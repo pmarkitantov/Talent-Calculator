@@ -15,6 +15,10 @@
 		AC1598DE2BB47D4000D605F9 /* CharacterClassesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598DD2BB47D4000D605F9 /* CharacterClassesViewModel.swift */; };
 		AC1598E02BB47D5A00D605F9 /* CharacterClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598DF2BB47D5A00D605F9 /* CharacterClass.swift */; };
 		AC1598E52BB4890200D605F9 /* TalentsData.json in Resources */ = {isa = PBXBuildFile; fileRef = AC1598E42BB4890200D605F9 /* TalentsData.json */; };
+		AC1598E92BB49BF300D605F9 /* TalentsTreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598E82BB49BF300D605F9 /* TalentsTreeView.swift */; };
+		AC1598EB2BB49C8A00D605F9 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598EA2BB49C8A00D605F9 /* GridView.swift */; };
+		AC1598F12BB4A62200D605F9 /* GridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598F02BB4A62200D605F9 /* GridViewModel.swift */; };
+		AC1598F32BB4A8A200D605F9 /* MockTalents.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598F22BB4A8A200D605F9 /* MockTalents.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		AC1598DD2BB47D4000D605F9 /* CharacterClassesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClassesViewModel.swift; sourceTree = "<group>"; };
 		AC1598DF2BB47D5A00D605F9 /* CharacterClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClass.swift; sourceTree = "<group>"; };
 		AC1598E42BB4890200D605F9 /* TalentsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = TalentsData.json; path = "Talent Calculator/TalentsData.json"; sourceTree = SOURCE_ROOT; };
+		AC1598E82BB49BF300D605F9 /* TalentsTreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentsTreeView.swift; sourceTree = "<group>"; };
+		AC1598EA2BB49C8A00D605F9 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		AC1598F02BB4A62200D605F9 /* GridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewModel.swift; sourceTree = "<group>"; };
+		AC1598F22BB4A8A200D605F9 /* MockTalents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTalents.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				AC1598DB2BB47D0100D605F9 /* ClassesListView.swift */,
+				AC1598E82BB49BF300D605F9 /* TalentsTreeView.swift */,
+				AC1598EA2BB49C8A00D605F9 /* GridView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -108,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				AC1598DD2BB47D4000D605F9 /* CharacterClassesViewModel.swift */,
+				AC1598F02BB4A62200D605F9 /* GridViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -115,6 +126,7 @@
 		AC1598E32BB4889F00D605F9 /* MockData */ = {
 			isa = PBXGroup;
 			children = (
+				AC1598F22BB4A8A200D605F9 /* MockTalents.swift */,
 			);
 			path = MockData;
 			sourceTree = "<group>";
@@ -191,6 +203,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC1598DE2BB47D4000D605F9 /* CharacterClassesViewModel.swift in Sources */,
+				AC1598E92BB49BF300D605F9 /* TalentsTreeView.swift in Sources */,
+				AC1598EB2BB49C8A00D605F9 /* GridView.swift in Sources */,
+				AC1598F32BB4A8A200D605F9 /* MockTalents.swift in Sources */,
+				AC1598F12BB4A62200D605F9 /* GridViewModel.swift in Sources */,
 				AC1598DC2BB47D0100D605F9 /* ClassesListView.swift in Sources */,
 				AC1598B32BB478C200D605F9 /* ContentView.swift in Sources */,
 				AC1598E02BB47D5A00D605F9 /* CharacterClass.swift in Sources */,

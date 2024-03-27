@@ -8,7 +8,7 @@
 import Foundation
 
 struct CharacterClass: Decodable, Identifiable {
-    var id: UUID?
+    var id = UUID()
     let name, icon: String
     let talentTrees: [TalentTree]
 }
@@ -20,14 +20,30 @@ struct TalentTree: Decodable {
 }
 
 // MARK: - Talent
-struct Talent: Decodable {
+struct Talent: Decodable, Identifiable {
+    var id: UUID = UUID() // Автоматически назначается при инициализации
     let name: String
-    let iconURL: String
+    let icon: String
     let baseDescription: String
-    let maxPoints, currentPoints, requiredPoints, row: Int
+    var currentPoints: Int = 0
+    let maxPoints: Int
+    let requiredPoints: Int
+    let row: Int
     let column: Int
-}
 
+}
+//extension Talent {
+//    init(row: Int, column: Int) {
+//        self.name = ""
+//        self.icon = ""
+//        self.baseDescription = ""
+//        self.currentPoints = 0
+//        self.maxPoints = 0
+//        self.requiredPoints = 0
+//        self.row = row
+//        self.column = column
+//    }
+//}
 
 
 

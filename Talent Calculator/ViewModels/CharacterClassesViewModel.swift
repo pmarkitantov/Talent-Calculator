@@ -8,21 +8,16 @@
 import Foundation
 import UIKit
 
-func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) throws -> T? {
-    guard let file = Bundle.main.url(forResource: filename, withExtension: nil) else {
-        print("Couldn't find \(filename) in main bundle.")
-        return nil
+func load<T: Decodable>(_ filename: String) throws -> T {
+    guard let fileURL = Bundle.main.url(forResource: filename, withExtension: nil) else {
+        fatalError("Не удалось найти файл \(filename) в основном бандле.")
     }
 
-    do {
-        let data = try Data(contentsOf: file)
-        let decoder = JSONDecoder()
-        return try decoder.decode(T.self, from: data)
-    } catch {
-        print("Error while loading or parsing \(filename): \(error)")
-        throw error
-    }
+    let data = try Data(contentsOf: fileURL)
+    let decoder = JSONDecoder()
+    return try decoder.decode(T.self, from: data)
 }
+
 
 class CharacterClassesViewModel: ObservableObject {
     @Published var characterClasses: [CharacterClass] = []
@@ -37,7 +32,7 @@ class CharacterClassesViewModel: ObservableObject {
                 self.characterClasses = loadedClasses
             }
         } catch {
-            print("Failed to load character classes: \(error)")
+            print("Failed to load character classes 1488: \(error)")
             
         }
     }
