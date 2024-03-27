@@ -13,7 +13,7 @@ struct ClassesListView: View {
 
     var body: some View {
         NavigationView {
-            List(viewModel.classes) { characterClass in
+            List(viewModel.characterClasses) { characterClass in
                 NavigationLink(destination: {
                     
                 }, label: {

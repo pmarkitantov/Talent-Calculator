@@ -11,10 +11,10 @@
 		AC1598B32BB478C200D605F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598B22BB478C200D605F9 /* ContentView.swift */; };
 		AC1598B52BB478C400D605F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1598B42BB478C400D605F9 /* Assets.xcassets */; };
 		AC1598B82BB478C400D605F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1598B72BB478C400D605F9 /* Preview Assets.xcassets */; };
-		AC1598C12BB47A9200D605F9 /* Talent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598C02BB47A9200D605F9 /* Talent.swift */; };
 		AC1598DC2BB47D0100D605F9 /* ClassesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598DB2BB47D0100D605F9 /* ClassesListView.swift */; };
 		AC1598DE2BB47D4000D605F9 /* CharacterClassesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598DD2BB47D4000D605F9 /* CharacterClassesViewModel.swift */; };
 		AC1598E02BB47D5A00D605F9 /* CharacterClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598DF2BB47D5A00D605F9 /* CharacterClass.swift */; };
+		AC1598E52BB4890200D605F9 /* TalentsData.json in Resources */ = {isa = PBXBuildFile; fileRef = AC1598E42BB4890200D605F9 /* TalentsData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,10 +23,10 @@
 		AC1598B22BB478C200D605F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AC1598B42BB478C400D605F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC1598B72BB478C400D605F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AC1598C02BB47A9200D605F9 /* Talent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talent.swift; sourceTree = "<group>"; };
 		AC1598DB2BB47D0100D605F9 /* ClassesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesListView.swift; sourceTree = "<group>"; };
 		AC1598DD2BB47D4000D605F9 /* CharacterClassesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClassesViewModel.swift; sourceTree = "<group>"; };
 		AC1598DF2BB47D5A00D605F9 /* CharacterClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClass.swift; sourceTree = "<group>"; };
+		AC1598E42BB4890200D605F9 /* TalentsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = TalentsData.json; path = "Talent Calculator/TalentsData.json"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +59,8 @@
 		AC1598AF2BB478C200D605F9 /* Talent Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				AC1598E42BB4890200D605F9 /* TalentsData.json */,
+				AC1598E32BB4889F00D605F9 /* MockData */,
 				AC1598DA2BB47CEA00D605F9 /* ViewModels */,
 				AC1598C22BB47C3B00D605F9 /* Images */,
 				AC1598BF2BB47A5700D605F9 /* Views */,
@@ -81,7 +83,6 @@
 		AC1598BE2BB47A4900D605F9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AC1598C02BB47A9200D605F9 /* Talent.swift */,
 				AC1598DF2BB47D5A00D605F9 /* CharacterClass.swift */,
 			);
 			path = Models;
@@ -109,6 +110,13 @@
 				AC1598DD2BB47D4000D605F9 /* CharacterClassesViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AC1598E32BB4889F00D605F9 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MockData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +179,7 @@
 			files = (
 				AC1598B82BB478C400D605F9 /* Preview Assets.xcassets in Resources */,
 				AC1598B52BB478C400D605F9 /* Assets.xcassets in Resources */,
+				AC1598E52BB4890200D605F9 /* TalentsData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +190,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC1598C12BB47A9200D605F9 /* Talent.swift in Sources */,
 				AC1598DE2BB47D4000D605F9 /* CharacterClassesViewModel.swift in Sources */,
 				AC1598DC2BB47D0100D605F9 /* ClassesListView.swift in Sources */,
 				AC1598B32BB478C200D605F9 /* ContentView.swift in Sources */,

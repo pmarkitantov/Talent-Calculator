@@ -8,16 +8,40 @@
 import Foundation
 import UIKit
 
-class CharacterClassesViewModel: ObservableObject {
-    @Published var classes: [CharacterClass] = [
-        CharacterClass(name: "Druid", icon: "druid"),
-        CharacterClass(name: "Hunter", icon: "hunter"),
-        CharacterClass(name: "Mage", icon: "mage"),
-        CharacterClass(name: "Paladin", icon: "paladin"),
-        CharacterClass(name: "Priest", icon: "priest"),
-        CharacterClass(name: "Rogue", icon: "rogue"),
-        CharacterClass(name: "Shaman", icon: "shaman"),
-        CharacterClass(name: "Warlock", icon: "warlock"),
-        CharacterClass(name: "Warrior", icon: "warrior")
-    ]
+func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) throws -> T? {
+    guard let file = Bundle.main.url(forResource: filename, withExtension: nil) else {
+        print("Couldn't find \(filename) in main bundle.")
+        return nil
+    }
+
+    do {
+        let data = try Data(contentsOf: file)
+        let decoder = JSONDecoder()
+        return try decoder.decode(T.self, from: data)
+    } catch {
+        print("Error while loading or parsing \(filename): \(error)")
+        throw error
+    }
 }
+
+class CharacterClassesViewModel: ObservableObject {
+    @Published var characterClasses: [CharacterClass] = []
+
+    init() {
+        loadCharacterClasses()
+    }
+
+    func loadCharacterClasses() {
+        do {
+            if let loadedClasses: [CharacterClass] = try load("TalentsData.json") {
+                self.characterClasses = loadedClasses
+            }
+        } catch {
+            print("Failed to load character classes: \(error)")
+            
+        }
+    }
+}
+
+
+

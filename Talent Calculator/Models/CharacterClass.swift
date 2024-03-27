@@ -7,17 +7,29 @@
 
 import Foundation
 
-struct CharacterClass: Identifiable {
-    let id: UUID = UUID()
-    let name: String
-    let icon: String
-    let talentTrees: [TalentCategory]
+struct CharacterClass: Decodable, Identifiable {
+    var id: UUID?
+    let name, icon: String
+    let talentTrees: [TalentTree]
 }
 
-struct TalentCategory {
+// MARK: - TalentTree
+struct TalentTree: Decodable {
     let name: String
-    let talents: [Talent] 
+    let talents: [Talent]
 }
+
+// MARK: - Talent
+struct Talent: Decodable {
+    let name: String
+    let iconURL: String
+    let baseDescription: String
+    let maxPoints, currentPoints, requiredPoints, row: Int
+    let column: Int
+}
+
+
+
 
 
 

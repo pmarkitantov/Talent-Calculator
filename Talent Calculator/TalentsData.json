@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Druid",
+        "icon": "druid",
+        "talentTrees": [
+            {
+                "name": "Balance",
+                "talents": [
+                    {
+                        "name": "Звездный огонь",
+                        "iconURL": "https://example.com/icons/starfire.png",
+                        "baseDescription": "Наносит противнику 100 урона от холода.",
+                        "maxPoints": 5,
+                        "currentPoints": 0,
+                        "requiredPoints": 0,
+                        "row": 1,
+                        "column": 1
+                        
+                    }
+                ]
+            },
+            {
+                "name": "Feral",
+                "talents": [
+                    {
+                        "name": "Цапнуть",
+                        "iconURL": "https://example.com/icons/claw.png",
+                        "baseDescription": "Увеличивает силу атаки в форме зверя.",
+                        "maxPoints": 3,
+                        "currentPoints": 0,
+                        "requiredPoints": 5,
+                        "row": 2,
+                        "column": 2
+                        
+                    }
+                ]
+            },
+            {
+                "name": "Restoration",
+                "talents": [
+                    {
+                        "name": "Быстрое исцеление",
+                        "iconURL": "https://example.com/icons/heal.png",
+                        "baseDescription": "Мгновенно исцеляет цель.",
+                        "maxPoints": 1,
+                        "currentPoints": 0,
+                        "requiredPoints": 10,
+                        "row": 3,
+                        "column": 1
+                        
+                    }
+                ]
+            }
+        ]
+    }
+]
