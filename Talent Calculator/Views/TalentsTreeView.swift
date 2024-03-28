@@ -9,11 +9,22 @@ import SwiftUI
 
 
 struct TalentsTreeView: View {
+    let className: String
+    
+        
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+            if let branches = TalentBranches.branches[className] {
+                if className == "druid"{
+                    TalentGridView(viewModel: GridViewModel(talentTreeName: "\(className)\(branches[0])"), backgroundImage: "\(className)\(branches[0])")
+                } else {
+                    Text("Нет данных о ветках талантов для класса \(className)")
+                }
+            } else {
+                Text("Нет информации о ветках талантов для класса \(className)")
+            }
+        }
 }
 
 #Preview {
-    TalentsTreeView()
+    TalentsTreeView(className: "druid")
 }

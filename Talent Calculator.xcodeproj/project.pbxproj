@@ -13,12 +13,12 @@
 		AC1598B82BB478C400D605F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1598B72BB478C400D605F9 /* Preview Assets.xcassets */; };
 		AC1598DC2BB47D0100D605F9 /* ClassesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598DB2BB47D0100D605F9 /* ClassesListView.swift */; };
 		AC1598DE2BB47D4000D605F9 /* CharacterClassesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598DD2BB47D4000D605F9 /* CharacterClassesViewModel.swift */; };
-		AC1598E02BB47D5A00D605F9 /* CharacterClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598DF2BB47D5A00D605F9 /* CharacterClass.swift */; };
-		AC1598E52BB4890200D605F9 /* TalentsData.json in Resources */ = {isa = PBXBuildFile; fileRef = AC1598E42BB4890200D605F9 /* TalentsData.json */; };
+		AC1598E02BB47D5A00D605F9 /* CharacterClassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598DF2BB47D5A00D605F9 /* CharacterClassModel.swift */; };
 		AC1598E92BB49BF300D605F9 /* TalentsTreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598E82BB49BF300D605F9 /* TalentsTreeView.swift */; };
-		AC1598EB2BB49C8A00D605F9 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598EA2BB49C8A00D605F9 /* GridView.swift */; };
+		AC1598EB2BB49C8A00D605F9 /* TalentGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598EA2BB49C8A00D605F9 /* TalentGridView.swift */; };
 		AC1598F12BB4A62200D605F9 /* GridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598F02BB4A62200D605F9 /* GridViewModel.swift */; };
 		AC1598F32BB4A8A200D605F9 /* MockTalents.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598F22BB4A8A200D605F9 /* MockTalents.swift */; };
+		AC1598FB2BB5B89400D605F9 /* druidBalance.json in Resources */ = {isa = PBXBuildFile; fileRef = AC1598FA2BB5B89400D605F9 /* druidBalance.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,12 +29,12 @@
 		AC1598B72BB478C400D605F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC1598DB2BB47D0100D605F9 /* ClassesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesListView.swift; sourceTree = "<group>"; };
 		AC1598DD2BB47D4000D605F9 /* CharacterClassesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClassesViewModel.swift; sourceTree = "<group>"; };
-		AC1598DF2BB47D5A00D605F9 /* CharacterClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClass.swift; sourceTree = "<group>"; };
-		AC1598E42BB4890200D605F9 /* TalentsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = TalentsData.json; path = "Talent Calculator/TalentsData.json"; sourceTree = SOURCE_ROOT; };
+		AC1598DF2BB47D5A00D605F9 /* CharacterClassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClassModel.swift; sourceTree = "<group>"; };
 		AC1598E82BB49BF300D605F9 /* TalentsTreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentsTreeView.swift; sourceTree = "<group>"; };
-		AC1598EA2BB49C8A00D605F9 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		AC1598EA2BB49C8A00D605F9 /* TalentGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentGridView.swift; sourceTree = "<group>"; };
 		AC1598F02BB4A62200D605F9 /* GridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewModel.swift; sourceTree = "<group>"; };
 		AC1598F22BB4A8A200D605F9 /* MockTalents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTalents.swift; sourceTree = "<group>"; };
+		AC1598FA2BB5B89400D605F9 /* druidBalance.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = druidBalance.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 		AC1598AF2BB478C200D605F9 /* Talent Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				AC1598E42BB4890200D605F9 /* TalentsData.json */,
+				AC1598FC2BB5D01400D605F9 /* Data */,
 				AC1598E32BB4889F00D605F9 /* MockData */,
 				AC1598DA2BB47CEA00D605F9 /* ViewModels */,
 				AC1598C22BB47C3B00D605F9 /* Images */,
@@ -91,7 +91,7 @@
 		AC1598BE2BB47A4900D605F9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AC1598DF2BB47D5A00D605F9 /* CharacterClass.swift */,
+				AC1598DF2BB47D5A00D605F9 /* CharacterClassModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -101,7 +101,7 @@
 			children = (
 				AC1598DB2BB47D0100D605F9 /* ClassesListView.swift */,
 				AC1598E82BB49BF300D605F9 /* TalentsTreeView.swift */,
-				AC1598EA2BB49C8A00D605F9 /* GridView.swift */,
+				AC1598EA2BB49C8A00D605F9 /* TalentGridView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -129,6 +129,14 @@
 				AC1598F22BB4A8A200D605F9 /* MockTalents.swift */,
 			);
 			path = MockData;
+			sourceTree = "<group>";
+		};
+		AC1598FC2BB5D01400D605F9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AC1598FA2BB5B89400D605F9 /* druidBalance.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,9 +197,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC1598FB2BB5B89400D605F9 /* druidBalance.json in Resources */,
 				AC1598B82BB478C400D605F9 /* Preview Assets.xcassets in Resources */,
 				AC1598B52BB478C400D605F9 /* Assets.xcassets in Resources */,
-				AC1598E52BB4890200D605F9 /* TalentsData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,12 +212,12 @@
 			files = (
 				AC1598DE2BB47D4000D605F9 /* CharacterClassesViewModel.swift in Sources */,
 				AC1598E92BB49BF300D605F9 /* TalentsTreeView.swift in Sources */,
-				AC1598EB2BB49C8A00D605F9 /* GridView.swift in Sources */,
+				AC1598EB2BB49C8A00D605F9 /* TalentGridView.swift in Sources */,
 				AC1598F32BB4A8A200D605F9 /* MockTalents.swift in Sources */,
 				AC1598F12BB4A62200D605F9 /* GridViewModel.swift in Sources */,
 				AC1598DC2BB47D0100D605F9 /* ClassesListView.swift in Sources */,
 				AC1598B32BB478C200D605F9 /* ContentView.swift in Sources */,
-				AC1598E02BB47D5A00D605F9 /* CharacterClass.swift in Sources */,
+				AC1598E02BB47D5A00D605F9 /* CharacterClassModel.swift in Sources */,
 				AC1598B12BB478C200D605F9 /* Talent_CalculatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

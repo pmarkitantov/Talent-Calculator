@@ -8,38 +8,61 @@
 import Foundation
 
 class GridViewModel: ObservableObject {
-    @Published var elements: [Talent] = []
-    // Предполагаем, что сетка 7x4
+    @Published var talents: [Talent] = []
+
     let totalRows = 7
     let totalColumns = 4
 
-    init(elements: [Talent]) {
-        // Заполнение таблицы элементами или пустыми местами
-        self.elements = (1...totalRows).flatMap { row in
+    init(talentTreeName: String) {
+        loadCharacterClasses(from: talentTreeName)
+    }
+
+    private func loadCharacterClasses(from talentTreeName: String) {
+        talents = load(with: talentTreeName)
+        fillMissingPlaces()
+    }
+
+    private func load(with talentTreeName: String) -> [Talent] {
+        guard let fileURL = Bundle.main.url(forResource: talentTreeName, withExtension: "json") else {
+            fatalError("\(talentTreeName).json file not found")
+        }
+
+        do {
+            let data = try Data(contentsOf: fileURL)
+            let decoder = JSONDecoder()
+            return try decoder.decode([Talent].self, from: data)
+        } catch {
+            fatalError("Error loading or decoding JSON from \(talentTreeName): \(error)")
+        }
+    }
+
+    // Добавление метода для заполнения таблицы элементами или пустыми местами
+    func fillMissingPlaces() {
+        let elements = talents
+        talents = (1...totalRows).flatMap { row in
             (1...totalColumns).map { column in
                 if let element = elements.first(where: { $0.row == row && $0.column == column }) {
                     return element
                 } else {
-                    // Создание пустого заполнителя для отсутствующих элементов
-                    return Talent(name: "", icon: "", baseDescription: "", maxPoints: 0, requiredPoints: 0, row: 0, column: 0)
+                    // Возвращение пустого заполнителя для отсутствующих элементов
+                    return Talent(name: "", icon: "", baseDescription: "", maxPoints: 0, requiredPoints: 0, row: row, column: column)
                 }
             }
         }
     }
 
+    // Методы для работы с данными
     func incrementCount(for elementID: UUID) {
-        if let index = elements.firstIndex(where: { $0.id == elementID }) {
-            let element = elements[index]
-            // Проверка, чтобы убедиться, что текущее количество нажатий меньше максимально допустимого
-            if element.currentPoints < element.maxPoints {
-                elements[index].currentPoints += 1
+        if let index = talents.firstIndex(where: { $0.id == elementID }) {
+            if talents[index].currentPoints < talents[index].maxPoints {
+                talents[index].currentPoints += 1
             }
         }
     }
-    
+
     func resetCurrentPoints() {
-            for index in elements.indices {
-                elements[index].currentPoints = 0
-            }
+        for index in talents.indices {
+            talents[index].currentPoints = 0
         }
+    }
 }
