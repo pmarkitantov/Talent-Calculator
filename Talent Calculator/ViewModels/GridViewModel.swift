@@ -24,7 +24,7 @@ class GridViewModel: ObservableObject {
 
     private func load(with talentTreeName: String) -> [Talent] {
         guard let fileURL = Bundle.main.url(forResource: talentTreeName, withExtension: "json") else {
-            fatalError("\(talentTreeName).json file not found")
+            return [Talent]()
         }
 
         do {
@@ -32,7 +32,7 @@ class GridViewModel: ObservableObject {
             let decoder = JSONDecoder()
             return try decoder.decode([Talent].self, from: data)
         } catch {
-            fatalError("Error loading or decoding JSON from \(talentTreeName): \(error)")
+            return [Talent]()
         }
     }
 

@@ -8,14 +8,13 @@
 import Foundation
 import SwiftUI
 
-
-// MARK: - CharacterClass
-struct CharacterClass {
+struct TalentTree {
     let name: String
-    let iconName: String
-    let nameColor: Color
+    let background: String
+    let icon: String
 }
-struct TalentBranches {
+
+enum TalentBranches {
     static let branches: [String: [String]] = [
         "druid": ["Balance", "Feral", "Restoration"],
         "warrior": ["Arms", "Fury", "Protection"],
@@ -26,11 +25,10 @@ struct TalentBranches {
         "shaman": ["Elemental", "Enhancement", "Restoration"],
         "mage": ["Arcane", "Fire", "Frost"],
         "warlock": ["Affliction", "Demonology", "Destruction"]
-        ]
+    ]
 }
-// MARK: - Talent
-import Foundation
 
+import Foundation
 
 struct Talent: Identifiable, Decodable {
     var id: UUID
@@ -49,7 +47,7 @@ struct Talent: Identifiable, Decodable {
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        
+
         name = try container.decode(String.self, forKey: .name)
         icon = try container.decode(String.self, forKey: .icon)
         baseDescription = try container.decode(String.self, forKey: .baseDescription)
@@ -58,27 +56,20 @@ struct Talent: Identifiable, Decodable {
         requiredPoints = try container.decode(Int.self, forKey: .requiredPoints)
         row = try container.decode(Int.self, forKey: .row)
         column = try container.decode(Int.self, forKey: .column)
-        
+
         // Генерируем новый UUID вместо получения его из JSON
         id = UUID()
     }
-    
+
     init(name: String, icon: String, baseDescription: String, currentPoints: Int = 0, maxPoints: Int, requiredPoints: Int, row: Int, column: Int) {
-            self.id = UUID() // Генерируется автоматически
-            self.name = name
-            self.icon = icon
-            self.baseDescription = baseDescription
-            self.currentPoints = currentPoints
-            self.maxPoints = maxPoints
-            self.requiredPoints = requiredPoints
-            self.row = row
-            self.column = column
-        }
+        id = UUID() // Генерируется автоматически
+        self.name = name
+        self.icon = icon
+        self.baseDescription = baseDescription
+        self.currentPoints = currentPoints
+        self.maxPoints = maxPoints
+        self.requiredPoints = requiredPoints
+        self.row = row
+        self.column = column
+    }
 }
-
-
-
-
-
-
-

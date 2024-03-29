@@ -11,8 +11,8 @@ import SwiftUI
 
 struct TalentGridView: View {
     @ObservedObject var viewModel: GridViewModel
-    @State var pointsSpend = 0
-
+    @State var pointsSpend = 1
+    let backgroundImage: String
 
     func isConditionMet(pointsSpend: Int, requiredPoints: Int) -> Bool {
         return pointsSpend >= requiredPoints
@@ -60,11 +60,15 @@ struct TalentGridView: View {
             }
         }
         .padding()
-        .background(Color.clear)
-        
+        .background(
+            Image("druidBalance")
+                .resizable()
+                .ignoresSafeArea()
+                .scaledToFill()
+        )
     }
 }
 
 #Preview {
-    TalentGridView(viewModel: GridViewModel(talentTreeName: "druidBalance"))
+    TalentGridView(viewModel: GridViewModel(talentTreeName: "druidBalance"), backgroundImage: "druidBalance")
 }
