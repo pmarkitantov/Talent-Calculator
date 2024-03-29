@@ -10,7 +10,7 @@ import SwiftUI
 struct TalentsTreeView: View {
     let characterClass: CharacterClass
     @State private var selectedTab: Int  = 0
-    @State private var currentLevel: Int = 1
+    @State private var currentLevel: Int = 10
     @State private var pointsSpent: Int  = 0
 
     var body: some View {

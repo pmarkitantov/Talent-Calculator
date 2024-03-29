@@ -8,6 +8,16 @@
 import Foundation
 import SwiftUI
 
+//enum Direction: String {
+//    case up, down, left, right
+//}
+
+// Структура Arrow с параметрами: направление, размер и название изображения
+struct Arrow {
+
+    var imageName: String
+}
+
 struct TalentTree {
     let name: String
     let background: String
@@ -28,8 +38,6 @@ enum TalentBranches {
     ]
 }
 
-import Foundation
-
 struct Talent: Identifiable, Decodable {
     var id: UUID
     let name: String
@@ -40,14 +48,17 @@ struct Talent: Identifiable, Decodable {
     let requiredPoints: Int
     let row: Int
     let column: Int
+    let arrow: String?
+
 
     enum CodingKeys: String, CodingKey {
-        case name, icon, baseDescription, currentPoints, maxPoints, requiredPoints, row, column
+        case name, icon, baseDescription, currentPoints, maxPoints, requiredPoints, row, column, arrow
     }
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
+        id = UUID() // Генерируется автоматически
         name = try container.decode(String.self, forKey: .name)
         icon = try container.decode(String.self, forKey: .icon)
         baseDescription = try container.decode(String.self, forKey: .baseDescription)
@@ -56,13 +67,12 @@ struct Talent: Identifiable, Decodable {
         requiredPoints = try container.decode(Int.self, forKey: .requiredPoints)
         row = try container.decode(Int.self, forKey: .row)
         column = try container.decode(Int.self, forKey: .column)
-
-        // Генерируем новый UUID вместо получения его из JSON
-        id = UUID()
+        arrow = try container.decodeIfPresent(String.self, forKey: .arrow) // Декодирование опционального значения
     }
 
-    init(name: String, icon: String, baseDescription: String, currentPoints: Int = 0, maxPoints: Int, requiredPoints: Int, row: Int, column: Int) {
-        id = UUID() // Генерируется автоматически
+    // Дополнительный инициализатор для создания объектов в коде
+    init(name: String, icon: String, baseDescription: String, currentPoints: Int = 0, maxPoints: Int, requiredPoints: Int, row: Int, column: Int, arrow: String? = nil) {
+        id = UUID()
         self.name = name
         self.icon = icon
         self.baseDescription = baseDescription
@@ -71,5 +81,6 @@ struct Talent: Identifiable, Decodable {
         self.requiredPoints = requiredPoints
         self.row = row
         self.column = column
+        self.arrow = arrow
     }
 }

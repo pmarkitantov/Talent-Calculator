@@ -24,6 +24,7 @@ class GridViewModel: ObservableObject {
 
     private func load(with talentTreeName: String) -> [Talent] {
         guard let fileURL = Bundle.main.url(forResource: talentTreeName, withExtension: "json") else {
+            print("Файл не найден")
             return [Talent]()
         }
 
@@ -32,11 +33,12 @@ class GridViewModel: ObservableObject {
             let decoder = JSONDecoder()
             return try decoder.decode([Talent].self, from: data)
         } catch {
+            print("Ошибка при декодировании: \(error)")
             return [Talent]()
         }
     }
 
-    // Добавление метода для заполнения таблицы элементами или пустыми местами
+//     Добавление метода для заполнения таблицы элементами или пустыми местами
     func fillMissingPlaces() {
         let elements = talents
         talents = (1...totalRows).flatMap { row in
@@ -51,7 +53,7 @@ class GridViewModel: ObservableObject {
         }
     }
 
-    // Методы для работы с данными
+//     Методы для работы с данными
     func incrementCount(for elementID: UUID) {
         if let index = talents.firstIndex(where: { $0.id == elementID }) {
             if talents[index].currentPoints < talents[index].maxPoints {
