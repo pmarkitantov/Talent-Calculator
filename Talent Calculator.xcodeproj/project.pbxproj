@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AC1598B12BB478C200D605F9 /* Talent_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598B02BB478C200D605F9 /* Talent_CalculatorApp.swift */; };
-		AC1598B32BB478C200D605F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598B22BB478C200D605F9 /* ContentView.swift */; };
 		AC1598B52BB478C400D605F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1598B42BB478C400D605F9 /* Assets.xcassets */; };
 		AC1598B82BB478C400D605F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1598B72BB478C400D605F9 /* Preview Assets.xcassets */; };
 		AC1598DC2BB47D0100D605F9 /* ClassesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598DB2BB47D0100D605F9 /* ClassesListView.swift */; };
@@ -28,7 +27,6 @@
 /* Begin PBXFileReference section */
 		AC1598AD2BB478C200D605F9 /* Talent Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Talent Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1598B02BB478C200D605F9 /* Talent_CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talent_CalculatorApp.swift; sourceTree = "<group>"; };
-		AC1598B22BB478C200D605F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AC1598B42BB478C400D605F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC1598B72BB478C400D605F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC1598DB2BB47D0100D605F9 /* ClassesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesListView.swift; sourceTree = "<group>"; };
@@ -83,7 +81,6 @@
 				AC1598BF2BB47A5700D605F9 /* Views */,
 				AC1598BE2BB47A4900D605F9 /* Models */,
 				AC1598B02BB478C200D605F9 /* Talent_CalculatorApp.swift */,
-				AC1598B22BB478C200D605F9 /* ContentView.swift */,
 				AC1598B62BB478C400D605F9 /* Preview Content */,
 			);
 			path = "Talent Calculator";
@@ -238,7 +235,6 @@
 				AC7BAF9D2BB620FE007883B1 /* TabbarButtonView.swift in Sources */,
 				AC1598F12BB4A62200D605F9 /* GridViewModel.swift in Sources */,
 				AC1598DC2BB47D0100D605F9 /* ClassesListView.swift in Sources */,
-				AC1598B32BB478C200D605F9 /* ContentView.swift in Sources */,
 				AC7BAFA72BB72081007883B1 /* AnotherTestView.swift in Sources */,
 				AC1598E02BB47D5A00D605F9 /* CharacterTalentsModel.swift in Sources */,
 				AC1598B12BB478C200D605F9 /* Talent_CalculatorApp.swift in Sources */,

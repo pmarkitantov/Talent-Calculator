@@ -13,7 +13,6 @@ struct TalentGridView: View {
     @ObservedObject var viewModel: GridViewModel
     @State var pointsSpend = 0
 
-
     func isConditionMet(pointsSpend: Int, requiredPoints: Int) -> Bool {
         return pointsSpend >= requiredPoints
     }
@@ -59,9 +58,8 @@ struct TalentGridView: View {
                 }
             }
         }
-        .padding()
+
         .background(Color.clear)
-        
     }
 }
 

@@ -21,10 +21,10 @@ struct TalentsTreeView: View {
                     .resizable()
                     .ignoresSafeArea()
 
-                VStack {
+                VStack(spacing: 15) {
                     TalentTreeHeader(branchName: tree.name, currentLevel: $currentLevel, pointsSpent: $pointsSpent)
                     let talentTreeName = "\(characterClass.name.lowercased())\(tree.name)"
-                    TalentGridView(viewModel: GridViewModel(talentTreeName: talentTreeName))
+                    TestGridView()
 
                     Rectangle()
                         .fill(Color.gray) // Задаём цвет перегородки
@@ -48,4 +48,5 @@ struct TalentsTreeView: View {
         TalentTree(name: "Feral", background: "druidFeral", icon: "druid-feral-icon"),
         TalentTree(name: "Restoration", background: "druidRestoration", icon: "druid-restoration-icon")
     ]))
+    .environmentObject(GridViewModel(talentTreeName: "testDruidBalance"))
 }

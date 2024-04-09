@@ -33,14 +33,14 @@ struct TabbarButtonView: View {
                 }
             }
         }
-        .frame(maxWidth: .infinity)
+        .frame(maxWidth: .infinity, minHeight: 80)
         .background(Color.clear)
-        .padding(.top, 15)
-        .padding(.bottom, 10)
+//        .padding(.top, 15)
+//        .padding(.bottom, 10)
     }
 }
 
-#Preview {
+#Preview(traits: .sizeThatFitsLayout) {
     TabbarButtonView(talentTrees: [TalentTree(name: "Balance", background: "druidBalance", icon: "druid-balance-icon"),
                                    TalentTree(name: "Feral", background: "druidFeral", icon: "druid-feral-icon"),
                                    TalentTree(name: "Restoration", background: "druidRestoration", icon: "druid-restoration-icon")], selectedTab: .constant(0))

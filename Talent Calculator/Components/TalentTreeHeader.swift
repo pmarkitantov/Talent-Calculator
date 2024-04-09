@@ -27,7 +27,7 @@ struct TalentTreeHeader: View {
             }
             .background(Color.white.opacity(0.7))
             .cornerRadius(10)
-            .padding()
+            .padding(.horizontal, 10)
         }
     }
 }
