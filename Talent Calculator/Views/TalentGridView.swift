@@ -10,10 +10,11 @@ import SwiftUI
 import SwiftUI
 
 struct TalentGridView: View {
-    @EnvironmentObject var viewModel: GridViewModel
+    @ObservedObject var viewModel: GridViewModel
     @Binding var pointsSpend: Int
     private let rows = 7
     private let columns = 4
+    var selectedBranchIndex: Int
 
     private var gridLayout: [GridItem] {
         Array(repeating: .init(.flexible()), count: columns)
@@ -26,11 +27,13 @@ struct TalentGridView: View {
                     // Расчет соответствующей строки и столбца для текущего индекса
                     let row = index / columns
                     let column = index % columns
-
-                    if let talent = viewModel.talents.first(where: { $0.row == row + 1 && $0.column == column + 1 }) {
-                        TalentCell(talent: talent, pointsSpend: $pointsSpend, incrementCount: viewModel.incrementCount)
+                    if let talent = viewModel.talentsBranches[selectedBranchIndex].first(where: { $0.row  == row + 1 && $0.column  == column + 1 }) {
+                        // Если талант найден, отображаем его иконку
+                        TalentCell(talent: talent, pointsSpend: $pointsSpend, incrementCount: { talentId in
+                            viewModel.incrementCount(for: talentId, inBranch: selectedBranchIndex)
+                        })
                     } else {
-                        // Если элемент не найден, оставляем ячейку пустой
+                        // Если талант не найден, отображаем пустое пространство
                         Color.clear
                     }
                 }
@@ -40,6 +43,9 @@ struct TalentGridView: View {
 }
 
 #Preview {
-    TalentGridView(pointsSpend: .constant(0))
-        .environmentObject(GridViewModel(talentTreeName: "druidFeral"))
+    TalentGridView(viewModel: GridViewModel(chatacterClass: CharacterClass(name: "Druid", iconName: "druid", nameColor: .orange, talentTrees: [
+        TalentTree(name: "Balance", background: "druidBalance", icon: "druid-balance-icon"),
+        TalentTree(name: "Feral", background: "druidFeral", icon: "druid-feral-icon"),
+        TalentTree(name: "Restoration", background: "druidRestoration", icon: "druid-restoration-icon")
+    ])), pointsSpend: .constant(0), selectedBranchIndex: 1)
 }

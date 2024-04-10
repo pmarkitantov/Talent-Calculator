@@ -8,48 +8,52 @@
 import Foundation
 
 class GridViewModel: ObservableObject {
-    @Published var talents: [Talent] = []
-
-    let totalRows = 7
-    let totalColumns = 4
+    @Published var talentsBranches: [[Talent]] = [[], [], []]
     
-    
-
-    init(talentTreeName: String) {
-        loadCharacterClasses(from: talentTreeName)
+    init(chatacterClass: CharacterClass) {
+        loadTalents(characterClass: chatacterClass)
     }
 
-    private func loadCharacterClasses(from talentTreeName: String) {
-        talents = load(with: talentTreeName)
-    }
+    func loadTalents(characterClass: CharacterClass) {
+        talentsBranches = [[], [], []] // Переинициализация
 
-    private func load(with talentTreeName: String) -> [Talent] {
-        guard let fileURL = Bundle.main.url(forResource: talentTreeName, withExtension: "json") else {
-            print("Файл не найден")
-            return [Talent]()
-        }
-
-        do {
-            let data = try Data(contentsOf: fileURL)
-            let decoder = JSONDecoder()
-            return try decoder.decode([Talent].self, from: data)
-        } catch {
-            print("Ошибка при декодировании: \(error)")
-            return [Talent]()
-        }
-    }
-
-    func incrementCount(for elementID: UUID) {
-        if let index = talents.firstIndex(where: { $0.id == elementID }) {
-            if talents[index].currentPoints < talents[index].maxPoints {
-                talents[index].currentPoints += 1
+        Task {
+            for (index, talentTree) in characterClass.talentTrees.enumerated() where index < talentsBranches.count {
+                do {
+                    let filename = characterClass.name.lowercased() + talentTree.name
+                    let talents = try await loadTalentsFromJSON(named: filename)
+                    DispatchQueue.main.async { [weak self] in
+                        self?.talentsBranches[index] = talents
+                    }
+                } catch {
+                    print("Не удалось загрузить таланты для ветки \(talentTree.name): \(error)")
+                    // Массив для этой ветки остается пустым
+                }
             }
         }
     }
 
-    func resetCurrentPoints() {
-        for index in talents.indices {
-            talents[index].currentPoints = 0
+
+    private func loadTalentsFromJSON(named fileName: String) async throws -> [Talent] {
+        guard let fileURL = Bundle.main.url(forResource: fileName, withExtension: "json") else {
+            throw NSError(domain: "TalentLoaderError", code: 404, userInfo: [NSLocalizedDescriptionKey: "Файл \(fileName).json не найден"])
+        }
+
+        let data = try Data(contentsOf: fileURL)
+        let decoder = JSONDecoder()
+        return try decoder.decode([Talent].self, from: data)
+    }
+    
+    func incrementCount(for elementID: UUID, inBranch branchIndex: Int) {
+        guard branchIndex < talentsBranches.count else { return }
+
+        if let index = talentsBranches[branchIndex].firstIndex(where: { $0.id == elementID }) {
+            if talentsBranches[branchIndex][index].currentPoints < talentsBranches[branchIndex][index].maxPoints {
+                talentsBranches[branchIndex][index].currentPoints += 1
+                // Обновляем данные, чтобы изменения отразились в UI
+                objectWillChange.send()
+            }
         }
     }
+
 }

@@ -9,10 +9,20 @@ import SwiftUI
 
 struct TalentsTreeView: View {
     let characterClass: CharacterClass
-    @State var viewModel = GridViewModel(talentTreeName: "testDruidBalance")
+    @ObservedObject var viewModel: GridViewModel
     @State private var selectedTab: Int  = 0
     @State private var currentLevel: Int = 10
-    @State private var pointsSpent: Int  = 0
+    @State var pointsSpent: Int = 0
+
+    init(characterClass: CharacterClass) {
+        self.characterClass = characterClass
+
+        self._viewModel = ObservedObject(initialValue: GridViewModel(chatacterClass: characterClass))
+    }
+
+    var pointsLeft: Int {
+        51 - pointsSpent
+    }
 
     var body: some View {
         ZStack {
@@ -24,15 +34,13 @@ struct TalentsTreeView: View {
 
                 VStack(spacing: 15) {
                     TalentTreeHeader(branchName: tree.name, currentLevel: $currentLevel, pointsSpent: $pointsSpent)
-                    let talentTreeName = "\(characterClass.name.lowercased())\(tree.name)"
-                    TalentGridView(pointsSpend: $pointsSpent)
+                    TalentGridView(viewModel: viewModel, pointsSpend: $pointsSpent, selectedBranchIndex: selectedTab)
 
                     Rectangle()
                         .fill(Color.gray) // Задаём цвет перегородки
                         .frame(height: 2) // Задаём толщину перегородки равной 2
                         .edgesIgnoringSafeArea(.horizontal)
 
-                    // Кастомный TabBar для выбора талантового дерева
                     TabbarButtonView(talentTrees: characterClass.talentTrees, selectedTab: $selectedTab)
                 }
             } else {
@@ -49,5 +57,4 @@ struct TalentsTreeView: View {
         TalentTree(name: "Feral", background: "druidFeral", icon: "druid-feral-icon"),
         TalentTree(name: "Restoration", background: "druidRestoration", icon: "druid-restoration-icon")
     ]))
-    .environmentObject(GridViewModel(talentTreeName: "testDruidBalance"))
 }
