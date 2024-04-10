@@ -12,6 +12,8 @@ class GridViewModel: ObservableObject {
 
     let totalRows = 7
     let totalColumns = 4
+    
+    
 
     init(talentTreeName: String) {
         loadCharacterClasses(from: talentTreeName)

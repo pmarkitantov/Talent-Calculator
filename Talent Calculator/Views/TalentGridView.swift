@@ -41,5 +41,5 @@ struct TalentGridView: View {
 
 #Preview {
     TalentGridView(pointsSpend: .constant(0))
-        .environmentObject(GridViewModel(talentTreeName: "testDruidBalance"))
+        .environmentObject(GridViewModel(talentTreeName: "druidFeral"))
 }

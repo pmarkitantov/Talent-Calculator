@@ -1,0 +1,182 @@
+[
+    {
+        "name": "Ferocity",
+        "icon": "ability_hunter_pet_hyena",
+        "baseDescription": "Reduces the cost of your Maul, Swipe, Claw, and Rake abilities by 1 Rage or Energy.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Feral Aggression",
+        "icon": "ability_druid_demoralizingroar",
+        "baseDescription": "Increases the Attack Power reduction of your Demoralizing Roar by 8% and the damage caused by your Ferocious Bite by 3%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Feral Instinct",
+        "icon": "ability_ambush",
+        "baseDescription": "Increases threat caused in Bear and Dire Bear Form by 3% and reduces the chance enemies have to detect you while Prowling.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Brutal Impact",
+        "icon": "ability_druid_bash",
+        "baseDescription": "Increases the stun duration of your Bash and Pounce abilities by 0.5 sec.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Thick Hide",
+        "icon": "inv_misc_pelt_bear_03",
+        "baseDescription": "Increases your Armor contribution from items by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Feline Swiftness",
+        "icon": "spell_nature_spiritwolf",
+        "baseDescription": "Increases your movement speed by 15% while outdoors in Cat Form and increases your chance to dodge while in Cat Form by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Feral Charge",
+        "icon": "ability_hunter_pet_bear",
+        "baseDescription": "Causes you to charge an enemy, immobilizing and interrupting any spell being cast for 4 sec.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Sharpened Claws",
+        "icon": "inv_misc_monsterclaw_04",
+        "baseDescription": "Increases your critical strike chance while in Bear, Dire Bear or Cat Form by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Improved Shred",
+        "icon": "spell_shadow_vampiricaura",
+        "baseDescription": "Reduces the Energy cost of your Shred ability by 6.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Predatory Strikes",
+        "icon": "ability_hunter_pet_cat",
+        "baseDescription": "Increases your melee attack power in Cat, Bear and Dire Bear Forms by 100% of your level.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Blood Frenzy",
+        "icon": "ability_ghoulfrenzy",
+        "baseDescription": "Your critical strikes from Cat Form abilities that add combo points \u00a0have a 50% chance to add an additional combo point.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Primal Fury",
+        "icon": "ability_racial_cannibalize",
+        "baseDescription": "Gives you a 50% chance to gain an additional 5 Rage anytime you get a critical strike while in Bear and Dire Bear Form.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 4,
+        "arrow": null
+    },
+    {
+        "name": "Savage Fury",
+        "icon": "ability_druid_ravage",
+        "baseDescription": "Increases the damage caused by your Claw, Rake, Maul and Swipe abilities by 10%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Faerie Fire (Feral)",
+        "icon": "spell_nature_faeriefire",
+        "baseDescription": "Decrease the armor of the target by 175 for 40 sec. \u00a0While affected, the target cannot stealth or turn invisible.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Heart of the Wild",
+        "icon": "spell_holy_blessingofagility",
+        "baseDescription": "Increases your Intellect by 4%. \u00a0In addition, while in Bear or Dire Bear Form your Stamina is increased by 4% and while in Cat Form your Strength is increased by 4%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 25,
+        "row": 6,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Leader of the Pack",
+        "icon": "spell_nature_unyeildingstamina",
+        "baseDescription": "While in Cat, Bear or Dire Bear Form, the Leader of the Pack increases ranged and melee critical chance of all party members within 45 yards by 3%.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 30,
+        "row": 7,
+        "column": 2,
+        "arrow": null
+    }
+    
+    
+    
+]
+

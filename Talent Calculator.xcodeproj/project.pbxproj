@@ -21,6 +21,8 @@
 		AC7BAFA12BB64392007883B1 /* CharacterClassesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7BAFA02BB64392007883B1 /* CharacterClassesModel.swift */; };
 		AC7BAFA52BB715CF007883B1 /* testDruidBalance.json in Resources */ = {isa = PBXBuildFile; fileRef = AC7BAFA42BB715CF007883B1 /* testDruidBalance.json */; };
 		AC8D2B2B2BC6B5E300E4A245 /* TalentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8D2B2A2BC6B5E300E4A245 /* TalentCell.swift */; };
+		AC8D2B2D2BC6C4B500E4A245 /* druidFeral.json in Resources */ = {isa = PBXBuildFile; fileRef = AC8D2B2C2BC6C4B500E4A245 /* druidFeral.json */; };
+		AC8D2B2F2BC6C4CA00E4A245 /* druidRestoration.json in Resources */ = {isa = PBXBuildFile; fileRef = AC8D2B2E2BC6C4CA00E4A245 /* druidRestoration.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		AC7BAFA02BB64392007883B1 /* CharacterClassesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClassesModel.swift; sourceTree = "<group>"; };
 		AC7BAFA42BB715CF007883B1 /* testDruidBalance.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testDruidBalance.json; sourceTree = "<group>"; };
 		AC8D2B2A2BC6B5E300E4A245 /* TalentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentCell.swift; sourceTree = "<group>"; };
+		AC8D2B2C2BC6C4B500E4A245 /* druidFeral.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = druidFeral.json; sourceTree = "<group>"; };
+		AC8D2B2E2BC6C4CA00E4A245 /* druidRestoration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = druidRestoration.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,8 @@
 			children = (
 				AC1598FA2BB5B89400D605F9 /* druidBalance.json */,
 				AC7BAFA42BB715CF007883B1 /* testDruidBalance.json */,
+				AC8D2B2C2BC6C4B500E4A245 /* druidFeral.json */,
+				AC8D2B2E2BC6C4CA00E4A245 /* druidRestoration.json */,
 			);
 			path = "Data Files";
 			sourceTree = "<group>";
@@ -211,8 +217,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC8D2B2D2BC6C4B500E4A245 /* druidFeral.json in Resources */,
 				AC1598FB2BB5B89400D605F9 /* druidBalance.json in Resources */,
 				AC1598B82BB478C400D605F9 /* Preview Assets.xcassets in Resources */,
+				AC8D2B2F2BC6C4CA00E4A245 /* druidRestoration.json in Resources */,
 				AC1598B52BB478C400D605F9 /* Assets.xcassets in Resources */,
 				AC7BAFA52BB715CF007883B1 /* testDruidBalance.json in Resources */,
 			);

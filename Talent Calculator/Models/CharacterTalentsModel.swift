@@ -22,6 +22,7 @@ struct TalentTree {
     let name: String
     let background: String
     let icon: String
+    
 }
 
 enum TalentBranches {
