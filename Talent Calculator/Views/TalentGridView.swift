@@ -10,59 +10,36 @@ import SwiftUI
 import SwiftUI
 
 struct TalentGridView: View {
-    @ObservedObject var viewModel: GridViewModel
-    @State var pointsSpend = 0
+    @EnvironmentObject var viewModel: GridViewModel
+    @Binding var pointsSpend: Int
+    private let rows = 7
+    private let columns = 4
 
-    func isConditionMet(pointsSpend: Int, requiredPoints: Int) -> Bool {
-        return pointsSpend >= requiredPoints
+    private var gridLayout: [GridItem] {
+        Array(repeating: .init(.flexible()), count: columns)
     }
 
     var body: some View {
-        let columns: [GridItem] = Array(repeating: .init(.flexible()), count: viewModel.totalColumns)
-
         ScrollView {
-            LazyVGrid(columns: columns, spacing: 20) {
-                ForEach(viewModel.talents, id: \.id) { talent in
-                    if talent.maxPoints > 0 {
-                        ZStack(alignment: Alignment(horizontal: .trailing, vertical: .bottom)) {
-                            Button(action: {
-                                viewModel.incrementCount(for: talent.id)
-                                pointsSpend += 1
-                            }) {
-                                Image(talent.icon)
-                                    .colorMultiply(pointsSpend >= talent.requiredPoints ? Color.white : Color.gray)
-                                    .overlay(
-                                        pointsSpend >= talent.requiredPoints ?
-                                            RoundedRectangle(cornerRadius: 10)
-                                            .stroke(talent.currentPoints >= talent.maxPoints ? Color.yellow : (talent.currentPoints >= 0 ? Color.green : Color.clear), lineWidth: 3) :
-                                            nil
-                                    )
-                            }
-                            Text("\(talent.currentPoints)/\(talent.maxPoints)")
-                                .padding(3)
-                                .background(Color.black.opacity(0.7))
-                                .foregroundColor(talent.currentPoints >= talent.maxPoints ? Color.yellow : (talent.currentPoints >= 0 ? Color.green : Color.clear))
-                                .clipShape(RoundedRectangle(cornerRadius: 5))
-                                .offset(x: 10, y: 10)
-                                .zIndex(1)
-                        }
-                        .frame(width: 70, height: 70)
-                        .allowsHitTesting(talent.currentPoints < talent.maxPoints && pointsSpend >= talent.requiredPoints)
+            LazyVGrid(columns: gridLayout, spacing: 20) {
+                ForEach(0 ..< rows * columns, id: \.self) { index in
+                    // Расчет соответствующей строки и столбца для текущего индекса
+                    let row = index / columns
+                    let column = index % columns
+
+                    if let talent = viewModel.talents.first(where: { $0.row == row + 1 && $0.column == column + 1 }) {
+                        TalentCell(talent: talent, pointsSpend: $pointsSpend, incrementCount: viewModel.incrementCount)
                     } else {
-                        // Пустое место для отсутствующих элементов
-                        Text("")
-                            .frame(width: 70, height: 70)
-                            .background(Color.clear)
-                            .cornerRadius(10)
+                        // Если элемент не найден, оставляем ячейку пустой
+                        Color.clear
                     }
                 }
             }
         }
-
-        .background(Color.clear)
     }
 }
 
 #Preview {
-    TalentGridView(viewModel: GridViewModel(talentTreeName: "druidBalance"))
+    TalentGridView(pointsSpend: .constant(0))
+        .environmentObject(GridViewModel(talentTreeName: "testDruidBalance"))
 }

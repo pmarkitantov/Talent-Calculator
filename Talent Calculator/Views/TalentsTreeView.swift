@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TalentsTreeView: View {
     let characterClass: CharacterClass
+    @State var viewModel = GridViewModel(talentTreeName: "testDruidBalance")
     @State private var selectedTab: Int  = 0
     @State private var currentLevel: Int = 10
     @State private var pointsSpent: Int  = 0
@@ -24,7 +25,7 @@ struct TalentsTreeView: View {
                 VStack(spacing: 15) {
                     TalentTreeHeader(branchName: tree.name, currentLevel: $currentLevel, pointsSpent: $pointsSpent)
                     let talentTreeName = "\(characterClass.name.lowercased())\(tree.name)"
-                    TestGridView()
+                    TalentGridView(pointsSpend: $pointsSpent)
 
                     Rectangle()
                         .fill(Color.gray) // Задаём цвет перегородки

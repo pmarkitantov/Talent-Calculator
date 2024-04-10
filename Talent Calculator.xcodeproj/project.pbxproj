@@ -19,9 +19,8 @@
 		AC7BAF9D2BB620FE007883B1 /* TabbarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7BAF9C2BB620FE007883B1 /* TabbarButtonView.swift */; };
 		AC7BAF9F2BB63EDC007883B1 /* TalentTreeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7BAF9E2BB63EDC007883B1 /* TalentTreeHeader.swift */; };
 		AC7BAFA12BB64392007883B1 /* CharacterClassesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7BAFA02BB64392007883B1 /* CharacterClassesModel.swift */; };
-		AC7BAFA32BB70E4E007883B1 /* TestGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7BAFA22BB70E4E007883B1 /* TestGridView.swift */; };
 		AC7BAFA52BB715CF007883B1 /* testDruidBalance.json in Resources */ = {isa = PBXBuildFile; fileRef = AC7BAFA42BB715CF007883B1 /* testDruidBalance.json */; };
-		AC7BAFA72BB72081007883B1 /* AnotherTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7BAFA62BB72081007883B1 /* AnotherTestView.swift */; };
+		AC8D2B2B2BC6B5E300E4A245 /* TalentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8D2B2A2BC6B5E300E4A245 /* TalentCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,9 +37,8 @@
 		AC7BAF9C2BB620FE007883B1 /* TabbarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarButtonView.swift; sourceTree = "<group>"; };
 		AC7BAF9E2BB63EDC007883B1 /* TalentTreeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentTreeHeader.swift; sourceTree = "<group>"; };
 		AC7BAFA02BB64392007883B1 /* CharacterClassesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClassesModel.swift; sourceTree = "<group>"; };
-		AC7BAFA22BB70E4E007883B1 /* TestGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGridView.swift; sourceTree = "<group>"; };
 		AC7BAFA42BB715CF007883B1 /* testDruidBalance.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testDruidBalance.json; sourceTree = "<group>"; };
-		AC7BAFA62BB72081007883B1 /* AnotherTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherTestView.swift; sourceTree = "<group>"; };
+		AC8D2B2A2BC6B5E300E4A245 /* TalentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +107,6 @@
 				AC1598DB2BB47D0100D605F9 /* ClassesListView.swift */,
 				AC1598E82BB49BF300D605F9 /* TalentsTreeView.swift */,
 				AC1598EA2BB49C8A00D605F9 /* TalentGridView.swift */,
-				AC7BAFA22BB70E4E007883B1 /* TestGridView.swift */,
-				AC7BAFA62BB72081007883B1 /* AnotherTestView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -152,6 +148,7 @@
 			children = (
 				AC7BAF9C2BB620FE007883B1 /* TabbarButtonView.swift */,
 				AC7BAF9E2BB63EDC007883B1 /* TalentTreeHeader.swift */,
+				AC8D2B2A2BC6B5E300E4A245 /* TalentCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -235,10 +232,9 @@
 				AC7BAF9D2BB620FE007883B1 /* TabbarButtonView.swift in Sources */,
 				AC1598F12BB4A62200D605F9 /* GridViewModel.swift in Sources */,
 				AC1598DC2BB47D0100D605F9 /* ClassesListView.swift in Sources */,
-				AC7BAFA72BB72081007883B1 /* AnotherTestView.swift in Sources */,
+				AC8D2B2B2BC6B5E300E4A245 /* TalentCell.swift in Sources */,
 				AC1598E02BB47D5A00D605F9 /* CharacterTalentsModel.swift in Sources */,
 				AC1598B12BB478C200D605F9 /* Talent_CalculatorApp.swift in Sources */,
-				AC7BAFA32BB70E4E007883B1 /* TestGridView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,7 +19,6 @@ class GridViewModel: ObservableObject {
 
     private func loadCharacterClasses(from talentTreeName: String) {
         talents = load(with: talentTreeName)
-        fillMissingPlaces()
     }
 
     private func load(with talentTreeName: String) -> [Talent] {
@@ -38,22 +37,6 @@ class GridViewModel: ObservableObject {
         }
     }
 
-//     Добавление метода для заполнения таблицы элементами или пустыми местами
-    func fillMissingPlaces() {
-        let elements = talents
-        talents = (1...totalRows).flatMap { row in
-            (1...totalColumns).map { column in
-                if let element = elements.first(where: { $0.row == row && $0.column == column }) {
-                    return element
-                } else {
-                    // Возвращение пустого заполнителя для отсутствующих элементов
-                    return Talent(name: "", icon: "", baseDescription: "", maxPoints: 0, requiredPoints: 0, row: row, column: column)
-                }
-            }
-        }
-    }
-
-//     Методы для работы с данными
     func incrementCount(for elementID: UUID) {
         if let index = talents.firstIndex(where: { $0.id == elementID }) {
             if talents[index].currentPoints < talents[index].maxPoints {

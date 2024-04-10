@@ -14,7 +14,7 @@ struct Talent_CalculatorApp: App {
     
     var body: some Scene {
         WindowGroup {
-            TestGridView()
+            ClassesListView()
         }
         .environmentObject(gridViewModel)
     }
