@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ClassesListView: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List(CharacterData.characterClasses, id: \.name) { characterClass in
                 NavigationLink(destination: TalentsTreeView(characterClass: characterClass)) {
                     HStack {

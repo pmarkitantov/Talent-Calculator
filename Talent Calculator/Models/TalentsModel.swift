@@ -8,21 +8,29 @@
 import Foundation
 import SwiftUI
 
-//enum Direction: String {
+// enum Direction: String {
 //    case up, down, left, right
-//}
+// }
+
+struct TalentPosition {
+    var id: UUID
+    var name: String
+    var rect: CGRect
+}
+
 
 // Структура Arrow с параметрами: направление, размер и название изображения
-struct Arrow {
-
-    var imageName: String
+struct Arrow: Decodable {
+    let image: String
+    var isActive: Bool
+    let toggleTalentName: String
+    let displaySide: String
 }
 
 struct TalentTree {
     let name: String
     let background: String
     let icon: String
-    
 }
 
 enum TalentBranches {
@@ -49,8 +57,7 @@ struct Talent: Identifiable, Decodable {
     let requiredPoints: Int
     let row: Int
     let column: Int
-    let arrow: String?
-
+    let arrow: Arrow?
 
     enum CodingKeys: String, CodingKey {
         case name, icon, baseDescription, currentPoints, maxPoints, requiredPoints, row, column, arrow
@@ -68,11 +75,11 @@ struct Talent: Identifiable, Decodable {
         requiredPoints = try container.decode(Int.self, forKey: .requiredPoints)
         row = try container.decode(Int.self, forKey: .row)
         column = try container.decode(Int.self, forKey: .column)
-        arrow = try container.decodeIfPresent(String.self, forKey: .arrow) // Декодирование опционального значения
+        arrow = try container.decodeIfPresent(Arrow.self, forKey: .arrow)
     }
 
     // Дополнительный инициализатор для создания объектов в коде
-    init(name: String, icon: String, baseDescription: String, currentPoints: Int = 0, maxPoints: Int, requiredPoints: Int, row: Int, column: Int, arrow: String? = nil) {
+    init(name: String, icon: String, baseDescription: String, currentPoints: Int = 0, maxPoints: Int, requiredPoints: Int, row: Int, column: Int, arrow: Arrow? = nil) {
         id = UUID()
         self.name = name
         self.icon = icon

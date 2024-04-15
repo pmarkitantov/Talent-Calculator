@@ -11,7 +11,7 @@
 		AC1598B52BB478C400D605F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1598B42BB478C400D605F9 /* Assets.xcassets */; };
 		AC1598B82BB478C400D605F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1598B72BB478C400D605F9 /* Preview Assets.xcassets */; };
 		AC1598DC2BB47D0100D605F9 /* ClassesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598DB2BB47D0100D605F9 /* ClassesListView.swift */; };
-		AC1598E02BB47D5A00D605F9 /* CharacterTalentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598DF2BB47D5A00D605F9 /* CharacterTalentsModel.swift */; };
+		AC1598E02BB47D5A00D605F9 /* TalentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598DF2BB47D5A00D605F9 /* TalentsModel.swift */; };
 		AC1598E92BB49BF300D605F9 /* TalentsTreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598E82BB49BF300D605F9 /* TalentsTreeView.swift */; };
 		AC1598EB2BB49C8A00D605F9 /* TalentGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598EA2BB49C8A00D605F9 /* TalentGridView.swift */; };
 		AC1598F12BB4A62200D605F9 /* GridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598F02BB4A62200D605F9 /* GridViewModel.swift */; };
@@ -23,6 +23,7 @@
 		AC8D2B2B2BC6B5E300E4A245 /* TalentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8D2B2A2BC6B5E300E4A245 /* TalentCell.swift */; };
 		AC8D2B2D2BC6C4B500E4A245 /* druidFeral.json in Resources */ = {isa = PBXBuildFile; fileRef = AC8D2B2C2BC6C4B500E4A245 /* druidFeral.json */; };
 		AC8D2B2F2BC6C4CA00E4A245 /* druidRestoration.json in Resources */ = {isa = PBXBuildFile; fileRef = AC8D2B2E2BC6C4CA00E4A245 /* druidRestoration.json */; };
+		ACC0CDED2BCD6C56004EAD40 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC0CDEC2BCD6C56004EAD40 /* ArrowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +32,7 @@
 		AC1598B42BB478C400D605F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC1598B72BB478C400D605F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC1598DB2BB47D0100D605F9 /* ClassesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesListView.swift; sourceTree = "<group>"; };
-		AC1598DF2BB47D5A00D605F9 /* CharacterTalentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTalentsModel.swift; sourceTree = "<group>"; };
+		AC1598DF2BB47D5A00D605F9 /* TalentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentsModel.swift; sourceTree = "<group>"; };
 		AC1598E82BB49BF300D605F9 /* TalentsTreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentsTreeView.swift; sourceTree = "<group>"; };
 		AC1598EA2BB49C8A00D605F9 /* TalentGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentGridView.swift; sourceTree = "<group>"; };
 		AC1598F02BB4A62200D605F9 /* GridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewModel.swift; sourceTree = "<group>"; };
@@ -43,6 +44,7 @@
 		AC8D2B2A2BC6B5E300E4A245 /* TalentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentCell.swift; sourceTree = "<group>"; };
 		AC8D2B2C2BC6C4B500E4A245 /* druidFeral.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = druidFeral.json; sourceTree = "<group>"; };
 		AC8D2B2E2BC6C4CA00E4A245 /* druidRestoration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = druidRestoration.json; sourceTree = "<group>"; };
+		ACC0CDEC2BCD6C56004EAD40 /* ArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +101,7 @@
 		AC1598BE2BB47A4900D605F9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AC1598DF2BB47D5A00D605F9 /* CharacterTalentsModel.swift */,
+				AC1598DF2BB47D5A00D605F9 /* TalentsModel.swift */,
 				AC7BAFA02BB64392007883B1 /* CharacterClassesModel.swift */,
 			);
 			path = Models;
@@ -155,6 +157,7 @@
 				AC7BAF9C2BB620FE007883B1 /* TabbarButtonView.swift */,
 				AC7BAF9E2BB63EDC007883B1 /* TalentTreeHeader.swift */,
 				AC8D2B2A2BC6B5E300E4A245 /* TalentCell.swift */,
+				ACC0CDEC2BCD6C56004EAD40 /* ArrowView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -239,9 +242,10 @@
 				AC7BAFA12BB64392007883B1 /* CharacterClassesModel.swift in Sources */,
 				AC7BAF9D2BB620FE007883B1 /* TabbarButtonView.swift in Sources */,
 				AC1598F12BB4A62200D605F9 /* GridViewModel.swift in Sources */,
+				ACC0CDED2BCD6C56004EAD40 /* ArrowView.swift in Sources */,
 				AC1598DC2BB47D0100D605F9 /* ClassesListView.swift in Sources */,
 				AC8D2B2B2BC6B5E300E4A245 /* TalentCell.swift in Sources */,
-				AC1598E02BB47D5A00D605F9 /* CharacterTalentsModel.swift in Sources */,
+				AC1598E02BB47D5A00D605F9 /* TalentsModel.swift in Sources */,
 				AC1598B12BB478C200D605F9 /* Talent_CalculatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

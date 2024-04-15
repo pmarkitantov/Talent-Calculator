@@ -17,7 +17,13 @@
         "maxPoints": 1,
         "requiredPoints": 0,
         "row": 1,
-        "column": 2
+        "column": 2,
+        "arrow": {
+            "image": "ArrowRightShort",
+            "isActive": true,
+            "toggleTalentName": "Nature's grasp",
+            "displaySide": "right"
+          }
     },
     {
         "name": "Improved Nature's grasp",
@@ -48,7 +54,12 @@
         "requiredPoints": 5,
         "row": 2,
         "column": 2,
-        "arrow": "ArrowMedium"
+        "arrow": {
+            "image": "ArrowMedium",
+            "isActive": false,
+            "toggleTalentName": "Toggle Talent 1",
+            "displaySide": "bottom"
+          }
     },
     {
         "name": "Talent 5",

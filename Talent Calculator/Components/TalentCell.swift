@@ -13,24 +13,21 @@ struct TalentCell: View {
     let incrementCount: (UUID) -> Void
 
     var body: some View {
-        if talent.maxPoints > 0 {
-            ZStack(alignment: .bottomTrailing) {
-                Button(action: {
-                    incrementCount(talent.id)
-                    pointsSpend += 1
-                }) {
-                    imageForTalent
-                }
-                .disabled(!isConditionMet)
-
-                Text("\(talent.currentPoints)/\(talent.maxPoints)")
-                    .talentCounterStyle(isMaxedOut: talent.currentPoints >= talent.maxPoints)
+        ZStack(alignment: .bottomTrailing) {
+            Button(action: {
+                incrementCount(talent.id)
+                pointsSpend += 1
+            }) {
+                imageForTalent
             }
-            .frame(width: 70, height: 70)
-            .allowsHitTesting(talent.currentPoints < talent.maxPoints && isConditionMet)
-        } else {
-            Color.clear
+            .disabled(!isConditionMet)
+
+            Text("\(talent.currentPoints)/\(talent.maxPoints)")
+                .talentCounterStyle(isMaxedOut: talent.currentPoints >= talent.maxPoints)
+                .grayscale(isConditionMet ? 0 : 1)
         }
+//        .frame(width: 70, height: 70)
+        .allowsHitTesting(talent.currentPoints < talent.maxPoints && isConditionMet)
     }
 
     private var isConditionMet: Bool {
@@ -39,7 +36,9 @@ struct TalentCell: View {
 
     private var imageForTalent: some View {
         Image(talent.icon)
-            .colorMultiply(isConditionMet ? Color.white : Color.gray)
+            .resizable()
+//            .colorMultiply(isConditionMet ? Color.white : Color.gray)
+            .grayscale(isConditionMet ? 0 : 1)
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .overlay(
                 isConditionMet ?
@@ -52,7 +51,7 @@ struct TalentCell: View {
 
 extension Text {
     func talentCounterStyle(isMaxedOut: Bool) -> some View {
-        padding(3)
+        padding(5)
             .background(Color.black.opacity(0.7))
             .foregroundColor(isMaxedOut ? Color.yellow : Color.green)
             .clipShape(RoundedRectangle(cornerRadius: 5))
