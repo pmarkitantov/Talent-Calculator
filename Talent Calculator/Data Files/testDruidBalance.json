@@ -33,7 +33,13 @@
         "maxPoints": 4,
         "requiredPoints": 0,
         "row": 1,
-        "column": 3
+        "column": 3,
+        "dependencies": [
+                    {
+                        "talentName": "Nature's grasp",
+                        "requiredPoints": 1
+                    }
+                ]
     },
     {
         "name": "Improved Entangling roots",

@@ -12,6 +12,11 @@ import SwiftUI
 //    case up, down, left, right
 // }
 
+struct TalentDependency: Codable {
+    var talentName: String
+    var requiredPoints: Int
+}
+
 struct TalentPosition {
     var id: UUID
     var name: String
@@ -58,9 +63,10 @@ struct Talent: Identifiable, Decodable {
     let row: Int
     let column: Int
     let arrow: Arrow?
+    var dependencies: [TalentDependency]?
 
     enum CodingKeys: String, CodingKey {
-        case name, icon, baseDescription, currentPoints, maxPoints, requiredPoints, row, column, arrow
+        case name, icon, baseDescription, currentPoints, maxPoints, requiredPoints, row, column, arrow, dependencies
     }
 
     init(from decoder: Decoder) throws {
@@ -76,6 +82,8 @@ struct Talent: Identifiable, Decodable {
         row = try container.decode(Int.self, forKey: .row)
         column = try container.decode(Int.self, forKey: .column)
         arrow = try container.decodeIfPresent(Arrow.self, forKey: .arrow)
+        dependencies = try container.decodeIfPresent([TalentDependency].self, forKey: .dependencies)
+        
     }
 
     // Дополнительный инициализатор для создания объектов в коде

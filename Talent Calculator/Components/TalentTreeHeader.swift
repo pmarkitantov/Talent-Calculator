@@ -13,22 +13,20 @@ struct TalentTreeHeader: View {
     @Binding var pointsSpent: Int
 
     var body: some View {
-        VStack {
-            HStack {
-                Text(branchName)
-                    .font(.headline)
-                    .padding()
-                Spacer()
-                Text("Уровень: \(currentLevel)")
-                    .padding()
-                Spacer()
-                Text("Очки: \(pointsSpent)")
-                    .padding()
-            }
-            .background(Color.white.opacity(0.7))
-            .cornerRadius(10)
-            .padding(.horizontal, 10)
+        HStack {
+            Text(branchName)
+                .font(.headline)
+                
+            Spacer()
+            Text("Уровень: \(currentLevel)")
+                
+            Spacer()
+            Text("Очки: \(pointsSpent)")
+                
         }
+        .padding()
+        .background(Color.white.opacity(0.7))
+        .cornerRadius(10)
     }
 }
 

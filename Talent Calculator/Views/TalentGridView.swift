@@ -20,6 +20,15 @@ struct TalentGridView: View {
         Array(repeating: .init(.flexible()), count: columns)
     }
 
+    func isTalentUnlocked(_ talent: Talent) -> Bool {
+        guard let dependencies = talent.dependencies else { return talent.requiredPoints <= pointsSpend }
+
+        return dependencies.allSatisfy { dependency in
+            guard let requiredTalent = viewModel.talentsBranches[selectedBranchIndex].first(where: { $0.name == dependency.talentName }) else { return false }
+            return requiredTalent.currentPoints >= dependency.requiredPoints && talent.requiredPoints <= pointsSpend
+        }
+    }
+
     var body: some View {
         ScrollView {
             LazyVGrid(columns: gridLayout, spacing: 20) {
@@ -32,6 +41,8 @@ struct TalentGridView: View {
                         TalentCell(talent: talent, pointsSpend: $pointsSpend, incrementCount: { talentId in
                             viewModel.incrementCount(for: talentId, inBranch: selectedBranchIndex)
                         })
+                        .allowsHitTesting(isTalentUnlocked(talent))
+                        .grayscale(isTalentUnlocked(talent) ? 0 : 1)
                     } else {
                         // Если талант не найден, отображаем пустое пространство
                         Color.clear
