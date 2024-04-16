@@ -27,9 +27,8 @@ struct TalentPosition {
 // Структура Arrow с параметрами: направление, размер и название изображения
 struct Arrow: Decodable {
     let image: String
-    var isActive: Bool
-    let toggleTalentName: String
-    let displaySide: String
+    let side: String
+    let size: String
 }
 
 struct TalentTree {
@@ -63,10 +62,10 @@ struct Talent: Identifiable, Decodable {
     let row: Int
     let column: Int
     let arrow: Arrow?
-    var dependencies: [TalentDependency]?
+    var dependencyName: String?
 
     enum CodingKeys: String, CodingKey {
-        case name, icon, baseDescription, currentPoints, maxPoints, requiredPoints, row, column, arrow, dependencies
+        case name, icon, baseDescription, currentPoints, maxPoints, requiredPoints, row, column, arrow, dependencyName
     }
 
     init(from decoder: Decoder) throws {
@@ -82,12 +81,12 @@ struct Talent: Identifiable, Decodable {
         row = try container.decode(Int.self, forKey: .row)
         column = try container.decode(Int.self, forKey: .column)
         arrow = try container.decodeIfPresent(Arrow.self, forKey: .arrow)
-        dependencies = try container.decodeIfPresent([TalentDependency].self, forKey: .dependencies)
+        dependencyName = try container.decodeIfPresent(String.self, forKey: .dependencyName)
         
     }
 
     // Дополнительный инициализатор для создания объектов в коде
-    init(name: String, icon: String, baseDescription: String, currentPoints: Int = 0, maxPoints: Int, requiredPoints: Int, row: Int, column: Int, arrow: Arrow? = nil) {
+    init(name: String, icon: String, baseDescription: String, currentPoints: Int = 0, maxPoints: Int, requiredPoints: Int, row: Int, column: Int, arrow: Arrow? = nil, dependencyName: String? = nil) {
         id = UUID()
         self.name = name
         self.icon = icon
@@ -98,5 +97,6 @@ struct Talent: Identifiable, Decodable {
         self.row = row
         self.column = column
         self.arrow = arrow
+        self.dependencyName = dependencyName
     }
 }

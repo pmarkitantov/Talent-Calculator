@@ -7,18 +7,18 @@
 
 import SwiftUI
 
-struct ArrowView: View {
-    
-    let arrow: Arrow
-
-    var body: some View {
-        Image(arrow.image)
-            .resizable()
-            .scaledToFill()
-        
-    }
-}
-
-#Preview {
-    ArrowView(arrow: Arrow(image: "ArrowRightShort", isActive: true, toggleTalentName: "hui", displaySide: "down"))
-}
+//struct ArrowView: View {
+//    
+//    let arrow: Arrow
+//
+//    var body: some View {
+//        Image(arrow.image)
+//            .resizable()
+//            .scaledToFill()
+//        
+//    }
+//}
+//
+//#Preview {
+//    ArrowView(arrow: Arrow(image: "ArrowRightShort", isActive: true, toggleTalentName: "hui", displaySide: "down"))
+//}

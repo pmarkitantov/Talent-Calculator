@@ -42,7 +42,7 @@ struct TabbarButtonView: View {
     }
 }
 
-#Preview(traits: .sizeThatFitsLayout) {
+#Preview {
     TabbarButtonView(talentTrees: [TalentTree(name: "Balance", background: "druidBalance", icon: "druid-balance-icon"),
                                    TalentTree(name: "Feral", background: "druidFeral", icon: "druid-feral-icon"),
                                    TalentTree(name: "Restoration", background: "druidRestoration", icon: "druid-restoration-icon")], selectedTab: .constant(0))

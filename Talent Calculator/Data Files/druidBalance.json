@@ -18,6 +18,7 @@
         "requiredPoints": 0,
         "row": 1,
         "column": 2
+       
     },
     {
         "name": "Improved Nature's grasp",
@@ -27,7 +28,13 @@
         "maxPoints": 4,
         "requiredPoints": 0,
         "row": 1,
-        "column": 3
+        "column": 3,
+        "arrow": {
+            "image": "ArrowRightShort",
+            "side": "left",
+            "size": "short"
+          },
+        "dependencyName": "Nature's grasp"
     },
     {
         "name": "Improved Entangling roots",
@@ -40,7 +47,7 @@
         "column": 1
     },
     {
-        "name": "Talent 5",
+        "name": "Improved Moonfire",
         "icon": "spell_nature_starfall",
         "baseDescription": "Description of Talent 5.",
         "currentPoints": 0,
@@ -48,9 +55,10 @@
         "requiredPoints": 5,
         "row": 2,
         "column": 2
+        
     },
     {
-        "name": "Talent 5",
+        "name": "Natural Weapons",
         "icon": "inv_staff_01",
         "baseDescription": "Description of Talent 5.",
         "currentPoints": 0,
@@ -58,9 +66,10 @@
         "requiredPoints": 5,
         "row": 2,
         "column": 3
+        
     },
     {
-        "name": "Talent 5",
+        "name": "Natural Shapeshifter",
         "icon": "spell_nature_wispsplode",
         "baseDescription": "Description of Talent 5.",
         "currentPoints": 0,
@@ -68,9 +77,10 @@
         "requiredPoints": 5,
         "row": 2,
         "column": 4
+        
     },
     {
-        "name": "Talent 5",
+        "name": "Improved Throrns",
         "icon": "spell_nature_thorns",
         "baseDescription": "Description of Talent 5.",
         "currentPoints": 0,
@@ -80,17 +90,23 @@
         "column": 1
     },
     {
-        "name": "Talent 5",
+        "name": "Omen of Clarity",
         "icon": "spell_nature_crystalball",
         "baseDescription": "Description of Talent 5.",
         "currentPoints": 0,
         "maxPoints": 1,
         "requiredPoints": 10,
         "row": 3,
-        "column": 3
+        "column": 3,
+        "arrow": {
+            "image": "ArrowShort",
+            "side": "top",
+            "size": "short"
+          },
+        "dependencyName": "Natural Weapons"
     },
     {
-        "name": "Talent 5",
+        "name": "Nature's Reach",
         "icon": "spell_nature_naturetouchgrow",
         "baseDescription": "Description of Talent 5.",
         "currentPoints": 0,
@@ -100,17 +116,22 @@
         "column": 4
     },
     {
-        "name": "Talent 5",
+        "name": "Vengeance",
         "icon": "spell_nature_purge",
         "baseDescription": "Description of Talent 5.",
         "currentPoints": 0,
         "maxPoints": 5,
         "requiredPoints": 15,
         "row": 4,
-        "column": 2
+        "column": 2,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+          }
     },
     {
-        "name": "Talent 5",
+        "name": "Improved Starfire",
         "icon": "spell_arcane_starfire",
         "baseDescription": "Description of Talent 5.",
         "currentPoints": 0,
@@ -120,7 +141,7 @@
         "column": 3
     },
     {
-        "name": "Talent 5",
+        "name": "Nature's Grase",
         "icon": "spell_nature_naturesblessing",
         "baseDescription": "Description of Talent 5.",
         "currentPoints": 0,
@@ -130,7 +151,7 @@
         "column": 2
     },
     {
-        "name": "Talent 5",
+        "name": "Moonglow",
         "icon": "spell_nature_sentinal",
         "baseDescription": "Description of Talent 5.",
         "currentPoints": 0,
@@ -140,17 +161,23 @@
         "column": 3
     },
     {
-        "name": "Talent 5",
+        "name": "Moonfury",
         "icon": "spell_nature_moonglow",
         "baseDescription": "Description of Talent 5.",
         "currentPoints": 0,
         "maxPoints": 5,
         "requiredPoints": 25,
         "row": 6,
-        "column": 2
+        "column": 2,
+        "arrow": {
+            "image": "ArrowShort",
+            "side": "top",
+            "size": "short"
+          },
+        "dependencyName": "Nature's Grase"
     },
     {
-        "name": "Talent 5",
+        "name": "Moonkin Form",
         "icon": "spell_nature_forceofnature",
         "baseDescription": "Description of Talent 5.",
         "currentPoints": 0,

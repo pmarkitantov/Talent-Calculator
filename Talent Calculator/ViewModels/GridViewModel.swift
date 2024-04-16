@@ -20,8 +20,8 @@ class GridViewModel: ObservableObject {
         Task {
             for (index, talentTree) in characterClass.talentTrees.enumerated() where index < talentsBranches.count {
                 do {
-//                    let filename = characterClass.name.lowercased() + talentTree.name
-                    let talents = try await loadTalentsFromJSON(named: "testDruidBalance")
+                    let filename = characterClass.name.lowercased() + talentTree.name
+                    let talents = try await loadTalentsFromJSON(named: filename)
                     DispatchQueue.main.async { [weak self] in
                         self?.talentsBranches[index] = talents
                     }

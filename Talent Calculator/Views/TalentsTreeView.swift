@@ -11,8 +11,8 @@ struct TalentsTreeView: View {
     let characterClass: CharacterClass
     @ObservedObject var viewModel: GridViewModel
     @State private var selectedTab: Int  = 0
-    @State private var currentLevel: Int = 10
     @State var pointsSpent: Int = 0
+    @State private var currentLevel: Int = 10
 
     init(characterClass: CharacterClass) {
         self.characterClass = characterClass
@@ -29,8 +29,8 @@ struct TalentsTreeView: View {
                     .ignoresSafeArea()
 
                 VStack(spacing: 20) {
-                    TalentTreeHeader(branchName: tree.name, currentLevel: $currentLevel, pointsSpent: $pointsSpent)
                     TalentGridView(viewModel: viewModel, pointsSpend: $pointsSpent, selectedBranchIndex: selectedTab)
+                        .padding()
 
                     Rectangle()
                         .fill(Color.gray) // Задаём цвет перегородки
@@ -49,9 +49,5 @@ struct TalentsTreeView: View {
 }
 
 #Preview {
-    TalentsTreeView(characterClass: CharacterClass(name: "Druid", iconName: "druid", nameColor: .orange, talentTrees: [
-        TalentTree(name: "Balance", background: "druidBalance", icon: "druid-balance-icon"),
-        TalentTree(name: "Feral", background: "druidFeral", icon: "druid-feral-icon"),
-        TalentTree(name: "Restoration", background: "druidRestoration", icon: "druid-restoration-icon")
-    ]))
+    TalentsTreeView(characterClass: CharacterData.characterClasses[0])
 }
