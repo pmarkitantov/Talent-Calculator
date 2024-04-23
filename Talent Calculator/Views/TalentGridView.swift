@@ -28,7 +28,7 @@ struct TalentGridView: View {
         guard let dependencyName = talent.dependencyName else { return talent.requiredPoints <= pointsSpend }
 
         let requiredTalent = viewModel.talentsBranches[selectedBranchIndex].first(where: { $0.name == dependencyName })
-        return requiredTalent?.currentPoints == requiredTalent?.maxPoints
+        return requiredTalent?.currentPoints == requiredTalent?.maxPoints && talent.requiredPoints <= pointsSpend
     }
 
     var body: some View {
@@ -73,36 +73,37 @@ struct TalentGridView: View {
             return -cellWidth / 2 // Пример смещения, настройте по необходимости
         case "right":
             return cellWidth / 4
+        case "topLeft":
+            return -cellWidth / 4 + 5
         default:
             return 0
         }
     }
 
     func yOffset(for arrow: Arrow, with cellHeight: CGFloat) -> CGFloat {
-        if arrow.side == "top" {
-            switch arrow.size {
-            case "short":
-                return -cellHeight / 2 - 5
-            case "medium":
-                return -cellHeight - 20
-            default:
-                return 0
-            }
-        } else {
+        switch (arrow.side, arrow.size) {
+        case ("top", "short"):
+            return -cellHeight / 2 - 5
+        case ("top", "medium"):
+            return -cellHeight - 20
+        case ("topLeft", _):
+            return -cellHeight
+        case("top","long"):
+            return -cellHeight * 2 + 5
+        default:
             return 0
         }
     }
 
     func frameWidth(for arrow: Arrow, _ cellWidth: CGFloat) -> CGFloat {
-        if arrow.side == "left" {
-            return cellWidth / 2
-        }
-        switch arrow.size {
-        case "short":
-            return cellWidth / 2
-        case "medium":
+        switch (arrow.side, arrow.size) {
+        case("topLeft", "medium"):
             return cellWidth
-        case "long":
+        case ("left", _):
+            return cellWidth / 2
+        case (_, "short"):
+            return cellWidth / 2
+        case (_, "medium"), (_, "long"):
             return cellWidth
         default:
             return cellWidth / 2
@@ -110,17 +111,21 @@ struct TalentGridView: View {
     }
 
     func frameHeight(for arrow: Arrow, _ cellHeight: CGFloat) -> CGFloat {
-        if arrow.side == "left" && arrow.size == "short" {
+        switch (arrow.side, arrow.size) {
+        case ("left", "short"):
             return cellHeight / 1.7
-        }
-        if arrow.side == "top" && arrow.size == "medium" {
+        case ("top", "medium"):
             return cellHeight + 50
-        } else {
+        case("topLeft", "medium"):
+            return cellHeight
+        case("top","long"):
+            return cellHeight * 3 - 5
+        default:
             return cellHeight
         }
     }
 }
 
 #Preview {
-    TalentGridView(viewModel: GridViewModel(chatacterClass: CharacterData.characterClasses[0]), pointsSpend: .constant(0), selectedBranchIndex: 0)
+    TalentGridView(viewModel: GridViewModel(chatacterClass: CharacterData.characterClasses[0]), pointsSpend: .constant(0), selectedBranchIndex: 2)
 }

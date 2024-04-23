@@ -12,7 +12,7 @@ struct TabbarButtonView: View {
     @Binding var selectedTab: Int
 
     var body: some View {
-        HStack(alignment: .top, spacing: 50) {
+        HStack(spacing: 50) {
             ForEach(Array(talentTrees.enumerated()), id: \.element.name) { index, tree in
                 Button(action: {
                     self.selectedTab = index

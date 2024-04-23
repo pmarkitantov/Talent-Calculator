@@ -28,16 +28,17 @@ struct TalentsTreeView: View {
                     .resizable()
                     .ignoresSafeArea()
 
-                VStack(spacing: 20) {
+                VStack(spacing: 0) {
                     TalentGridView(viewModel: viewModel, pointsSpend: $pointsSpent, selectedBranchIndex: selectedTab)
-                        .padding()
+                        .padding(.horizontal)
+                        
 
-                    Rectangle()
-                        .fill(Color.gray) // Задаём цвет перегородки
-                        .frame(height: 2) // Задаём толщину перегородки равной 2
-                        .edgesIgnoringSafeArea(.horizontal)
+                    RoundedRectangle(cornerRadius:10)
+                        .fill(Color.yellow) // Задаём цвет перегородки
+                        .frame(height: 5) // Задаём толщину перегородки равной 2
 
                     TabbarButtonView(talentTrees: characterClass.talentTrees, selectedTab: $selectedTab)
+                        .padding()
                 }
             } else {
                 Text("Выбранная вкладка недоступна")

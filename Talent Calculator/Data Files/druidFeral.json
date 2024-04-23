@@ -129,7 +129,12 @@
         "requiredPoints": 15,
         "row": 4,
         "column": 4,
-        "arrow": null
+        "arrow": {
+            "image": "ArrowRightMedium",
+            "side": "topLeft",
+            "size": "medium"
+          },
+        "dependencyName": "Sharpened Claws"
     },
     {
         "name": "Savage Fury",
@@ -162,7 +167,12 @@
         "requiredPoints": 25,
         "row": 6,
         "column": 2,
-        "arrow": null
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+          },
+        "dependencyName": "Predatory Strikes"
     },
     {
         "name": "Leader of the Pack",

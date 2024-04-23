@@ -128,7 +128,9 @@
             "image": "ArrowMedium",
             "side": "top",
             "size": "medium"
-          }
+          },
+        "dependencyName":"Improved Moonfire"
+        
     },
     {
         "name": "Improved Starfire",
