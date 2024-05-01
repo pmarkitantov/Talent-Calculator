@@ -23,6 +23,7 @@
 		AC8D2B2D2BC6C4B500E4A245 /* druidFeral.json in Resources */ = {isa = PBXBuildFile; fileRef = AC8D2B2C2BC6C4B500E4A245 /* druidFeral.json */; };
 		AC8D2B2F2BC6C4CA00E4A245 /* druidRestoration.json in Resources */ = {isa = PBXBuildFile; fileRef = AC8D2B2E2BC6C4CA00E4A245 /* druidRestoration.json */; };
 		ACA5BE9B2BE274DE00E9AA8A /* paladinHoly.json in Resources */ = {isa = PBXBuildFile; fileRef = ACA5BE9A2BE274DE00E9AA8A /* paladinHoly.json */; };
+		ACA5BE9F2BE2799800E9AA8A /* paladinProtection.json in Resources */ = {isa = PBXBuildFile; fileRef = ACA5BE9E2BE2799800E9AA8A /* paladinProtection.json */; };
 		ACC0CDED2BCD6C56004EAD40 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC0CDEC2BCD6C56004EAD40 /* ArrowView.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		AC8D2B2C2BC6C4B500E4A245 /* druidFeral.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = druidFeral.json; sourceTree = "<group>"; };
 		AC8D2B2E2BC6C4CA00E4A245 /* druidRestoration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = druidRestoration.json; sourceTree = "<group>"; };
 		ACA5BE9A2BE274DE00E9AA8A /* paladinHoly.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = paladinHoly.json; sourceTree = "<group>"; };
+		ACA5BE9E2BE2799800E9AA8A /* paladinProtection.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = paladinProtection.json; sourceTree = "<group>"; };
 		ACC0CDEC2BCD6C56004EAD40 /* ArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,7 @@
 				AC8D2B2C2BC6C4B500E4A245 /* druidFeral.json */,
 				AC8D2B2E2BC6C4CA00E4A245 /* druidRestoration.json */,
 				ACA5BE9A2BE274DE00E9AA8A /* paladinHoly.json */,
+				ACA5BE9E2BE2799800E9AA8A /* paladinProtection.json */,
 			);
 			path = "Data Files";
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC8D2B2D2BC6C4B500E4A245 /* druidFeral.json in Resources */,
+				ACA5BE9F2BE2799800E9AA8A /* paladinProtection.json in Resources */,
 				AC1598FB2BB5B89400D605F9 /* druidBalance.json in Resources */,
 				ACA5BE9B2BE274DE00E9AA8A /* paladinHoly.json in Resources */,
 				AC1598B82BB478C400D605F9 /* Preview Assets.xcassets in Resources */,
