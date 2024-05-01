@@ -1,0 +1,167 @@
+[
+    {
+        "name": "Divine Strength",
+        "icon": "ability_golemthunderclap",
+        "baseDescription": "Reduces the cost of your Maul, Swipe, Claw, and Rake abilities by 1 Rage or Energy.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Divine Intellect",
+        "icon": "spell_nature_sleep",
+        "baseDescription": "Increases the Attack Power reduction of your Demoralizing Roar by 8% and the damage caused by your Ferocious Bite by 3%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Spiritual Focus",
+        "icon": "spell_arcane_blink",
+        "baseDescription": "Gives your Flash of Light and Holy Light spells a 14% chance to not lose casting time when you take damage.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Improved Seal of Righteousness",
+        "icon": "ability_thunderbolt",
+        "baseDescription": "Increases the damage done by your Seal of Righteousness and Judgement of Righteousness by 3%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Healing Light",
+        "icon": "spell_holy_holybolt",
+        "baseDescription": "Increases the amount healed by your Holy Light and Flash of Light spells by 8%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Consecration",
+        "icon": "spell_holy_innerfire",
+        "baseDescription": "Consecrates the land beneath Paladin, doing 64 Holy damage over 8 sec to enemies who enter the area.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Improved Lay on Hands",
+        "icon": "spell_holy_layonhands",
+        "baseDescription": "Gives the target of your Lay on Hands spell a 15% bonus to their armor value from items for 2 min.  In addition, the cooldown for your Lay on Hands spell is reduced by 10 min.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Unyielding Faith",
+        "icon": "spell_holy_unyieldingfaith",
+        "baseDescription": "Increases your chance to resist Fear and Disorient effects by an additional 10%.",
+        "currentPoints": 0,
+        "maxPoints":2,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 4,
+        "arrow": null
+    },
+    {
+        "name": "Illumination",
+        "icon": "spell_holy_greaterheal",
+        "baseDescription": "After getting a critical effect from your Flash of Light, Holy Light, or Holy Shock heal spell, gives you a 20% chance to gain Mana equal to the base cost of the spell.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Improved Blessing of Wisdom",
+        "icon": "spell_holy_sealofwisdom",
+        "baseDescription": "Increases the effect of your Blessing of Wisdom spell by 10%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Divine Favor",
+        "icon": "spell_holy_heal",
+        "baseDescription": "When activated, gives your next Flash of Light, Holy Light, or Holy Shock spell a 100% critical effect chance.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 2,
+        "arrow": {
+            "image": "ArrowShort",
+            "side": "top",
+            "size": "short"
+          },
+        "dependencyName": "Illumination"
+    },
+    {
+        "name": "Lasting Judgement",
+        "icon": "spell_holy_healingaura",
+        "baseDescription": "Increases the duration of your Judgement of Light and Judgement of Wisdom by 10 sec.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Holy Power",
+        "icon": "spell_holy_power",
+        "baseDescription": "Increases the critical effect chance of your Holy spells by 1%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 25,
+        "row": 6,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Holy Shock",
+        "icon": "spell_holy_searinglight",
+        "baseDescription": "Blasts the target with Holy energy, causing 204 to 220 Holy damage to an enemy, or 204 to 220 healing to an ally.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 30,
+        "row": 7,
+        "column": 2,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+          },
+        "dependencyName": "Divine Favor"
+    }
+    
+]
