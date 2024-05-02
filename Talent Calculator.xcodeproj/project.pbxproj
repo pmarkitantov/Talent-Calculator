@@ -16,6 +16,7 @@
 		AC1598EB2BB49C8A00D605F9 /* TalentGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598EA2BB49C8A00D605F9 /* TalentGridView.swift */; };
 		AC1598F12BB4A62200D605F9 /* GridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598F02BB4A62200D605F9 /* GridViewModel.swift */; };
 		AC1598FB2BB5B89400D605F9 /* druidBalance.json in Resources */ = {isa = PBXBuildFile; fileRef = AC1598FA2BB5B89400D605F9 /* druidBalance.json */; };
+		AC69D01F2BF25D38006F68C2 /* paladinRetribution.json in Resources */ = {isa = PBXBuildFile; fileRef = AC69D01E2BF25D38006F68C2 /* paladinRetribution.json */; };
 		AC7BAF9D2BB620FE007883B1 /* TabbarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7BAF9C2BB620FE007883B1 /* TabbarButtonView.swift */; };
 		AC7BAF9F2BB63EDC007883B1 /* TalentTreeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7BAF9E2BB63EDC007883B1 /* TalentTreeHeader.swift */; };
 		AC7BAFA12BB64392007883B1 /* CharacterClassesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7BAFA02BB64392007883B1 /* CharacterClassesModel.swift */; };
@@ -38,6 +39,7 @@
 		AC1598EA2BB49C8A00D605F9 /* TalentGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentGridView.swift; sourceTree = "<group>"; };
 		AC1598F02BB4A62200D605F9 /* GridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewModel.swift; sourceTree = "<group>"; };
 		AC1598FA2BB5B89400D605F9 /* druidBalance.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = druidBalance.json; sourceTree = "<group>"; };
+		AC69D01E2BF25D38006F68C2 /* paladinRetribution.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = paladinRetribution.json; sourceTree = "<group>"; };
 		AC7BAF9C2BB620FE007883B1 /* TabbarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarButtonView.swift; sourceTree = "<group>"; };
 		AC7BAF9E2BB63EDC007883B1 /* TalentTreeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentTreeHeader.swift; sourceTree = "<group>"; };
 		AC7BAFA02BB64392007883B1 /* CharacterClassesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClassesModel.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				AC8D2B2E2BC6C4CA00E4A245 /* druidRestoration.json */,
 				ACA5BE9A2BE274DE00E9AA8A /* paladinHoly.json */,
 				ACA5BE9E2BE2799800E9AA8A /* paladinProtection.json */,
+				AC69D01E2BF25D38006F68C2 /* paladinRetribution.json */,
 			);
 			path = "Data Files";
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				AC1598B82BB478C400D605F9 /* Preview Assets.xcassets in Resources */,
 				AC8D2B2F2BC6C4CA00E4A245 /* druidRestoration.json in Resources */,
 				AC1598B52BB478C400D605F9 /* Assets.xcassets in Resources */,
+				AC69D01F2BF25D38006F68C2 /* paladinRetribution.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

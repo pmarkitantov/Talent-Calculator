@@ -1,0 +1,173 @@
+[
+    {
+        "name": "Improved Blessing of Might",
+        "icon": "spell_holy_fistofjustice",
+        "baseDescription": "Increases the melee attack power bonus of your Blessing of Might by 4%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Benediction",
+        "icon": "spell_frost_windwalkon",
+        "baseDescription": "Reduces the Mana cost of your Judgement and Seal spells by 3%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Improved Judgement",
+        "icon": "spell_holy_righteousfury",
+        "baseDescription": "Decreases the cooldown of your Judgement spell by 1 sec.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Improved Seal of the Crusader",
+        "icon": "spell_holy_holysmite",
+        "baseDescription": "Increases the melee attack power bonus of your Seal of the Crusader and the Holy damage increase of your Judgement of the Crusader by 5%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Deflection",
+        "icon": "ability_parry",
+        "baseDescription": "Increases your Parry chance by 1%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Vindication",
+        "icon": "spell_holy_vindication",
+        "baseDescription": "Gives the Paladin's damaging melee attacks a chance to reduce the target's Strength and Agility by 10% for 10 sec.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Conviction",
+        "icon": "spell_holy_retributionaura",
+        "baseDescription": "Increases your chance to get a critical strike with melee weapons by 1%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Seal of Command",
+        "icon": "ability_warrior_innerrage",
+        "baseDescription": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage.  Only one Seal can be active on the Paladin at any one time.  Lasts 30 sec.Unleashing this Seal's energy will judge an enemy, instantly causing 90 to 95 Holy damage, 137 to 146 if the target is stunned or incapacitated.",
+        "currentPoints": 0,
+        "maxPoints":3,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Pursuit of Justice",
+        "icon": "spell_holy_persuitofjustice",
+        "baseDescription": "Increases movement and mounted movement speed by 8%.  This does not stack with other movement speed increasing effects.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 4,
+        "arrow": null
+    },
+    {
+        "name": "Eye for an Eye",
+        "icon": "spell_holy_eyeforaneye",
+        "baseDescription": "All spell criticals against you cause 15% of the damage taken to the caster as well.  The damage caused by Eye for an Eye will not exceed 50% of the Paladin's total health.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Improved Retribution Aura",
+        "icon": "spell_holy_auraoflight",
+        "baseDescription": "Increases the damage done by your Retribution Aura by 25%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Two-Handed Weapon Specialization",
+        "icon": "inv_hammer_04",
+        "baseDescription": "Increases the damage you deal with two-handed melee weapons by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Sanctity Aura",
+        "icon": "spell_holy_mindvision",
+        "baseDescription": "Increases Holy damage done by party members within 30 yards by 10%.  Players may only have one Aura on them per Paladin at any one time.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Vengeance",
+        "icon": "ability_racial_avatar",
+        "baseDescription": "Gives you a 3% bonus to Physical and Holy damage you deal for 8 sec after dealing a critical strike from a weapon swing, spell, or ability.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 25,
+        "row": 6,
+        "column": 2,
+        "arrow": {
+            "image": "ArrowLong",
+            "side": "top",
+            "size": "long"
+          },
+        "dependencyName": "Conviction"
+    },
+    {
+        "name": "Repentance",
+        "icon": "spell_holy_prayerofhealing",
+        "baseDescription": "Puts the enemy target in a state of meditation, incapacitating them for up to 6 sec.  Any damage caused will awaken the target.  Only works against Humanoids.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 30,
+        "row": 7,
+        "column": 2,
+        "arrow": null
+    }
+    
+]
