@@ -89,7 +89,7 @@ struct TalentGridView: View {
         case ("topLeft", _):
             return -cellHeight
         case("top","long"):
-            return -cellHeight * 2 + 5
+            return -cellHeight * 2 + 10
         default:
             return 0
         }

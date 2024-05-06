@@ -31,14 +31,13 @@ struct TalentsTreeView: View {
                 VStack(spacing: 0) {
                     TalentGridView(viewModel: viewModel, pointsSpend: $pointsSpent, selectedBranchIndex: selectedTab)
                         .padding(.horizontal)
-                        
 
-                    RoundedRectangle(cornerRadius:10)
-                        .fill(Color.yellow) // Задаём цвет перегородки
-                        .frame(height: 5) // Задаём толщину перегородки равной 2
+                    Spacer()
 
                     TabbarButtonView(talentTrees: characterClass.talentTrees, selectedTab: $selectedTab)
+                        .frame(height: 60)
                         .padding()
+                        
                 }
             } else {
                 Text("Выбранная вкладка недоступна")

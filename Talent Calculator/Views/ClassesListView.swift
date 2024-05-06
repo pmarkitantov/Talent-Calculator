@@ -14,7 +14,7 @@ struct ClassesListView: View {
             List(CharacterData.characterClasses, id: \.name) { characterClass in
                 NavigationLink(destination: TalentsTreeView(characterClass: characterClass)) {
                     HStack {
-                        Image(characterClass.iconName) // Используй имя системной иконки или имя файла иконки
+                        Image(characterClass.iconName)
                         Text(characterClass.name)
                             .foregroundColor(characterClass.nameColor)
                             .font(.title)

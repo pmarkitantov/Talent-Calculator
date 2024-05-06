@@ -12,11 +12,11 @@ struct TabbarButtonView: View {
     @Binding var selectedTab: Int
 
     var body: some View {
-        HStack(spacing: 50) {
+        HStack {
             ForEach(Array(talentTrees.enumerated()), id: \.element.name) { index, tree in
-                Button(action: {
+                Button {
                     self.selectedTab = index
-                }) {
+                } label: {
                     VStack {
                         Image(tree.icon)
                             .resizable()
@@ -27,18 +27,21 @@ struct TabbarButtonView: View {
                                     .stroke(self.selectedTab == index ? Color.yellow : Color.clear, lineWidth: 3)
                             )
                         Text(tree.name)
-                            .font(.caption)
-                            .scaledToFit()
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                            .scaledToFill()
                     }
-                    .frame(width: 70)
-                    .foregroundColor(self.selectedTab == index ? .yellow : .white)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical)
+                    .foregroundColor(self.selectedTab == index ? .yellow : .primary)
                 }
-                
             }
         }
-        .frame(maxWidth: .infinity, minHeight: 80)
-        .background(Color.clear)
-        .padding(.horizontal)
+        .frame(maxWidth: .infinity, minHeight: 100)
+        .background(.ultraThinMaterial)
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+
+
     }
 }
 
