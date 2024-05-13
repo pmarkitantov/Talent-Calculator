@@ -1,0 +1,189 @@
+[
+    {
+        "name": "Improved Fireball",
+        "icon": "spell_fire_flamebolt",
+        "baseDescription": "Reduces the casting time of your Fireball spell by koeff sec.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Impact",
+        "icon": "spell_fire_meteorstorm",
+        "baseDescription": "Gives your Fire spells a 4% chance to stun the target for 2 sec.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Ignite",
+        "icon": "spell_fire_incinerate",
+        "baseDescription": "Your critical strikes from Fire damage spells cause the target to burn for an additional 24% of your spell's damage over 4 sec.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Flame Throwing",
+        "icon": "spell_fire_flare",
+        "baseDescription": "Increases the range of your Fire spells by 3 yards.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Improved Fire Blast",
+        "icon": "spell_fire_fireball",
+        "baseDescription": "Reduces the cooldown of your Fire Blast spell by 1.5 sec.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Incinerate",
+        "icon": "spell_fire_flameshock",
+        "baseDescription": "Increases the critical strike chance of your Fire Blast and Scorch spells by 4%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Improved Flamestrike",
+        "icon": "spell_fire_selfdestruct",
+        "baseDescription": "Increases the critical strike chance of your Flamestrike spell by 5%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Pyroblast",
+        "icon": "spell_fire_fireball02",
+        "baseDescription": "Hurls an immense fiery boulder that causes 148 to 195 Fire damage and an additional 56 Fire damage over 12 sec.",
+        "currentPoints": 0,
+        "maxPoints":1,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Burning Soul",
+        "icon": "spell_fire_fire",
+        "baseDescription": "Increases your Defense skill by 4.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 4,
+        "arrow": null
+    },
+    {
+        "name": "Improved Scorch",
+        "icon": "spell_fire_soulburn",
+        "baseDescription": "Your Scorch spells have a 33% chance to cause your target to be vulnerable to Fire damage.  This vulnerability increases the Fire damage dealt to your target by 3% and lasts 30 sec.  Stacks up to 5 times.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Improved Fire Ward",
+        "icon": "spell_fire_firearmor",
+        "baseDescription": "Causes your Fire Ward to have a 20% chance to reflect Fire spells while active.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Master of Elements",
+        "icon": "spell_fire_masterofelements",
+        "baseDescription": "Your Fire and Frost spell criticals will refund 10% of their base mana cost.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 4,
+        "arrow": null
+    },
+    {
+        "name": "Critical Mass",
+        "icon": "spell_nature_wispheal",
+        "baseDescription": "Increases the critical strike chance of your Fire spells by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Blast Wave",
+        "icon": "spell_holy_excorcism_02",
+        "baseDescription": "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for 159 to 192 Fire damage, and dazing them for 6 sec.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 25,
+        "row": 5,
+        "column": 3,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+          },
+        "dependencyName": "Pyroblast"
+    },
+    {
+        "name": "Fire Power",
+        "icon": "spell_fire_immolation",
+        "baseDescription": "Increases the damage done by your Fire spells by 4%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 25,
+        "row": 6,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Combustion",
+        "icon": "spell_fire_sealoffire",
+        "baseDescription": "When activated, this spell causes each of your Fire damage spell hits to increase your critical strike chance with Fire damage spells by 10%.  This effect lasts until you have caused 3 critical strikes with Fire spells.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 30,
+        "row": 7,
+        "column": 2,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+          },
+        "dependencyName": "Critical Mass"
+    }
+    
+]
