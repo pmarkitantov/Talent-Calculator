@@ -1,0 +1,195 @@
+[
+    {
+        "name": "Arcane Subtlety",
+        "icon": "spell_holy_dispelmagic",
+        "baseDescription": "Reduces your target's resistance to all your spells by 5 and reduces the threat caused by your Arcane spells by 20%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Arcane Focus",
+        "icon": "spell_holy_devotion",
+        "baseDescription": "Reduces the chance that the opponent can resist your Arcane spells by 4%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Improved Arcane Missiles",
+        "icon": "spell_nature_starfall",
+        "baseDescription": "Gives you a 80% chance to avoid interruption caused by damage while channeling Arcane Missiles.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Wand Specialization",
+        "icon": "inv_wand_01",
+        "baseDescription": "Increases your damage with Wands by 13%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Magic Absorption",
+        "icon": "spell_nature_astralrecalgroup",
+        "baseDescription": "Increases all resistances by 2 and causes all spells you fully resist to restore 1% of your total mana.  1 sec. cooldown.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Arcane Concentration",
+        "icon": "spell_shadow_manaburn",
+        "baseDescription": "Gives you a 2% chance of entering a Clearcasting state after any damage spell hits a target.  The Clearcasting state reduces the mana cost of your next damage spell by 100%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Magic Attunement",
+        "icon": "spell_nature_abolishmagic",
+        "baseDescription": "Increases the effect of your Amplify Magic and Dampen Magic spells by 25%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Improved Arcane Explosion",
+        "icon": "spell_nature_wispsplode",
+        "baseDescription": "Increases the critical strike chance of your Arcane Explosion spell by an additional 4%.",
+        "currentPoints": 0,
+        "maxPoints":3,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Arcane Resilience",
+        "icon": "spell_arcane_arcaneresilience",
+        "baseDescription": "Increases your armor by an amount equal to 50% of your Intellect.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Improved Mana Shield",
+        "icon": "spell_shadow_detectlesserinvisibility",
+        "baseDescription": "Decreases the mana lost per point of damage taken when Mana Shield is active by 10%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Improved Counterspell",
+        "icon": "spell_frost_iceshock",
+        "baseDescription": "Gives your Counterspell a 50% chance to silence the target for 4 sec.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Arcane Meditation",
+        "icon": "spell_shadow_siphonmana",
+        "baseDescription": "Allows 5% of your Mana regeneration to continue while casting.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 4,
+        "arrow": null
+    },
+    {
+        "name": "Presence of Mind",
+        "icon": "spell_nature_enchantarmor",
+        "baseDescription": "When activated, your next Mage spell with a casting time less than 10 sec becomes an instant cast spell.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Arcane Mind",
+        "icon": "spell_shadow_charm",
+        "baseDescription": "Increases your maximum Mana by 4%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 3,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+          },
+        "dependencyName": "Arcane Resilience"
+    },
+    {
+        "name": "Arcane Instability",
+        "icon": "spell_shadow_teleport",
+        "baseDescription": "Increases your spell damage and critical strike chance by 1%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 25,
+        "row": 6,
+        "column": 2,
+        "arrow": {
+            "image": "ArrowShort",
+            "side": "top",
+            "size": "short"
+          },
+        "dependencyName": "Presence of Mind"
+    },
+    {
+        "name": "Arcane Power",
+        "icon": "spell_nature_lightning",
+        "baseDescription": "When activated, your spells deal 30% more damage while costing 30% more mana to cast.  This effect lasts 15 sec.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 25,
+        "row": 7,
+        "column": 2,
+        "arrow": {
+            "image": "ArrowShort",
+            "side": "top",
+            "size": "short"
+          },
+        "dependencyName": "Arcane Instability"
+    }
+    
+]
+

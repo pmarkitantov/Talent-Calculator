@@ -49,5 +49,5 @@ struct TalentsTreeView: View {
 }
 
 #Preview {
-    TalentsTreeView(characterClass: CharacterData.characterClasses[0])
+    TalentsTreeView(characterClass: CharacterData.characterClasses[2])
 }
