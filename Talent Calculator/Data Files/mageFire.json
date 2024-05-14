@@ -148,7 +148,7 @@
         "baseDescription": "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for 159 to 192 Fire damage, and dazing them for 6 sec.",
         "currentPoints": 0,
         "maxPoints": 1,
-        "requiredPoints": 25,
+        "requiredPoints": 20,
         "row": 5,
         "column": 3,
         "arrow": {

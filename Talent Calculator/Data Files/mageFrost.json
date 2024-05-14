@@ -1,0 +1,200 @@
+[
+    {
+        "name": "Frost Warding",
+        "icon": "spell_frost_frostward",
+        "baseDescription": "Increases the armor and resistances given by your Frost Armor and Ice Armor spells by 15%.  In addition, gives your Frost Ward a 10% chance to reflect Frost spells and effects while active.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Improved Frostbolt",
+        "icon": "spell_frost_frostbolt02",
+        "baseDescription": "Reduces the casting time of your Frostbolt spell by 0.2 sec.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Elemental Precision",
+        "icon": "spell_ice_magicdamage",
+        "baseDescription": "Reduces the chance that the opponent can resist your Frost and Fire spells by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Ice Shards",
+        "icon": "spell_frost_iceshard",
+        "baseDescription": "Increases the range of your Fire spells by 3 yards.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Frostbite",
+        "icon": "spell_frost_frostarmor",
+        "baseDescription": "Reduces the cooldown of your Fire Blast spell by 1.5 sec.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Improved Frost Nova",
+        "icon": "spell_frost_freezingbreath",
+        "baseDescription": "Increases the critical strike chance of your Fire Blast and Scorch spells by 4%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Permafrost",
+        "icon": "spell_frost_wisp",
+        "baseDescription": "Increases the critical strike chance of your Flamestrike spell by 5%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 4,
+        "arrow": null
+    },
+    {
+        "name": "Piercing Ice",
+        "icon": "spell_frost_frostbolt",
+        "baseDescription": "Hurls an immense fiery boulder that causes 148 to 195 Fire damage and an additional 56 Fire damage over 12 sec.",
+        "currentPoints": 0,
+        "maxPoints":3,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Cold Snap",
+        "icon": "spell_frost_wizardmark",
+        "baseDescription": "When activated, this spell finishes the cooldown on all of your Frost spells.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Improved Blizzard",
+        "icon": "spell_frost_icestorm",
+        "baseDescription": "Adds a chill effect to your Blizzard spell.  This effect lowers the target's movement speed by 50%.  Lasts 1.50 sec.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 4,
+        "arrow": null
+    },
+    {
+        "name": "Arctic Reach",
+        "icon": "spell_shadow_darkritual",
+        "baseDescription": "Increases the range of your Frostbolt and Blizzard spells and the radius of your Frost Nova and Cone of Cold spells by 10%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Frost Channeling",
+        "icon": "spell_frost_stun",
+        "baseDescription": "Reduces the mana cost of your Frost spells by 5% and reduces the threat caused by your Frost spells by 10%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Shatter",
+        "icon": "spell_frost_frostshock",
+        "baseDescription": "Increases the critical strike chance of all your spells against frozen targets by 20%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 3,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+          },
+        "dependencyName": "Improved Frost Nova"
+    },
+    {
+        "name": "Ice Block",
+        "icon": "spell_frost_frost",
+        "baseDescription": "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for 159 to 192 Fire damage, and dazing them for 6 sec.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Improved Cone of Cold",
+        "icon": "spell_frost_glacier",
+        "baseDescription": "Increases the damage dealt by your Cone of Cold spell by 25%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Winter's Chill",
+        "icon": "spell_frost_chillingblast",
+        "baseDescription": "Gives your Frost damage spells a 40% chance to apply the Winter's Chill effect, which increases the chance a Frost spell will critically hit the target by 2% for 15 sec.  Stacks up to 5 times.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 25,
+        "row":6,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Ice Barrier",
+        "icon": "spell_ice_lament",
+        "baseDescription": "Instantly shields you, absorbing 455 damage.  Lasts 1 min.  While the shield holds, spells will not be interrupted.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 30,
+        "row": 7,
+        "column": 2,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+          },
+        "dependencyName": "Ice Block"
+    }
+    
+]
