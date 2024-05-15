@@ -30,6 +30,7 @@
 		ACD358AC2BF2098D00AA2BB0 /* mageFire.json in Resources */ = {isa = PBXBuildFile; fileRef = ACD358AB2BF2098D00AA2BB0 /* mageFire.json */; };
 		ACD358AE2BF2099D00AA2BB0 /* mageFrost.json in Resources */ = {isa = PBXBuildFile; fileRef = ACD358AD2BF2099D00AA2BB0 /* mageFrost.json */; };
 		ACD358B02BF3BB9E00AA2BB0 /* hunterBeastmastery.json in Resources */ = {isa = PBXBuildFile; fileRef = ACD358AF2BF3BB9E00AA2BB0 /* hunterBeastmastery.json */; };
+		ACE97D492BF4A90000A66BE5 /* warriorArms.json in Resources */ = {isa = PBXBuildFile; fileRef = ACE97D482BF4A90000A66BE5 /* warriorArms.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		ACD358AB2BF2098D00AA2BB0 /* mageFire.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mageFire.json; sourceTree = "<group>"; };
 		ACD358AD2BF2099D00AA2BB0 /* mageFrost.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mageFrost.json; sourceTree = "<group>"; };
 		ACD358AF2BF3BB9E00AA2BB0 /* hunterBeastmastery.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = hunterBeastmastery.json; sourceTree = "<group>"; };
+		ACE97D482BF4A90000A66BE5 /* warriorArms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = warriorArms.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 		AC1598FC2BB5D01400D605F9 /* Data Files */ = {
 			isa = PBXGroup;
 			children = (
+				ACE97D482BF4A90000A66BE5 /* warriorArms.json */,
 				AC1598FA2BB5B89400D605F9 /* druidBalance.json */,
 				AC8D2B2C2BC6C4B500E4A245 /* druidFeral.json */,
 				AC8D2B2E2BC6C4CA00E4A245 /* druidRestoration.json */,
@@ -247,6 +250,7 @@
 				ACA5BE9B2BE274DE00E9AA8A /* paladinHoly.json in Resources */,
 				AC1598B82BB478C400D605F9 /* Preview Assets.xcassets in Resources */,
 				AC8D2B2F2BC6C4CA00E4A245 /* druidRestoration.json in Resources */,
+				ACE97D492BF4A90000A66BE5 /* warriorArms.json in Resources */,
 				AC1598B52BB478C400D605F9 /* Assets.xcassets in Resources */,
 				ACD358AA2BF2097B00AA2BB0 /* mageArcane.json in Resources */,
 				AC69D01F2BF25D38006F68C2 /* paladinRetribution.json in Resources */,
