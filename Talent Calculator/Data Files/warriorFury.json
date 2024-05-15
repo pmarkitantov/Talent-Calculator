@@ -1,0 +1,200 @@
+[
+    {
+        "name": "Booming Voice",
+        "icon": "spell_nature_purge",
+        "baseDescription": "Reduces the cost of your Heroic Strike ability by 1 rage point.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Cruelty",
+        "icon": "ability_rogue_eviscerate",
+        "baseDescription": "Increases your chance to get a critical strike with melee weapons by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Improved Demoralizing Shout",
+        "icon": "ability_warrior_warcry",
+        "baseDescription": "Increases the melee attack power reduction of your Demoralizing Shout by 16%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Unbridled Wrath",
+        "icon": "spell_nature_stoneclawtotem",
+        "baseDescription": "Gives you a 16% chance to generate an additional Rage point when you deal melee damage with a weapon.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Improved Cleave",
+        "icon": "ability_warrior_cleave",
+        "baseDescription": "Increases the bonus damage done by your Cleave ability by 120%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Piercing Howl",
+        "icon": "spell_shadow_deathscream",
+        "baseDescription": "Causes all enemies near the warrior to be dazed, reducing movement speed by 50% for 6 sec.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Blood Craze",
+        "icon": "spell_shadow_summonimp",
+        "baseDescription": "Regenerates 2% of your total Health over 6 sec after being the victim of a critical strike.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Improved Battle Shout",
+        "icon": "ability_warrior_battleshout",
+        "baseDescription": "Increases the melee attack power bonus of your Battle Shout by 5%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 4,
+        "arrow": null
+    },
+    {
+        "name": "Dual Wield Specialization",
+        "icon": "ability_dualwield",
+        "baseDescription": "Increases the damage done by your offhand weapon by 10%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Improved Execute",
+        "icon": "inv_sword_48",
+        "baseDescription": "Reduces the Rage cost of your Execute ability by 2.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Enrage",
+        "icon": "spell_shadow_unholyfrenzy",
+        "baseDescription": "Gives you a 5% melee damage bonus for 12 sec up to a maximum of 12 swings after being the victim of a critical strike.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Improved Slam",
+        "icon": "ability_warrior_decisivestrike",
+        "baseDescription": "Decreases the casting time of your Slam ability by 0.2 sec.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Death Wish",
+        "icon": "spell_shadow_deathpact",
+        "baseDescription": "When activated, increases your physical damage by 20% and makes you immune to Fear effects, but lowers your armor and all resistances by 20%.  Lasts 30 sec.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Improved Intercept",
+        "icon": "ability_rogue_sprint",
+        "baseDescription": "Reduces the cooldown of your Intercept ability by 5 sec.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 4,
+        "arrow": null
+    },
+    {
+        "name": "Improved Berserker Rage",
+        "icon": "spell_nature_ancestralguardian",
+        "baseDescription": "The Berserker Rage ability will generate 5 rage when used.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 25,
+        "row": 6,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Flurry",
+        "icon": "ability_ghoulfrenzy",
+        "baseDescription": "Increases your attack speed by 10% for your next 3 swings after dealing a melee critical strike.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 25,
+        "row": 6,
+        "column": 3,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+          },
+        "dependencyName": "Enrage"
+    },
+    {
+        "name": "Bloodthirst",
+        "icon": "spell_nature_bloodlust",
+        "baseDescription": "Instantly attack the target causing damage equal to 45% of your attack power.  In addition, the next 5 successful melee attacks will restore 10 health.  This effect lasts 8 sec.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 30,
+        "row": 7,
+        "column": 2,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+      },
+        "dependencyName": "Death Wish"
+    }
+
+]
