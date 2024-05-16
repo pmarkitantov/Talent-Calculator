@@ -1,0 +1,229 @@
+[
+    {
+        "name": "Improved Gouge",
+        "icon": "ability_gouge",
+        "baseDescription": "Increases the effect duration of your Gouge ability by 0.5 sec.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Improved Sinister Strike",
+        "icon": "spell_shadow_ritualofsacrifice",
+        "baseDescription": "Reduces the Energy cost of your Sinister Strike ability by 5.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Lightning Reflexes",
+        "icon": "spell_nature_invisibilty",
+        "baseDescription": "Increases your Dodge chance by 1%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Improved Backstab",
+        "icon": "ability_backstab",
+        "baseDescription": "Increases the critical strike chance of your Backstab ability by 20%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Deflection",
+        "icon": "ability_parry",
+        "baseDescription": "Increases your Parry chance by 1%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Precision",
+        "icon": "ability_rogue_ambush",
+        "baseDescription": "Increases your chance to hit with melee weapons by 1%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Endurance",
+        "icon": "spell_shadow_shadowward",
+        "baseDescription": "Reduces the cooldown of your Sprint and Evasion abilities by 45 sec.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Riposte",
+        "icon": "ability_warrior_challange",
+        "baseDescription": "A strike that becomes active after parrying an opponent's attack.  This attack deals 150% weapon damage and disarms the target for 6 sec.",
+        "currentPoints": 0,
+        "maxPoints":1,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 2,
+        "arrow": {
+            "image": "ArrowShort",
+            "side": "top",
+            "size": "short"
+          },
+        "dependencyName": "Deflection"
+    },
+    {
+        "name": "Improved Sprint",
+        "icon": "ability_rogue_sprint",
+        "baseDescription": "Gives a 50% chance to remove all movement impairing effects when you activate your Sprint ability.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 4,
+        "arrow": null
+    },
+    {
+        "name": "Improved Kick",
+        "icon": "ability_kick",
+        "baseDescription": "Gives your Kick ability a 100% chance to silence the target for 2 sec.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Dagger Specialization",
+        "icon": "inv_weapon_shortblade_05",
+        "baseDescription": "Increases your chance to get a critical strike with Daggers by 1%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Dual Wield Specialization",
+        "icon": "ability_dualwield",
+        "baseDescription": "Increases the damage done by your offhand weapon by 10%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 3,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+          },
+        "dependencyName": "Precision"
+    },
+    {
+        "name": "Mace Specialization",
+        "icon": "inv_mace_01",
+        "baseDescription": "Increases your skill with Maces by 2, and gives you a 2% chance to stun your target for 3 sec with a mace.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Blade Flurry",
+        "icon": "ability_warrior_punishingblow",
+        "baseDescription": "Increases your attack speed by 20%.  In addition, attacks strike an additional nearby opponent.  Lasts 15 sec.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Sword Specialization",
+        "icon": "inv_sword_27",
+        "baseDescription": "Gives you a 1% chance to get an extra attack on the same target after dealing damage with your Sword.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Fist Weapon Specialization",
+        "icon": "inv_gauntlets_04",
+        "baseDescription": "Increases your chance to get a critical strike with Fist Weapons by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 4,
+        "arrow": null
+    },
+    {
+        "name": "Weapon Expertise",
+        "icon": "spell_holy_blessingofstrength",
+        "baseDescription": "Increases your skill with Sword, Fist and Dagger weapons by 3.",
+        "currentPoints": 0,
+        "maxPoints":2,
+        "requiredPoints": 10,
+        "row": 6,
+        "column": 2,
+        "arrow": {
+            "image": "ArrowShort",
+            "side": "top",
+            "size": "short"
+          },
+        "dependencyName": "Blade Flurry"
+    },
+    {
+        "name": "Aggression",
+        "icon": "ability_racial_avatar",
+        "baseDescription": "Increases the damage of your Sinister Strike and Eviscerate abilities by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 25,
+        "row": 6,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Adrenaline Rush",
+        "icon": "spell_shadow_shadowworddominate",
+        "baseDescription": "Increases your Energy regeneration rate by 100% for 15 sec.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 30,
+        "row": 7,
+        "column": 2,
+        "arrow": null
+    }
+    
+]
+
+

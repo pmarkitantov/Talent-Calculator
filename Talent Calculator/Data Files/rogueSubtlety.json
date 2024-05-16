@@ -1,0 +1,200 @@
+[
+    {
+        "name": "Master of Deception",
+        "icon": "spell_shadow_charm",
+        "baseDescription": "Reduces the chance enemies have to detect you while in Stealth mode.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Opportunity",
+        "icon": "ability_warrior_warcry",
+        "baseDescription": "Increases the damage dealt when striking from behind with your Backstab, Garrote, or Ambush abilities by 4%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Sleight of Hand",
+        "icon": "ability_rogue_feint",
+        "baseDescription": "Reduces the chance you are critically hit by melee and ranged attacks by 1% and increases the threat reduction of your Feint ability by 10%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Elusiveness",
+        "icon": "spell_magic_lesserinvisibilty",
+        "baseDescription": "Reduces the cooldown of your Vanish and Blind abilities by 45 sec.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Camouflage",
+        "icon": "ability_stealth",
+        "baseDescription": "Increases your speed while stealthed by 6% and reduces the cooldown of your Stealth ability by 2 sec.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Initiative",
+        "icon": "spell_shadow_fumble",
+        "baseDescription": "Gives you a 25% chance to add an additional combo point to your target when using your Ambush, Garrote, or Cheap Shot ability.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Ghostly Strike",
+        "icon": "spell_shadow_curse",
+        "baseDescription": "A strike that deals 125% weapon damage and increases your chance to dodge by 15% for 7 sec.  Awards 1 combo point.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Improved Ambush",
+        "icon": "ability_rogue_ambush",
+        "baseDescription": "Increases the critical strike chance of your Ambush ability by 15%.",
+        "currentPoints": 0,
+        "maxPoints":1,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Setup",
+        "icon": "spell_nature_mirrorimage",
+        "baseDescription": "Gives you a 30% chance to add a combo point to your target after dodging their attack or fully resisting one of their spells.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Improved Sap",
+        "icon": "ability_sap",
+        "baseDescription": "Gives your Kick ability a 100% chance to silence the target for 2 sec.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Serrated Blades",
+        "icon": "inv_sword_17",
+        "baseDescription": "Causes your attacks to ignore 0 of your target's Armor and increases the damage dealt by your Rupture ability by 10%.  The amount of Armor reduced increases with your level.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Heightened Senses",
+        "icon": "ability_ambush",
+        "baseDescription": "Increases the damage done by your offhand weapon by 10%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Preparation",
+        "icon": "inv_mace_01",
+        "baseDescription": "Increases your skill with Maces by 2, and gives you a 2% chance to stun your target for 3 sec with a mace.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Dirty Deeds",
+        "icon": "spell_shadow_summonsuccubus",
+        "baseDescription": "Reduces the Energy cost of your Cheap Shot and Garrote abilities by 10.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Hemorrhage",
+        "icon": "spell_shadow_lifedrain",
+        "baseDescription": "An instant strike that damages the opponent and causes the target to hemorrhage, increasing any Physical damage dealt to the target by up to 3.  Lasts 30 charges or 15 sec.  Awards 1 combo points.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 4,
+        "arrow": {
+            "image": "ArrowRightMedium",
+            "side": "topLeft",
+            "size": "medium"
+          },
+        "dependencyName": "Blade Flurry"
+    },
+    {
+        "name": "Deadliness",
+        "icon": "inv_weapon_crossbow_11",
+        "baseDescription": "Increases your Attack Power by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 25,
+        "row": 6,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Premeditation",
+        "icon": "spell_shadow_possession",
+        "baseDescription": "When used, adds 2 combo points to your target.  You must add to or use those combo points within 10 sec or the combo points are lost.",
+        "currentPoints": 0,
+        "maxPoints":2,
+        "requiredPoints": 10,
+        "row": 7,
+        "column": 2,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+          },
+        "dependencyName": "Preparation"
+    }
+]
+

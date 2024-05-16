@@ -1,0 +1,179 @@
+[
+    {
+        "name": "Improved Eviscerate",
+        "icon": "ability_rogue_eviscerate",
+        "baseDescription": "Increases the damage done by your Eviscerate ability by 5%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Remorseless Attacks",
+        "icon": "ability_fiegndead",
+        "baseDescription": "After killing an opponent that yields experience or honor, gives you a 20% increased critical strike chance on your next Sinister Strike, Backstab, Ambush, or Ghostly Strike.  Lasts 20 sec.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Malice",
+        "icon": "ability_racial_bloodrage",
+        "baseDescription": "Increases your critical strike chance by 1%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Ruthlessness",
+        "icon": "ability_druid_disembowel",
+        "baseDescription": "Gives your finishing moves a 20% chance to add a combo point to your target.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Murder",
+        "icon": "spell_shadow_deathscream",
+        "baseDescription": "Increases all damage caused against Humanoid, Giant, Beast and Dragonkin targets by 1%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Improved Slice and Dice",
+        "icon": "ability_rogue_slicedice",
+        "baseDescription": "Increases the duration of your Slice and Dice ability by 15%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 4,
+        "arrow": null
+    },
+    {
+        "name": "Relentless Strikes",
+        "icon": "ability_warrior_decisivestrike",
+        "baseDescription": "Your finishing moves have a 20% chance per combo point to restore 25 energy.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 1,
+        "arrow": null
+    },
+    {
+        "name": "Improved Expose Armor",
+        "icon": "ability_warrior_riposte",
+        "baseDescription": "Increases the armor reduced by your Expose Armor ability by 25%.",
+        "currentPoints": 0,
+        "maxPoints":2,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Lethality",
+        "icon": "ability_backstab",
+        "baseDescription": "Increases your Defense skill by 4.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 3,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+          },
+        "dependencyName": "Malice"
+    },
+    {
+        "name": "Vile Poisons",
+        "icon": "ability_rogue_feigndeath",
+        "baseDescription": "Increases the damage dealt by your poisons by 4% and gives your poisons an additional 8% chance to resist dispel effects.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Improved Poisons",
+        "icon": "ability_poisons",
+        "baseDescription": "Increases the chance to apply poisons to your target by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Cold Blood",
+        "icon": "spell_ice_lament",
+        "baseDescription": "When activated, increases the critical strike chance of your next Sinister Strike, Backstab, Ambush, or Eviscerate by 100%.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 2,
+        "arrow": null
+    },
+    {
+        "name": "Improved Kidney Shot",
+        "icon": "ability_rogue_kidneyshot",
+        "baseDescription": "While affected by your Kidney Shot ability, the target receives an additional 3% damage from all sources.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 3,
+        "arrow": null
+    },
+    {
+        "name": "Seal Fate",
+        "icon": "spell_shadow_chilltouch",
+        "baseDescription": "Your critical strikes from abilities that add combo points  have a 20% chance to add an additional combo point.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 25,
+        "row": 6,
+        "column": 2,
+        "arrow": {
+            "image": "ArrowShort",
+            "side": "top",
+            "size": "short"
+          },
+        "dependencyName": "Cold Blood"
+    },
+    {
+        "name": "Vigor",
+        "icon": "spell_nature_earthbindtotem",
+        "baseDescription": "Increases your maximum Energy by 10.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 30,
+        "row": 7,
+        "column": 2,
+        "arrow": null
+    }
+    
+]
+
