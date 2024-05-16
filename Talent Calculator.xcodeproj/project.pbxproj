@@ -160,22 +160,15 @@
 		AC1598FC2BB5D01400D605F9 /* Data Files */ = {
 			isa = PBXGroup;
 			children = (
-				ACE97D4C2BF4B8A300A66BE5 /* warriorProtection.json */,
-				ACE97D4A2BF4B34700A66BE5 /* warriorFury.json */,
-				ACE97D482BF4A90000A66BE5 /* warriorArms.json */,
-				AC1598FA2BB5B89400D605F9 /* druidBalance.json */,
-				AC8D2B2C2BC6C4B500E4A245 /* druidFeral.json */,
-				AC8D2B2E2BC6C4CA00E4A245 /* druidRestoration.json */,
-				ACA5BE9A2BE274DE00E9AA8A /* paladinHoly.json */,
-				ACA5BE9E2BE2799800E9AA8A /* paladinProtection.json */,
-				AC69D01E2BF25D38006F68C2 /* paladinRetribution.json */,
-				ACD358A92BF2097B00AA2BB0 /* mageArcane.json */,
-				ACD358AB2BF2098D00AA2BB0 /* mageFire.json */,
-				ACD358AD2BF2099D00AA2BB0 /* mageFrost.json */,
-				ACD358AF2BF3BB9E00AA2BB0 /* hunterBeastmastery.json */,
-				ACE97D4E2BF6049800A66BE5 /* rogueAssassination.json */,
-				ACE97D502BF604B300A66BE5 /* rogueCombat.json */,
-				ACE97D522BF604CC00A66BE5 /* rogueSubtlety.json */,
+				ACE97D5C2BF6067300A66BE5 /* Hunter */,
+				ACE97D5B2BF6066C00A66BE5 /* Warlock */,
+				ACE97D5A2BF6066200A66BE5 /* Paladin */,
+				ACE97D592BF6065D00A66BE5 /* Rogue */,
+				ACE97D582BF6065700A66BE5 /* Shaman */,
+				ACE97D572BF6065200A66BE5 /* Mage */,
+				ACE97D562BF6064C00A66BE5 /* Priest */,
+				ACE97D552BF6064600A66BE5 /* Druid */,
+				ACE97D542BF6063C00A66BE5 /* Warrior */,
 			);
 			path = "Data Files";
 			sourceTree = "<group>";
@@ -196,6 +189,85 @@
 				ACC0CDEC2BCD6C56004EAD40 /* ArrowView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		ACE97D542BF6063C00A66BE5 /* Warrior */ = {
+			isa = PBXGroup;
+			children = (
+				ACE97D4A2BF4B34700A66BE5 /* warriorFury.json */,
+				ACE97D4C2BF4B8A300A66BE5 /* warriorProtection.json */,
+				ACE97D482BF4A90000A66BE5 /* warriorArms.json */,
+			);
+			path = Warrior;
+			sourceTree = "<group>";
+		};
+		ACE97D552BF6064600A66BE5 /* Druid */ = {
+			isa = PBXGroup;
+			children = (
+				AC8D2B2C2BC6C4B500E4A245 /* druidFeral.json */,
+				AC1598FA2BB5B89400D605F9 /* druidBalance.json */,
+				AC8D2B2E2BC6C4CA00E4A245 /* druidRestoration.json */,
+			);
+			path = Druid;
+			sourceTree = "<group>";
+		};
+		ACE97D562BF6064C00A66BE5 /* Priest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Priest;
+			sourceTree = "<group>";
+		};
+		ACE97D572BF6065200A66BE5 /* Mage */ = {
+			isa = PBXGroup;
+			children = (
+				ACD358A92BF2097B00AA2BB0 /* mageArcane.json */,
+				ACD358AB2BF2098D00AA2BB0 /* mageFire.json */,
+				ACD358AD2BF2099D00AA2BB0 /* mageFrost.json */,
+			);
+			path = Mage;
+			sourceTree = "<group>";
+		};
+		ACE97D582BF6065700A66BE5 /* Shaman */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shaman;
+			sourceTree = "<group>";
+		};
+		ACE97D592BF6065D00A66BE5 /* Rogue */ = {
+			isa = PBXGroup;
+			children = (
+				ACE97D4E2BF6049800A66BE5 /* rogueAssassination.json */,
+				ACE97D522BF604CC00A66BE5 /* rogueSubtlety.json */,
+				ACE97D502BF604B300A66BE5 /* rogueCombat.json */,
+			);
+			path = Rogue;
+			sourceTree = "<group>";
+		};
+		ACE97D5A2BF6066200A66BE5 /* Paladin */ = {
+			isa = PBXGroup;
+			children = (
+				ACA5BE9A2BE274DE00E9AA8A /* paladinHoly.json */,
+				AC69D01E2BF25D38006F68C2 /* paladinRetribution.json */,
+				ACA5BE9E2BE2799800E9AA8A /* paladinProtection.json */,
+			);
+			path = Paladin;
+			sourceTree = "<group>";
+		};
+		ACE97D5B2BF6066C00A66BE5 /* Warlock */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Warlock;
+			sourceTree = "<group>";
+		};
+		ACE97D5C2BF6067300A66BE5 /* Hunter */ = {
+			isa = PBXGroup;
+			children = (
+				ACD358AF2BF3BB9E00AA2BB0 /* hunterBeastmastery.json */,
+			);
+			path = Hunter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
