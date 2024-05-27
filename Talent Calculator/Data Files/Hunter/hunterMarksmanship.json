@@ -1,0 +1,156 @@
+[
+    {
+        "name": "Improved Concussive Shot",
+        "icon": "spell_frost_stun",
+        "baseDescription": "Gives your Concussive Shot a 4% chance to stun the target for 3 sec.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 2
+    },
+    {
+        "name": "Efficiency",
+        "icon": "spell_frost_wizardmark",
+        "baseDescription": "Reduces the Mana cost of your Shots and Stings by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 3
+    },
+    {
+        "name": "Improved Hunter's Mark",
+        "icon": "ability_hunter_snipershot",
+        "baseDescription": "Increases the Ranged Attack Power bonus of your Hunter's Mark spell by 3%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 2
+    },
+    {
+        "name": "Lethal Shots",
+        "icon": "ability_searingarrow",
+        "baseDescription": "Increases your critical strike chance with ranged weapons by 1%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 3
+    },
+    {
+        "name": "Aimed Shot",
+        "icon": "inv_spear_07",
+        "baseDescription": "An aimed shot that increases ranged damage by 70.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 1
+    },
+    {
+        "name": "Improved Arcane Shot",
+        "icon": "ability_impalingbolt",
+        "baseDescription": "Reduces the cooldown of your Arcane Shot by 0.2 sec.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 2
+    },
+    {
+        "name": "Hawk Eye",
+        "icon": "ability_townwatch",
+        "baseDescription": "Increases the range of your ranged weapons by 2 yards.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 4
+    },
+    {
+        "name": "Improved Serpent Sting",
+        "icon": "ability_hunter_quickshot",
+        "baseDescription": "Increases the damage done by your Serpent Sting by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 2
+    },
+    {
+        "name": "Mortal Shots",
+        "icon": "ability_piercedamage",
+        "baseDescription": "Increases your ranged weapon critical strike damage bonus by 6%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 10,
+        "row": 4,
+        "column": 3,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+          },
+        "dependencyName": "Lethal Shots"
+    },
+    {
+        "name": "Scatter Shot",
+        "icon": "ability_golemstormbolt",
+        "baseDescription": "A short-range shot that deals 50% weapon damage and disorients the target for 4 sec.  Any damage caused will remove the effect.  Turns off your attack when used.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 1
+    },
+    {
+        "name": "Barrage",
+        "icon": "ability_upgrademoonglaive",
+        "baseDescription": "Increases the damage done by your Multi-Shot and Volley spells by 5%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 2
+    },
+    {
+        "name": "Improved Scorpid Sting",
+        "icon": "ability_hunter_criticalshot",
+        "baseDescription": "Reduces the Stamina of targets affected by your Scorpid Sting by 10% of the amount of Strength reduced.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 3
+    },
+    {
+        "name": "Ranged Weapon Specialization",
+        "icon": "inv_weapon_rifle_06",
+        "baseDescription": "Increases the damage you deal with ranged weapons by 1%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 25,
+        "row": 6,
+        "column": 3
+    },
+    {
+        "name": "Trueshot Aura",
+        "icon": "ability_trueshot",
+        "baseDescription": "Increases the attack power of party members within 45 yards by 50.  Lasts 30 min.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 30,
+        "row": 7,
+        "column": 2,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+          },
+        "dependencyName": "Barrage"
+    }
+]
+
+

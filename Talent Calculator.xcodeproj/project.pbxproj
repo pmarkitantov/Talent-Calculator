@@ -39,6 +39,8 @@
 		ACE97D5E2C04883B00A66BE5 /* priestDiscipline.json in Resources */ = {isa = PBXBuildFile; fileRef = ACE97D5D2C04883A00A66BE5 /* priestDiscipline.json */; };
 		ACE97D602C04884E00A66BE5 /* priestHoly.json in Resources */ = {isa = PBXBuildFile; fileRef = ACE97D5F2C04884E00A66BE5 /* priestHoly.json */; };
 		ACE97D622C04885A00A66BE5 /* priestShadow.json in Resources */ = {isa = PBXBuildFile; fileRef = ACE97D612C04885A00A66BE5 /* priestShadow.json */; };
+		ACE97D662C04897D00A66BE5 /* hunterMarksmanship.json in Resources */ = {isa = PBXBuildFile; fileRef = ACE97D652C04897D00A66BE5 /* hunterMarksmanship.json */; };
+		ACE97D682C04898D00A66BE5 /* hunterSurvival.json in Resources */ = {isa = PBXBuildFile; fileRef = ACE97D672C04898D00A66BE5 /* hunterSurvival.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +77,8 @@
 		ACE97D5D2C04883A00A66BE5 /* priestDiscipline.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = priestDiscipline.json; sourceTree = "<group>"; };
 		ACE97D5F2C04884E00A66BE5 /* priestHoly.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = priestHoly.json; sourceTree = "<group>"; };
 		ACE97D612C04885A00A66BE5 /* priestShadow.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = priestShadow.json; sourceTree = "<group>"; };
+		ACE97D652C04897D00A66BE5 /* hunterMarksmanship.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = hunterMarksmanship.json; sourceTree = "<group>"; };
+		ACE97D672C04898D00A66BE5 /* hunterSurvival.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = hunterSurvival.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +279,8 @@
 			isa = PBXGroup;
 			children = (
 				ACD358AF2BF3BB9E00AA2BB0 /* hunterBeastmastery.json */,
+				ACE97D652C04897D00A66BE5 /* hunterMarksmanship.json */,
+				ACE97D672C04898D00A66BE5 /* hunterSurvival.json */,
 			);
 			path = Hunter;
 			sourceTree = "<group>";
@@ -344,7 +350,9 @@
 				ACE97D4F2BF6049800A66BE5 /* rogueAssassination.json in Resources */,
 				ACE97D5E2C04883B00A66BE5 /* priestDiscipline.json in Resources */,
 				ACD358AC2BF2098D00AA2BB0 /* mageFire.json in Resources */,
+				ACE97D662C04897D00A66BE5 /* hunterMarksmanship.json in Resources */,
 				ACD358B02BF3BB9E00AA2BB0 /* hunterBeastmastery.json in Resources */,
+				ACE97D682C04898D00A66BE5 /* hunterSurvival.json in Resources */,
 				ACE97D532BF604CC00A66BE5 /* rogueSubtlety.json in Resources */,
 				ACA5BE9B2BE274DE00E9AA8A /* paladinHoly.json in Resources */,
 				ACE97D602C04884E00A66BE5 /* priestHoly.json in Resources */,

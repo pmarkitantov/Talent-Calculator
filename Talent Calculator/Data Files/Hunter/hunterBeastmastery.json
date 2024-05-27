@@ -1,0 +1,175 @@
+[
+    {
+        "name": "Improved Aspect of the Hawk",
+        "icon": "spell_nature_ravenform",
+        "baseDescription": "While Aspect of the Hawk is active, all normal ranged attacks have a 1% chance of increasing ranged attack speed by 30% for 12 sec.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 1
+    },
+    {
+        "name": "Endurance Training",
+        "icon": "spell_nature_reincarnation",
+        "baseDescription": "Increases the Health of your pets by 3%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 2
+    },
+    {
+        "name": "Improved Eyes of the Beast",
+        "icon": "ability_eyeoftheowl",
+        "baseDescription": "Increases the duration of your Eyes of the Beast by 30 sec.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 1
+    },
+    {
+        "name": "Improved Aspect of the Monkey",
+        "icon": "ability_hunter_aspectofthemonkey",
+        "baseDescription": "Increases the Dodge bonus of your Aspect of the Monkey by 4%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 2
+    },
+    {
+        "name": "Thick Hide",
+        "icon": "inv_misc_pelt_bear_03",
+        "baseDescription": "Increases your Armor contribution from items by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 3
+    },
+    {
+        "name": "Improved Revive Pet",
+        "icon": "ability_hunter_beastsoothe",
+        "baseDescription": "Revive Pet's casting time is reduced by 6 sec, mana cost is reduced by 40%, and increases the health your pet returns with by an additional 30%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 4
+    },
+    {
+        "name": "Pathfinding",
+        "icon": "ability_mount_jungletiger",
+        "baseDescription": "Increases the speed bonus of your Aspect of the Cheetah and Aspect of the Pack by 3%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 1
+    },
+    {
+        "name": "Bestial Swiftness",
+        "icon": "ability_druid_dash",
+        "baseDescription": "Increases the outdoor movement speed of your pets by 30%.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 2
+    },
+    {
+        "name": "Unleashed Fury",
+        "icon": "ability_bullrush",
+        "baseDescription": "Increases the damage done by your offhand weapon by 10%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 3
+    },
+    {
+        "name": "Improved Mend Pet",
+        "icon": "ability_hunter_mendpet",
+        "baseDescription": "Gives the Mend Pet spell a 15% chance of cleansing 1 Curse, Disease, Magic or Poison effect from the pet each tick.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 2
+    },
+    {
+        "name": "Ferocity",
+        "icon": "inv_misc_monsterclaw_04",
+        "baseDescription": "Increases the critical strike chance of your pets by 3%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 3
+    },
+    {
+        "name": "Spirit Bond",
+        "icon": "classic_ability_druid_demoralizingroar",
+        "baseDescription": "While your pet is active, you and your pet will regenerate 2% of total health every 10 sec.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 1
+    },
+    {
+        "name": "Intimidation",
+        "icon": "ability_devour",
+        "baseDescription": "Command your pet to intimidate the target on the next successful melee attack, causing a high amount of threat and stunning the target for 3 sec.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 2
+    },
+    {
+        "name": "Bestial Discipline",
+        "icon": "spell_nature_abolishmagic",
+        "baseDescription": "Increases the Focus regeneration of your pets by 10%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 4
+    },
+    {
+        "name": "Frenzy",
+        "icon": "inv_misc_monsterclaw_03",
+        "baseDescription": "Gives your pet a 20% chance to gain a 30% attack speed increase for 8 sec after dealing a critical strike.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 25,
+        "row": 6,
+        "column": 3,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+          },
+        "dependencyName": "Ferocity"
+    },
+    {
+        "name": "Bestial Wrath",
+        "icon": "ability_druid_ferociousbite",
+        "baseDescription": "Send your pet into a rage causing 50% additional damage for 18 sec.  While enraged, the beast does not feel pity or remorse or fear and it cannot be stopped unless killed.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 30,
+        "row": 7,
+        "column": 2,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+          },
+        "dependencyName": "Intimidation"
+    }
+]
+

@@ -1,0 +1,177 @@
+[
+    {
+        "name": "Monster Slaying",
+        "icon": "inv_misc_head_dragon_black",
+        "baseDescription": "Increases all damage caused against Beasts, Giants and Dragonkin targets by 1% and increases critical damage caused against Beasts, Giants and Dragonkin targets by an additional 1%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 1
+    },
+    {
+        "name": "Humanoid Slaying",
+        "icon": "spell_holy_prayerofhealing",
+        "baseDescription": "Increases all damage caused against Humanoid targets by 1% and increases critical damage caused against Humanoid targets by an additional 1%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 2
+    },
+    {
+        "name": "Deflection",
+        "icon": "ability_parry",
+        "baseDescription": "Increases your Parry chance by 1%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 3
+    },
+    {
+        "name": "Entrapment",
+        "icon": "spell_nature_stranglevines",
+        "baseDescription": "Gives your Immolation Trap, Frost Trap, and Explosive Trap a 10% chance to entrap the target, preventing them from moving for 5 sec.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 1
+    },
+    {
+        "name": "Savage Strikes",
+        "icon": "ability_racial_bloodrage",
+        "baseDescription": "Increases the critical strike chance of Raptor Strike and Mongoose Bite by 10%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 2
+    },
+    {
+        "name": "Improved Wing Clip",
+        "icon": "ability_rogue_trip",
+        "baseDescription": "Gives your Wing Clip ability a 4% chance to immobilize the target for 5 sec.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 3
+    },
+    {
+        "name": "Clever Traps",
+        "icon": "spell_nature_timestop",
+        "baseDescription": "Increases the duration of Freezing and Frost trap effects by 15% and the damage of Immolation and Explosive trap effects by 15%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 1
+    },
+    {
+        "name": "Survivalist",
+        "icon": "spell_shadow_twilight",
+        "baseDescription": "Increases total health by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 2
+    },
+    {
+        "name": "Deterrence",
+        "icon": "ability_whirlwind",
+        "baseDescription": "When activated, increases your Dodge and Parry chance by 25% for 10 sec.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 3
+        
+    },
+    {
+        "name": "Trap Mastery",
+        "icon": "ability_ensnare",
+        "baseDescription": "Decreases the chance enemies will resist trap effects by 5%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 1
+    },
+    {
+        "name": "Surefooted",
+        "icon": "ability_kick",
+        "baseDescription": "Increases hit chance by 3% and increases the chance movement impairing effects will be resisted by an additional 15%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 2
+    },
+    {
+        "name": "Improved Feign Death",
+        "icon": "ability_rogue_feigndeath",
+        "baseDescription": "Reduces the chance your Feign Death ability will be resisted by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 20,
+        "row": 4,
+        "column": 4
+    },
+    {
+        "name": "Killer Instinct",
+        "icon": "spell_holy_blessingofstamina",
+        "baseDescription": "Increases your critical strike chance with all attacks by 1%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 2
+    },
+    {
+        "name": "Counterattack",
+        "icon": "ability_warrior_challange",
+        "baseDescription": "A strike that becomes active after parrying an opponent's attack.  This attack deals 40 damage and immobilizes the target for 5 sec.  Counterattack cannot be blocked, dodged, or parried.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 3,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+          },
+        "dependencyName": "Deterrence"
+        
+    },
+    {
+        "name": "Lightning Reflexes",
+        "icon": "spell_nature_invisibilty",
+        "baseDescription": "Increases your Agility by 3%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 25,
+        "row": 6,
+        "column": 3
+    },
+    {
+        "name": "Wyvern Sting",
+        "icon": "inv_spear_02",
+        "baseDescription": "A stinging shot that puts the target to sleep for 12 sec.  Any damage will cancel the effect.  When the target wakes up, the Sting causes 300 Nature damage over 12 sec.  Only usable out of combat.  Only one Sting per Hunter can be active on the target at a time.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 30,
+        "row": 7,
+        "column": 2,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+          },
+        "dependencyName": "Killer Instinct"
+    }
+]
+
