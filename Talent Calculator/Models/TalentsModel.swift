@@ -8,48 +8,22 @@
 import Foundation
 import SwiftUI
 
-// enum Direction: String {
-//    case up, down, left, right
-// }
 
-struct TalentDependency: Codable {
-    var talentName: String
-    var requiredPoints: Int
-}
-
-struct TalentPosition {
-    var id: UUID
-    var name: String
-    var rect: CGRect
-}
-
-
-// Структура Arrow с параметрами: направление, размер и название изображения
 struct Arrow: Decodable {
     let image: String
     let side: String
     let size: String
 }
 
-struct TalentTree {
+struct TalentBranch {
     let name: String
     let background: String
     let icon: String
+    var talents: [Talent]?
+    var spentPointsInBranch: Int = 0
 }
 
-enum TalentBranches {
-    static let branches: [String: [String]] = [
-        "druid": ["Balance", "Feral", "Restoration"],
-        "warrior": ["Arms", "Fury", "Protection"],
-        "paladin": ["Holy", "Protection", "Retribution"],
-        "hunter": ["Beast Mastery", "Marksmanship", "Survival"],
-        "rogue": ["Assassination", "Outlaw", "Subtlety"],
-        "priest": ["Discipline", "Holy", "Shadow"],
-        "shaman": ["Elemental", "Enhancement", "Restoration"],
-        "mage": ["Arcane", "Fire", "Frost"],
-        "warlock": ["Affliction", "Demonology", "Destruction"]
-    ]
-}
+
 
 struct Talent: Identifiable, Decodable {
     var id: UUID
@@ -85,7 +59,6 @@ struct Talent: Identifiable, Decodable {
         
     }
 
-    // Дополнительный инициализатор для создания объектов в коде
     init(name: String, icon: String, baseDescription: String, currentPoints: Int = 0, maxPoints: Int, requiredPoints: Int, row: Int, column: Int, arrow: Arrow? = nil, dependencyName: String? = nil) {
         id = UUID()
         self.name = name

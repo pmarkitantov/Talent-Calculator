@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CC576412C0E7D8F00A58EBD /* ArrowCalculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC576402C0E7D8F00A58EBD /* ArrowCalculations.swift */; };
 		AC1598B12BB478C200D605F9 /* Talent_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1598B02BB478C200D605F9 /* Talent_CalculatorApp.swift */; };
 		AC1598B52BB478C400D605F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1598B42BB478C400D605F9 /* Assets.xcassets */; };
 		AC1598B82BB478C400D605F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1598B72BB478C400D605F9 /* Preview Assets.xcassets */; };
@@ -25,7 +26,6 @@
 		AC8D2B2F2BC6C4CA00E4A245 /* druidRestoration.json in Resources */ = {isa = PBXBuildFile; fileRef = AC8D2B2E2BC6C4CA00E4A245 /* druidRestoration.json */; };
 		ACA5BE9B2BE274DE00E9AA8A /* paladinHoly.json in Resources */ = {isa = PBXBuildFile; fileRef = ACA5BE9A2BE274DE00E9AA8A /* paladinHoly.json */; };
 		ACA5BE9F2BE2799800E9AA8A /* paladinProtection.json in Resources */ = {isa = PBXBuildFile; fileRef = ACA5BE9E2BE2799800E9AA8A /* paladinProtection.json */; };
-		ACC0CDED2BCD6C56004EAD40 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC0CDEC2BCD6C56004EAD40 /* ArrowView.swift */; };
 		ACD358AA2BF2097B00AA2BB0 /* mageArcane.json in Resources */ = {isa = PBXBuildFile; fileRef = ACD358A92BF2097B00AA2BB0 /* mageArcane.json */; };
 		ACD358AC2BF2098D00AA2BB0 /* mageFire.json in Resources */ = {isa = PBXBuildFile; fileRef = ACD358AB2BF2098D00AA2BB0 /* mageFire.json */; };
 		ACD358AE2BF2099D00AA2BB0 /* mageFrost.json in Resources */ = {isa = PBXBuildFile; fileRef = ACD358AD2BF2099D00AA2BB0 /* mageFrost.json */; };
@@ -44,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8CC576402C0E7D8F00A58EBD /* ArrowCalculations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowCalculations.swift; sourceTree = "<group>"; };
 		AC1598AD2BB478C200D605F9 /* Talent Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Talent Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1598B02BB478C200D605F9 /* Talent_CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talent_CalculatorApp.swift; sourceTree = "<group>"; };
 		AC1598B42BB478C400D605F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,7 +64,6 @@
 		AC8D2B2E2BC6C4CA00E4A245 /* druidRestoration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = druidRestoration.json; sourceTree = "<group>"; };
 		ACA5BE9A2BE274DE00E9AA8A /* paladinHoly.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = paladinHoly.json; sourceTree = "<group>"; };
 		ACA5BE9E2BE2799800E9AA8A /* paladinProtection.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = paladinProtection.json; sourceTree = "<group>"; };
-		ACC0CDEC2BCD6C56004EAD40 /* ArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
 		ACD358A92BF2097B00AA2BB0 /* mageArcane.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mageArcane.json; sourceTree = "<group>"; };
 		ACD358AB2BF2098D00AA2BB0 /* mageFire.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mageFire.json; sourceTree = "<group>"; };
 		ACD358AD2BF2099D00AA2BB0 /* mageFrost.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mageFrost.json; sourceTree = "<group>"; };
@@ -115,10 +115,10 @@
 				AC7BAF982BB61BE5007883B1 /* Utilities */,
 				AC1598FC2BB5D01400D605F9 /* Data Files */,
 				AC1598DA2BB47CEA00D605F9 /* ViewModels */,
-				AC1598C22BB47C3B00D605F9 /* Images */,
 				AC1598BF2BB47A5700D605F9 /* Views */,
 				AC1598BE2BB47A4900D605F9 /* Models */,
 				AC1598B02BB478C200D605F9 /* Talent_CalculatorApp.swift */,
+				AC1598C22BB47C3B00D605F9 /* Images */,
 				AC1598B62BB478C400D605F9 /* Preview Content */,
 			);
 			path = "Talent Calculator";
@@ -186,6 +186,7 @@
 		AC7BAF982BB61BE5007883B1 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				8CC576402C0E7D8F00A58EBD /* ArrowCalculations.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -196,7 +197,6 @@
 				AC7BAF9C2BB620FE007883B1 /* TabbarButtonView.swift */,
 				AC7BAF9E2BB63EDC007883B1 /* TalentTreeHeader.swift */,
 				AC8D2B2A2BC6B5E300E4A245 /* TalentCell.swift */,
-				ACC0CDEC2BCD6C56004EAD40 /* ArrowView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -382,7 +382,7 @@
 				AC7BAFA12BB64392007883B1 /* CharacterClassesModel.swift in Sources */,
 				AC7BAF9D2BB620FE007883B1 /* TabbarButtonView.swift in Sources */,
 				AC1598F12BB4A62200D605F9 /* GridViewModel.swift in Sources */,
-				ACC0CDED2BCD6C56004EAD40 /* ArrowView.swift in Sources */,
+				8CC576412C0E7D8F00A58EBD /* ArrowCalculations.swift in Sources */,
 				AC1598DC2BB47D0100D605F9 /* ClassesListView.swift in Sources */,
 				AC8D2B2B2BC6B5E300E4A245 /* TalentCell.swift in Sources */,
 				AC1598E02BB47D5A00D605F9 /* TalentsModel.swift in Sources */,

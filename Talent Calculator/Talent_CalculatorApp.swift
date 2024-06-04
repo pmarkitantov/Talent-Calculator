@@ -10,11 +10,10 @@ import SwiftUI
 @main
 struct Talent_CalculatorApp: App {
     @State private var selectedTab: Int = 1
-    
+
     var body: some Scene {
         WindowGroup {
             ClassesListView()
         }
-        
     }
 }

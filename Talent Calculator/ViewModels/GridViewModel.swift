@@ -8,31 +8,40 @@
 import Foundation
 
 class GridViewModel: ObservableObject {
-    @Published var talentsBranches: [[Talent]] = [[], [], []]
-    
+    @Published var talentsBranches: [TalentBranch]
+
+    var branchPoint = [0, 0, 0]
+    var totalPoints = 0
+
     init(chatacterClass: CharacterClass) {
+        self.talentsBranches = chatacterClass.talentTrees
         loadTalents(characterClass: chatacterClass)
     }
 
     func loadTalents(characterClass: CharacterClass) {
-        talentsBranches = [[], [], []] // Переинициализация
-
         Task {
             for (index, talentTree) in characterClass.talentTrees.enumerated() where index < talentsBranches.count {
                 do {
                     let filename = characterClass.name.lowercased() + talentTree.name
                     let talents = try await loadTalentsFromJSON(named: filename)
                     DispatchQueue.main.async { [weak self] in
-                        self?.talentsBranches[index] = talents
+                        self?.talentsBranches[index].talents = talents
                     }
                 } catch {
                     print("Не удалось загрузить таланты для ветки \(talentTree.name): \(error)")
-                    // Массив для этой ветки остается пустым
                 }
             }
         }
     }
 
+    func isTalentActive(talent: Talent, branchIndex: Int) -> Bool {
+        guard let dependencyName = talent.dependencyName else {
+            return talent.requiredPoints <= branchPoint[branchIndex]
+        }
+        guard let requiredTalent = talentsBranches[branchIndex].talents?.first(where: { $0.name == dependencyName }) else { return false }
+
+        return requiredTalent.currentPoints == requiredTalent.maxPoints && talent.requiredPoints <= branchPoint[branchIndex]
+    }
 
     private func loadTalentsFromJSON(named fileName: String) async throws -> [Talent] {
         guard let fileURL = Bundle.main.url(forResource: fileName, withExtension: "json") else {
@@ -43,17 +52,15 @@ class GridViewModel: ObservableObject {
         let decoder = JSONDecoder()
         return try decoder.decode([Talent].self, from: data)
     }
-    
-    func incrementCount(for elementID: UUID, inBranch branchIndex: Int) {
-        guard branchIndex < talentsBranches.count else { return }
 
-        if let index = talentsBranches[branchIndex].firstIndex(where: { $0.id == elementID }) {
-            if talentsBranches[branchIndex][index].currentPoints < talentsBranches[branchIndex][index].maxPoints {
-                talentsBranches[branchIndex][index].currentPoints += 1
-                // Обновляем данные, чтобы изменения отразились в UI
+    func incrementCount(for elementID: UUID, inBranch branchIndex: Int) {
+        if let index = talentsBranches[branchIndex].talents!.firstIndex(where: { $0.id == elementID }) {
+            if talentsBranches[branchIndex].talents![index].currentPoints < talentsBranches[branchIndex].talents![index].maxPoints {
+                talentsBranches[branchIndex].talents![index].currentPoints += 1
+                branchPoint[branchIndex] += 1
+                totalPoints += 1
                 objectWillChange.send()
             }
         }
     }
-
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TabbarButtonView: View {
-    let talentTrees: [TalentTree]
+    let talentTrees: [TalentBranch]
     @Binding var selectedTab: Int
 
     var body: some View {
@@ -40,13 +40,11 @@ struct TabbarButtonView: View {
         .frame(maxWidth: .infinity, minHeight: 100)
         .background(.ultraThinMaterial)
         .clipShape(RoundedRectangle(cornerRadius: 10))
-
-
     }
 }
 
 #Preview {
-    TabbarButtonView(talentTrees: [TalentTree(name: "Balance", background: "druidBalance", icon: "druid-balance-icon"),
-                                   TalentTree(name: "Feral", background: "druidFeral", icon: "druid-feral-icon"),
-                                   TalentTree(name: "Restoration", background: "druidRestoration", icon: "druid-restoration-icon")], selectedTab: .constant(0))
+    TabbarButtonView(talentTrees: [TalentBranch(name: "Balance", background: "druidBalance", icon: "druid-balance-icon"),
+                                   TalentBranch(name: "Feral", background: "druidFeral", icon: "druid-feral-icon"),
+                                   TalentBranch(name: "Restoration", background: "druidRestoration", icon: "druid-restoration-icon")], selectedTab: .constant(0))
 }

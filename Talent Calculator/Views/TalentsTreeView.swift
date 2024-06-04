@@ -10,9 +10,7 @@ import SwiftUI
 struct TalentsTreeView: View {
     let characterClass: CharacterClass
     @ObservedObject var viewModel: GridViewModel
-    @State private var selectedTab: Int  = 0
-    @State var pointsSpent: Int = 0
-    @State private var currentLevel: Int = 10
+    @State private var selectedTab: Int = 0
 
     init(characterClass: CharacterClass) {
         self.characterClass = characterClass
@@ -22,14 +20,13 @@ struct TalentsTreeView: View {
 
     var body: some View {
         ZStack {
-            // Фоновое изображение для текущего выбранного талантового дерева
             if let tree = characterClass.talentTrees.indices.contains(selectedTab) ? characterClass.talentTrees[selectedTab] : nil {
                 Image(tree.background)
                     .resizable()
                     .ignoresSafeArea()
 
                 VStack(spacing: 0) {
-                    TalentGridView(viewModel: viewModel, pointsSpend: $pointsSpent, selectedBranchIndex: selectedTab)
+                    TalentGridView(viewModel: viewModel, selectedBranchIndex: selectedTab)
                         .padding(.horizontal)
 
                     Spacer()
@@ -37,7 +34,6 @@ struct TalentsTreeView: View {
                     TabbarButtonView(talentTrees: characterClass.talentTrees, selectedTab: $selectedTab)
                         .frame(height: 60)
                         .padding()
-                        
                 }
             } else {
                 Text("Выбранная вкладка недоступна")

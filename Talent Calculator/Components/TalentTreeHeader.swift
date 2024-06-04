@@ -16,13 +16,12 @@ struct TalentTreeHeader: View {
         HStack {
             Text(branchName)
                 .font(.headline)
-                
+
             Spacer()
             Text("Уровень: \(currentLevel)")
-                
+
             Spacer()
             Text("Очки: \(pointsSpent)")
-                
         }
         .padding()
         .background(Color.white.opacity(0.7))
