@@ -39,11 +39,7 @@ struct TabbarButtonView: View {
         }
         .frame(maxWidth: .infinity, minHeight: 100)
         .background(.ultraThinMaterial)
-        .clipShape(RoundedRectangle(cornerRadius: 10))
-        .overlay {
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(.accent, lineWidth: 2)
-        }
+        .clipShape(RoundedRectangle(cornerRadius: 15))
     }
 }
 

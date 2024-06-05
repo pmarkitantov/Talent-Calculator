@@ -11,6 +11,8 @@ struct TalentsTreeView: View {
     let characterClass: CharacterClass
     @ObservedObject var viewModel: GridViewModel
     @State private var selectedTab: Int = 0
+    @State var selectedTalentId = UUID()
+    @State var showDescription: Bool = false
 
     init(characterClass: CharacterClass) {
         self.characterClass = characterClass
@@ -29,14 +31,23 @@ struct TalentsTreeView: View {
                     header
                         .padding(.horizontal)
 
-                    TalentGridView(viewModel: viewModel, selectedBranchIndex: selectedTab)
+                    TalentGridView(viewModel: viewModel, selectedTalentId: $selectedTalentId, selectedBranchIndex: selectedTab)
                         .padding(.horizontal)
 
                     Spacer()
 
+                    if showDescription {
+                        descriptionView
+                            .padding([.bottom, .horizontal])
+                    }
+
                     TabbarButtonView(talentTrees: characterClass.talentTrees, selectedTab: $selectedTab)
+                        .shadow(color: Color(characterClass.nameColor).opacity(10), radius: 5, x: 0, y: 0)
                         .frame(height: 60)
                         .padding()
+                }
+                .onChange(of: selectedTalentId) {
+                    showDescription = true
                 }
             } else {
                 Text("Выбранная вкладка недоступна")
@@ -50,6 +61,15 @@ struct TalentsTreeView: View {
 extension TalentsTreeView {
     var header: some View {
         HStack {
+            Image(characterClass.iconName)
+                .resizable()
+                .frame(width: 30, height: 30)
+                .clipShape(Circle())
+                .overlay {
+                    Circle()
+                        .stroke(Color(characterClass.nameColor), lineWidth: 2)
+                }
+
             Text(characterClass.name)
                 .foregroundStyle(Color(characterClass.nameColor))
             Text("(\(viewModel.branchPointAsString()))")
@@ -65,11 +85,51 @@ extension TalentsTreeView {
         .cornerRadius(10)
         .overlay {
             RoundedRectangle(cornerRadius: 10)
-                .stroke(.accent, lineWidth: 2)
+                .stroke(characterClass.nameColor, lineWidth: 2)
+        }
+        .shadow(color: Color(characterClass.nameColor).opacity(0.5), radius: 5, x: 0, y: 0)
+    }
+
+    private var descriptionView: some View {
+        VStack(alignment: .leading) {
+            HStack {
+                VStack(alignment: .leading) {
+                    Text(viewModel.showTalentName(for: selectedTalentId))
+                        .font(.headline)
+                        .fontWeight(.bold)
+                    Text("Rank: \(viewModel.showTalentRank(for: selectedTalentId))")
+                        .foregroundStyle(.secondary)
+                }
+                .padding(.leading)
+                Spacer()
+            }
+            Text(viewModel.showDescription(for: selectedTalentId))
+                .padding(.horizontal)
+                .font(.subheadline)
+        }
+        .frame(maxWidth: .infinity, minHeight: 100)
+        .background(.ultraThinMaterial)
+        .clipShape(RoundedRectangle(cornerRadius: 15))
+        .overlay(alignment: .topTrailing) {
+            Button {
+                if viewModel.tapCount > 1 {
+                    viewModel.tapCount = 0
+                }
+                showDescription = false
+            }
+            label: {
+                Image(systemName: "xmark")
+                    .font(.headline)
+                    .padding(10)
+                    .foregroundStyle(.red)
+                    .background(.thickMaterial)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .shadow(radius: 4)
+            }
         }
     }
 }
 
 #Preview {
-    TalentsTreeView(characterClass: CharacterData.characterClasses[8])
+    TalentsTreeView(characterClass: CharacterData.characterClasses[2])
 }

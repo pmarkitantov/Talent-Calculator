@@ -12,8 +12,9 @@ import SwiftUI
 class GridViewModel: ObservableObject {
     @Published var talentsBranches: [TalentBranch]
     @Published var errorMessage: String?
+    var tapCount = 0
+    private var lastSelectedTalentId: UUID?
 
-    
     var branchPoint = [0, 0, 0]
     var pointsLeft = 51
 
@@ -83,6 +84,35 @@ class GridViewModel: ObservableObject {
         return try decoder.decode([Talent].self, from: data)
     }
 
+    func showDescription(for talentId: UUID) -> String {
+        for talentBrach in talentsBranches {
+            if let talent = talentBrach.talents!.first(where: { $0.id == talentId }) {
+                return talent.baseDescription
+            }
+        }
+        return "error"
+    }
+
+    func showTalentName(for taletId: UUID) -> String {
+        for talentsBranch in talentsBranches {
+            if let talent = talentsBranch.talents!.first(where: { $0.id == taletId }) {
+                return talent.name
+            }
+        }
+        return ""
+    }
+    
+    func showTalentRank(for taletId: UUID) -> String {
+        for talentsBranch in talentsBranches {
+            if let talent = talentsBranch.talents!.first(where: { $0.id == taletId }) {
+                return "\(talent.currentPoints)/\(talent.maxPoints)"
+            }
+        }
+        return ""
+    }
+    
+    
+
     func incrementCount(for elementID: UUID, inBranch branchIndex: Int) {
         if let talentIndex = talentsBranches[branchIndex].talents!.firstIndex(where: { $0.id == elementID }) {
             var talent = talentsBranches[branchIndex].talents![talentIndex]
@@ -95,5 +125,18 @@ class GridViewModel: ObservableObject {
                 objectWillChange.send()
             }
         }
+    }
+
+    func handleButtonTap(for talentId: UUID, inBranch branchIndex: Int, selectedTalentId: inout UUID) {
+        if lastSelectedTalentId != talentId {
+            tapCount = 0
+            lastSelectedTalentId = talentId
+        }
+        if tapCount == 0 {
+            selectedTalentId = talentId
+        } else if tapCount > 0 {
+            incrementCount(for: talentId, inBranch: branchIndex)
+        }
+        tapCount += 1
     }
 }

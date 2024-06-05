@@ -18,12 +18,12 @@ struct TalentCell: View {
                 .overlay(
                     isUnlocked ?
                         RoundedRectangle(cornerRadius: 10)
-                        .stroke(talent.currentPoints >= talent.maxPoints ? Color.yellow : (talent.currentPoints >= 0 ? Color.green : Color.clear), lineWidth: 5) : nil
+                        .stroke(talent.currentPoints >= talent.maxPoints ? Color.accentColor : (talent.currentPoints >= 0 ? Color.green : Color.clear), lineWidth: 5) : nil
                 )
             Text("\(talent.currentPoints)/\(talent.maxPoints)")
                 .padding(5)
                 .background(Color.black.opacity(0.7))
-                .foregroundColor(talent.currentPoints >= talent.maxPoints ? Color.yellow : Color.green)
+                .foregroundColor(talent.currentPoints >= talent.maxPoints ? Color.accentColor : Color.green)
                 .clipShape(RoundedRectangle(cornerRadius: 5))
                 .offset(x: 10, y: 10)
                 .zIndex(1)
