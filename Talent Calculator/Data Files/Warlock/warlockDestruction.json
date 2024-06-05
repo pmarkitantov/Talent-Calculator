@@ -1,0 +1,182 @@
+[
+    {
+        "name": "Improved Shadow Bolt",
+        "icon": "spell_shadow_shadowbolt",
+        "baseDescription": "Your Shadow Bolt critical strikes increase Shadow damage dealt to the target by 4% until 4 non-periodic damage sources are applied.  Effect lasts a maximum of 12 sec.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 2
+    },
+    {
+        "name": "Cataclysm",
+        "icon": "spell_fire_windsofwoe",
+        "baseDescription": "Reduces the Mana cost of your Destruction spells by 1%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 3
+    },
+    {
+        "name": "Bane",
+        "icon": "spell_shadow_deathpact",
+        "baseDescription": "Reduces the casting time of your Shadow Bolt and Immolate spells by 0.1 sec and your Soul Fire spell by 0.4 sec.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 2
+    },
+    {
+        "name": "Aftermath",
+        "icon": "spell_fire_fire",
+        "baseDescription": "Gives your Destruction spells a 2% chance to daze the target for 5 sec.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 3
+    },
+    {
+        "name": "Improved Firebolt",
+        "icon": "spell_fire_firebolt",
+        "baseDescription": "Reduces the casting time of your Imp's Firebolt spell by 0.5 sec.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 1
+    },
+    {
+        "name": "Improved Lash of Pain",
+        "icon": "spell_shadow_curse",
+        "baseDescription": "Reduces the cooldown of your Succubus' Lash of Pain spell by 3 sec.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 2
+    },
+    {
+        "name": "Devastation",
+        "icon": "spell_fire_flameshock",
+        "baseDescription": "Increases the critical strike chance of your Destruction spells by 1%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 3
+    },
+    {
+        "name": "Shadowburn",
+        "icon": "spell_shadow_scourgebuild",
+        "baseDescription": "Instantly blasts the target for 91 to 104 Shadow damage.  If the target dies within 5 sec of Shadowburn, and yields experience or honor, the caster gains a Soul Shard.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 4
+    },
+    {
+        "name": "Intensity",
+        "icon": "spell_fire_lavaspawn",
+        "baseDescription": "Gives you a 35% chance to resist interruption caused by damage while channeling the Rain of Fire, Hellfire or Soul Fire spell.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 1
+    },
+    {
+        "name": "Destructive Reach",
+        "icon": "spell_shadow_corpseexplode",
+        "baseDescription": "Increases the range of your Destruction spells by 10%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 2
+    },
+    {
+        "name": "Improved Searing Pain",
+        "icon": "spell_fire_soulburn",
+        "baseDescription": "Increases the critical strike chance of your Searing Pain spell by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 4
+    },
+    
+    {
+        "name": "Pyroclasm",
+        "icon": "spell_fire_volcano",
+        "baseDescription": "Gives your Rain of Fire, Hellfire, and Soul Fire spells a 26% chance to stun the target for 3 sec.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 1,
+        "arrow": {
+            "image": "ArrowShort",
+            "side": "top",
+            "size": "short"
+          },
+        "dependencyName": "Intensity"
+    },
+    {
+        "name": "Improved Immolate",
+        "icon": "spell_fire_immolation",
+        "baseDescription": "Reduces the Attack Speed and Casting Speed penalty of your Enslave Demon spell by 2% and reduces the resist chance by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 2
+    },
+    {
+        "name": "Ruin",
+        "icon": "spell_shadow_shadowwordpain",
+        "baseDescription": "Increases the critical strike damage bonus of your Destruction spells by 100%.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 3,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+          },
+        "dependencyName": "Devastation"
+    },
+    {
+        "name": "Emberstorm",
+        "icon": "spell_fire_selfdestruct",
+        "baseDescription": "Increases the damage done by your Fire spells by 4%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 25,
+        "row": 6,
+        "column": 3
+        
+    },
+    {
+        "name": "Conflagrate",
+        "icon": "spell_fire_fireball",
+        "baseDescription": "Ignites a target that is already afflicted by Immolate, dealing 249 to 316 Fire damage and consuming the Immolate spell.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 30,
+        "row": 7,
+        "column": 2,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+        },
+        "dependencyName": "Improved Immolate"
+    }
+]

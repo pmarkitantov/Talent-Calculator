@@ -1,0 +1,191 @@
+[
+    {
+        "name": "Suppression",
+        "icon": "spell_shadow_unsummonbuilding",
+        "baseDescription": "Reduces the chance for enemies to resist your Affliction spells by 4%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 2
+    },
+    {
+        "name": "Improved Corruption",
+        "icon": "spell_shadow_abominationexplosion",
+        "baseDescription": "Reduces the casting time of your Corruption spell by 0.4 sec.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 3
+    },
+    {
+        "name": "Improved Curse of Weakness",
+        "icon": "spell_shadow_curseofmannoroth",
+        "baseDescription": "Increases the effect of your Curse of Weakness by 6%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 1
+    },
+    {
+        "name": "Improved Drain Soul",
+        "icon": "spell_shadow_haunting",
+        "baseDescription": "Gives you a 50% chance to get a 100% increase to your Mana regeneration for 10 sec if the target is killed by you while you drain its soul.  In addition your Mana may continue to regenerate while casting at 50% of normal.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 2
+    },
+    {
+        "name": "Improved Life Tap",
+        "icon": "spell_shadow_burningspirit",
+        "baseDescription": "Increases the amount of Mana awarded by your Life Tap spell by 10%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 3
+    },
+    {
+        "name": "Improved Drain Life",
+        "icon": "spell_shadow_lifedrain02",
+        "baseDescription": "Increases the Health drained by your Drain Life spell by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 4
+    },
+    {
+        "name": "Improved Curse of Agony",
+        "icon": "spell_shadow_curseofsargeras",
+        "baseDescription": "Increases the damage done by your Curse of Agony by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 1
+    },
+    {
+        "name": "Fel Concentration",
+        "icon": "spell_shadow_fingerofdeath",
+        "baseDescription": "Gives you a 14% chance to avoid interruption caused by damage while channeling the Drain Life, Drain Mana, or Drain Soul spell.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 2
+    },
+    {
+        "name": "Amplify Curse",
+        "icon": "spell_shadow_contagion",
+        "baseDescription": "Increases the effect of your next Curse of Weakness or Curse of Agony by 50%, or your next Curse of Exhaustion by 20%.  Lasts 30 sec.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 3
+    },
+    {
+        "name": "Grim Reach",
+        "icon": "spell_shadow_callofbone",
+        "baseDescription": "Increases the range of your Affliction spells by 10%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 1
+    },
+    {
+        "name": "Nightfall",
+        "icon": "spell_shadow_twilight",
+        "baseDescription": "Gives your Corruption and Drain Life spells a 2% chance to cause you to enter a Shadow Trance state after damaging the opponent.  The Shadow Trance state reduces the casting time of your next Shadow Bolt spell by 100%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 2
+    },
+    {
+        "name": "Improved Drain Mana",
+        "icon": "spell_shadow_siphonmana",
+        "baseDescription": "Causes 30% of the Mana drained by your Drain Mana spell to damage the opponent.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 4
+    },
+    {
+        "name": "Siphon Life",
+        "icon": "spell_shadow_requiem",
+        "baseDescription": "Transfers 15 health from the target to the caster every 3 sec.  Lasts 30 sec.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 2
+    },
+    {
+        "name": "Curse of Exhaustion",
+        "icon": "spell_shadow_grimward",
+        "baseDescription": "Reduces the target's movement speed by 10% for 12 sec.  Only one Curse per Warlock can be active on any one target.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 3,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+          },
+        "dependencyName": "Amplify Curse"
+    },
+    {
+        "name": "Improved Curse of Exhaustion",
+        "icon": "spell_shadow_grimward",
+        "baseDescription": "Increases the speed reduction of your Curse of Exhaustion by 20%.",
+        "currentPoints": 0,
+        "maxPoints": 4,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 4,
+        "arrow": {
+            "image": "ArrowShort",
+            "side": "top",
+            "size": "short"
+          },
+        "dependencyName": "Curse of Exhaustion"
+    },
+    {
+        "name": "Shadow Mastery",
+        "icon": "spell_shadow_shadetruesight",
+        "baseDescription": "Increases the damage dealt or life drained by your Shadow spells by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 25,
+        "row": 6,
+        "column": 2,
+        "arrow": {
+            "image": "ArrowShort",
+            "side": "top",
+            "size": "short"
+          },
+        "dependencyName": "Siphon Life"
+    },
+    {
+        "name": "Dark Pact",
+        "icon": "spell_shadow_darkritual",
+        "baseDescription": "Drains 150 of your pet's Mana, returning 100% to you.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 30,
+        "row": 7,
+        "column": 2
+    }
+]
+

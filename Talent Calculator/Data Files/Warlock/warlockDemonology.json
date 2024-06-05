@@ -1,0 +1,191 @@
+[
+    {
+        "name": "Improved Healthstone",
+        "icon": "inv_stone_04",
+        "baseDescription": "Increases the amount of Health restored by your Healthstone by 10%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 1
+    },
+    {
+        "name": "Improved Imp",
+        "icon": "spell_shadow_summonimp",
+        "baseDescription": "Increases the effect of your Imp's Firebolt, Fire Shield, and Blood Pact spells by 10%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 2
+    },
+    {
+        "name": "Demonic Embrace",
+        "icon": "spell_shadow_metamorphosis",
+        "baseDescription": "Increases your total Stamina by 6% but reduces your total Spirit by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 3
+    },
+    {
+        "name": "Improved Health Funnel",
+        "icon": "spell_shadow_lifedrain",
+        "baseDescription": "Increases the amount of Health transferred by your Health Funnel spell by 10%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 1
+    },
+    {
+        "name": "Improved Voidwalker",
+        "icon": "spell_shadow_summonvoidwalker",
+        "baseDescription": "Increases the effectiveness of your Voidwalker's Torment, Consume Shadows, Sacrifice and Suffering spells by 10%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 2
+    },
+    {
+        "name": "Fel Intellect",
+        "icon": "spell_holy_magicalsentry",
+        "baseDescription": "Increases the maximum Mana of your Imp, Voidwalker, Succubus, and Felhunter by 3%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 3
+    },
+    {
+        "name": "Improved Succubus",
+        "icon": "spell_shadow_summonsuccubus",
+        "baseDescription": "Increases the effect of your Succubus' Lash of Pain and Soothing Kiss spells by 10%, and increases the duration of your Succubus' Seduction and Lesser Invisibility spells by 10%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 1
+    },
+    {
+        "name": "Fel Domination",
+        "icon": "spell_nature_removecurse",
+        "baseDescription": "Gives you a 14% chance to avoid interruption caused by damage while channeling the Drain Life, Drain Mana, or Drain Soul spell.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 2
+    },
+    {
+        "name": "Fel Stamina",
+        "icon": "spell_shadow_antishadow",
+        "baseDescription": "Increases the maximum Health of your Imp, Voidwalker, Succubus, and Felhunter by 3%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 3
+    },
+    {
+        "name": "Master Summoner",
+        "icon": "spell_shadow_impphaseshift",
+        "baseDescription": "Reduces the casting time of your Imp, Voidwalker, Succubus, and Felhunter Summoning spells by 2 sec and the Mana cost by 20%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 2,
+        "arrow": {
+            "image": "ArrowShort",
+            "side": "top",
+            "size": "short"
+          },
+        "dependencyName": "Fel Domination"
+    },
+    {
+        "name": "Unholy Power",
+        "icon": "spell_shadow_shadowworddominate",
+        "baseDescription": "Increases the damage done by your Voidwalker, Succubus, and Felhunter's melee attacks by 4%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 3
+    },
+    {
+        "name": "Improved Enslave Demon",
+        "icon": "spell_shadow_enslavedemon",
+        "baseDescription": "Reduces the Attack Speed and Casting Speed penalty of your Enslave Demon spell by 2% and reduces the resist chance by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 1
+    },
+    {
+        "name": "Demonic Sacrifice",
+        "icon": "spell_shadow_psychicscream",
+        "baseDescription": "When activated, sacrifices your summoned demon to grant you an effect that lasts 30 min.  The effect is canceled if any Demon is summoned.Imp: Increases your Fire damage by 15%.Voidwalker: Restores 3% of total Health every 4 sec.Succubus: Increases your Shadow damage by 15%.Felhunter: Restores 2% of total Mana every 4 sec.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 2
+    },
+    {
+        "name": "Improved Firestone",
+        "icon": "inv_ammo_firetar",
+        "baseDescription": "Increases the bonus Fire damage from Firestones and the Firestone effect by 15%.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 20,
+        "row": 5,
+        "column":4
+    },
+    {
+        "name": "Master Demonologist",
+        "icon": "spell_shadow_shadowpact",
+        "baseDescription": "Grants both the Warlock and the summoned demon an effect as long as that demon is active.Imp - Reduces threat caused by 4%.Voidwalker - Reduces physical damage taken by 2%.Succubus - Increases all damage caused by 2%.Felhunter - Increases all resistances by .2 per level.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 25,
+        "row": 6,
+        "column": 3,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+          },
+        "dependencyName": "Unholy Power"
+    },
+    {
+        "name": "Soul Link",
+        "icon": "spell_shadow_gathershadows",
+        "baseDescription": "When active, 0% of all damage taken by the caster is taken by your Imp, Voidwalker, Succubus, or Felhunter demon instead.  In addition, both the demon and master will inflict 3% more damage.  Lasts as long as the demon is active.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 30,
+        "row": 7,
+        "column": 2,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+        },
+        "dependencyName": "Demonic Sacrifice"
+    },
+    {
+        "name": "Improved Spellstone",
+        "icon": "inv_misc_gem_sapphire_01",
+        "baseDescription": "Increases the amount of damage absorbed by your Spellstone by 15%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 30,
+        "row": 7,
+        "column": 3
+    }
+]
+
