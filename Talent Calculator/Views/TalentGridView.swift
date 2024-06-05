@@ -43,11 +43,9 @@ struct TalentGridView: View {
                                 Button {
                                     let newId = talent.id
 
-                                    // Обновляем lastSelectedTalentId при любом нажатии
                                     lastSelectedTalentId = newId
                                     selectedTalentId = lastSelectedTalentId!
 
-                                    // Проверяем состояние isUnlocked перед выполнением действия
                                     if isUnlocked {
                                         viewModel.handleButtonTap(for: newId, inBranch: selectedBranchIndex, selectedTalentId: &selectedTalentId)
                                     }

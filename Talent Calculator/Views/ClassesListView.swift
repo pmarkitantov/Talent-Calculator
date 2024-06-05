@@ -15,15 +15,14 @@ struct ClassesListView: View {
                 Image("background")
                     .resizable()
                     .ignoresSafeArea()
-                    
-                
+                    .blur(radius: 10)
+
                 VStack {
                     HStack {
                         Text("Choose a Class")
                             .font(.largeTitle)
-                        .fontWeight(.semibold)
+                            .fontWeight(.semibold)
                         Spacer()
-
                     }
                     .padding(.horizontal)
                     ScrollView {
@@ -51,7 +50,6 @@ struct ClassesListView: View {
                     }
                 }
             }
-            
         }
     }
 }

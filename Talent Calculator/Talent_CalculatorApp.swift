@@ -12,7 +12,7 @@ struct Talent_CalculatorApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ClassesListView()
+            HomeView()
         }
     }
 }

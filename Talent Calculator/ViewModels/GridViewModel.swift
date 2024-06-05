@@ -147,10 +147,10 @@ class GridViewModel: ObservableObject {
                     }
                 }
             }
-            
+
             self.pointsLeft = 51
-            self.branchPoint = [0,0,0]
-            
+            self.branchPoint = [0, 0, 0]
+
             DispatchQueue.main.async {
                 self.objectWillChange.send()
             }
