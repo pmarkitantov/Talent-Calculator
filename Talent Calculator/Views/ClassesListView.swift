@@ -10,18 +10,36 @@ import SwiftUI
 
 struct ClassesListView: View {
     var body: some View {
-        NavigationView {
-            List(CharacterData.characterClasses, id: \.name) { characterClass in
-                NavigationLink(destination: TalentsTreeView(characterClass: characterClass)) {
-                    HStack {
-                        Image(characterClass.iconName)
-                        Text(characterClass.name)
-                            .foregroundColor(characterClass.nameColor)
-                            .font(.title)
+        NavigationStack {
+            ZStack {
+                Image("background")
+                    .resizable()
+                    .ignoresSafeArea()
+
+                ScrollView {
+                    VStack(alignment: .leading) {
+                        ForEach(CharacterData.characterClasses, id: \.name) { characterClass in
+                            NavigationLink(destination: TalentsTreeView(characterClass: characterClass)) {
+                                HStack {
+                                    Image(characterClass.iconName)
+                                    Text(characterClass.name)
+                                        .foregroundColor(characterClass.nameColor)
+                                        .font(.title)
+                                        .fontWeight(.semibold)
+                                    Spacer()
+                                }
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .background(.thinMaterial)
+                                .clipShape(RoundedRectangle(cornerRadius: 15))
+                                .shadow(color: Color(characterClass.nameColor).opacity(1), radius: 5, x: 0, y: -1)
+                            }
+                        }
                     }
+                    .padding(.horizontal)
                 }
             }
-            .navigationTitle("Select a Class")
+            .navigationTitle("Choose a Class")
         }
     }
 }

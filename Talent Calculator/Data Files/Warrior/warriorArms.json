@@ -176,8 +176,7 @@
         "maxPoints": 5,
         "requiredPoints": 20,
         "row": 5,
-        "column": 4,
-        "arrow": null
+        "column": 4
     },
     {
         "name": "Polearm Specialization",
@@ -187,13 +186,7 @@
         "maxPoints": 5,
         "requiredPoints": 25,
         "row": 6,
-        "column": 1,
-        "arrow": {
-            "image": "ArrowMedium",
-            "side": "top",
-            "size": "medium"
-          },
-        "dependencyName": "Critical Mass"
+        "column": 1
     },
     {
         "name": "Improved Hamstring",
@@ -203,8 +196,7 @@
         "maxPoints": 3,
         "requiredPoints": 25,
         "row": 6,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Mortal Strike",
@@ -214,7 +206,7 @@
         "maxPoints": 1,
         "requiredPoints": 30,
         "row": 7,
-        "column": 3,
+        "column": 2,
         "arrow": {
             "image": "ArrowMedium",
             "side": "top",

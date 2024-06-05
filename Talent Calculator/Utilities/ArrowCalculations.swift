@@ -25,7 +25,7 @@ enum ArrowCalculations {
     static func yOffset(for arrow: Arrow, with cellHeight: CGFloat) -> CGFloat {
         switch (arrow.side, arrow.size) {
         case ("top", "short"):
-            return -cellHeight / 2 - 5
+            return -cellHeight / 2 - 10
         case ("top", "medium"):
             return -cellHeight - 20
         case ("topLeft", _):
@@ -44,7 +44,7 @@ enum ArrowCalculations {
         case ("left", _):
             return cellWidth / 2
         case (_, "short"):
-            return cellWidth / 2
+            return cellWidth / 1.6
         case (_, "medium"), (_, "long"):
             return cellWidth
         default:

@@ -71,5 +71,5 @@ extension TalentsTreeView {
 }
 
 #Preview {
-    TalentsTreeView(characterClass: CharacterData.characterClasses[2])
+    TalentsTreeView(characterClass: CharacterData.characterClasses[8])
 }
