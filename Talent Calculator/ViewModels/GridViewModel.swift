@@ -33,7 +33,7 @@ class GridViewModel: ObservableObject {
         await withTaskGroup(of: (Int, [Talent]?).self) { group in
             for (index, talentTree) in characterClass.talentTrees.enumerated() where index < talentsBranches.count {
                 group.addTask {
-                    let filename = characterClass.name.lowercased() + talentTree.name
+                    let filename = characterClass.name.lowercased() + talentTree.name.replacingOccurrences(of: " ", with: "")
                     do {
                         let talents = try await self.loadTalentsFromJSON(named: filename)
                         return (index, talents)

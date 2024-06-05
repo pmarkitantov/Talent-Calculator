@@ -111,7 +111,7 @@
     },
     {
         "name": "Spirit Bond",
-        "icon": "classic_ability_druid_demoralizingroar",
+        "icon": "ability_druid_demoralizingroar",
         "baseDescription": "While your pet is active, you and your pet will regenerate 2% of total health every 10 sec.",
         "currentPoints": 0,
         "maxPoints": 2,
