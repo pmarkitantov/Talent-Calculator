@@ -8,7 +8,6 @@
 import Foundation
 import SwiftUI
 
-
 struct Arrow: Decodable {
     let image: String
     let side: String
@@ -23,10 +22,8 @@ struct TalentBranch {
     var spentPointsInBranch: Int = 0
 }
 
-
-
 struct Talent: Identifiable, Decodable {
-    var id: UUID
+    var id: UUID = .init()
     let name: String
     let icon: String
     let baseDescription: String
@@ -56,11 +53,11 @@ struct Talent: Identifiable, Decodable {
         column = try container.decode(Int.self, forKey: .column)
         arrow = try container.decodeIfPresent(Arrow.self, forKey: .arrow)
         dependencyName = try container.decodeIfPresent(String.self, forKey: .dependencyName)
-        
     }
+    
+    //Кастомый инициализатор для превьюшек
 
     init(name: String, icon: String, baseDescription: String, currentPoints: Int = 0, maxPoints: Int, requiredPoints: Int, row: Int, column: Int, arrow: Arrow? = nil, dependencyName: String? = nil) {
-        id = UUID()
         self.name = name
         self.icon = icon
         self.baseDescription = baseDescription

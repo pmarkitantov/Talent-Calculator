@@ -64,8 +64,3 @@ enum CharacterData {
         ])
     ]
 }
-
-
-
-
-
