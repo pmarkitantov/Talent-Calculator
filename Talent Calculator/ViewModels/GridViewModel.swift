@@ -101,7 +101,7 @@ class GridViewModel: ObservableObject {
         }
         return ""
     }
-    
+
     func showTalentRank(for taletId: UUID) -> String {
         for talentsBranch in talentsBranches {
             if let talent = talentsBranch.talents!.first(where: { $0.id == taletId }) {
@@ -110,8 +110,6 @@ class GridViewModel: ObservableObject {
         }
         return ""
     }
-    
-    
 
     func incrementCount(for elementID: UUID, inBranch branchIndex: Int) {
         if let talentIndex = talentsBranches[branchIndex].talents!.firstIndex(where: { $0.id == elementID }) {
@@ -138,5 +136,24 @@ class GridViewModel: ObservableObject {
             incrementCount(for: talentId, inBranch: branchIndex)
         }
         tapCount += 1
+    }
+
+    func resetTalent() {
+        DispatchQueue.global(qos: .userInitiated).async {
+            for index in 0..<self.talentsBranches.count {
+                if let talents = self.talentsBranches[index].talents {
+                    for i in 0..<talents.count {
+                        self.talentsBranches[index].talents![i].currentPoints = 0
+                    }
+                }
+            }
+            
+            self.pointsLeft = 51
+            self.branchPoint = [0,0,0]
+            
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
+        }
     }
 }

@@ -21,40 +21,64 @@ struct TalentsTreeView: View {
     }
 
     var body: some View {
-        ZStack {
-            if let tree = characterClass.talentTrees.indices.contains(selectedTab) ? characterClass.talentTrees[selectedTab] : nil {
-                Image(tree.background)
-                    .resizable()
-                    .ignoresSafeArea()
+        NavigationStack {
+            ZStack {
+                if let tree = characterClass.talentTrees.indices.contains(selectedTab) ? characterClass.talentTrees[selectedTab] : nil {
+                    Image(tree.background)
+                        .resizable()
+                        .ignoresSafeArea()
 
-                VStack(spacing: 0) {
-                    header
-                        .padding(.horizontal)
+                    VStack(spacing: 0) {
+                        header
+                            .padding([.horizontal, .top])
 
-                    TalentGridView(viewModel: viewModel, selectedTalentId: $selectedTalentId, selectedBranchIndex: selectedTab)
-                        .padding(.horizontal)
+                        TalentGridView(viewModel: viewModel, selectedTalentId: $selectedTalentId, selectedBranchIndex: selectedTab)
+                            .padding(.horizontal)
 
-                    Spacer()
+                        Spacer()
 
-                    if showDescription {
-                        descriptionView
-                            .padding([.bottom, .horizontal])
+                        if showDescription {
+                            descriptionView
+                                .padding([.bottom, .horizontal])
+                        }
+
+                        TabbarButtonView(talentTrees: characterClass.talentTrees, selectedTab: $selectedTab)
+                            .shadow(color: Color(characterClass.nameColor).opacity(10), radius: 5, x: 0, y: 0)
+                            .frame(height: 60)
+                            .padding()
                     }
-
-                    TabbarButtonView(talentTrees: characterClass.talentTrees, selectedTab: $selectedTab)
-                        .shadow(color: Color(characterClass.nameColor).opacity(10), radius: 5, x: 0, y: 0)
-                        .frame(height: 60)
-                        .padding()
+                    .onChange(of: selectedTalentId) {
+                        showDescription = true
+                    }
+                } else {
+                    Text("Выбранная вкладка недоступна")
+                        .ignoresSafeArea()
                 }
-                .onChange(of: selectedTalentId) {
-                    showDescription = true
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {} label: {
+                        HStack {
+                            Text("Save build")
+                            Image(systemName: "square.and.arrow.down")
+                        }
+                        .fontWeight(.semibold)
+                    }
                 }
-            } else {
-                Text("Выбранная вкладка недоступна")
-                    .ignoresSafeArea()
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        viewModel.resetTalent()
+                    } label: {
+                        HStack {
+                            Text("Reset")
+                            Image(systemName: "trash")
+                        }
+                        .fontWeight(.semibold)
+                        .foregroundStyle(.red)
+                    }
+                }
             }
         }
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

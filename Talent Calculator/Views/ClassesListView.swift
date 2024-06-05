@@ -15,6 +15,7 @@ struct ClassesListView: View {
                 Image("background")
                     .resizable()
                     .ignoresSafeArea()
+                    
                 
                 VStack {
                     HStack {
