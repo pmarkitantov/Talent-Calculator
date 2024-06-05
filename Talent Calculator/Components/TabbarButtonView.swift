@@ -33,13 +33,17 @@ struct TabbarButtonView: View {
                     }
                     .frame(maxWidth: .infinity)
                     .padding(.vertical)
-                    .foregroundColor(self.selectedTab == index ? .yellow : .primary)
+                    .foregroundColor(self.selectedTab == index ? .yellow : .secondary)
                 }
             }
         }
         .frame(maxWidth: .infinity, minHeight: 100)
         .background(.ultraThinMaterial)
         .clipShape(RoundedRectangle(cornerRadius: 10))
+        .overlay {
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(.accent, lineWidth: 2)
+        }
     }
 }
 

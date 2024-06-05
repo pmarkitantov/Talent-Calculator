@@ -5,42 +5,72 @@
 //  Created by Pavel Markitantov on 27/03/2024.
 //
 
+import Combine
 import Foundation
+import SwiftUI
 
 class GridViewModel: ObservableObject {
     @Published var talentsBranches: [TalentBranch]
+    @Published var errorMessage: String?
 
+    
     var branchPoint = [0, 0, 0]
-    var totalPoints = 0
+    var pointsLeft = 51
 
-    init(chatacterClass: CharacterClass) {
-        self.talentsBranches = chatacterClass.talentTrees
-        loadTalents(characterClass: chatacterClass)
+    func branchPointAsString() -> String {
+        return branchPoint.map { String($0) }.joined(separator: "/")
     }
 
-    func loadTalents(characterClass: CharacterClass) {
-        Task {
+    init(characterClass: CharacterClass) {
+        self.talentsBranches = characterClass.talentTrees
+        Task { await loadTalents(characterClass: characterClass) }
+    }
+
+    @MainActor
+    func loadTalents(characterClass: CharacterClass) async {
+        var talents = [[Talent]?](repeating: nil, count: talentsBranches.count)
+
+        await withTaskGroup(of: (Int, [Talent]?).self) { group in
             for (index, talentTree) in characterClass.talentTrees.enumerated() where index < talentsBranches.count {
-                do {
+                group.addTask {
                     let filename = characterClass.name.lowercased() + talentTree.name
-                    let talents = try await loadTalentsFromJSON(named: filename)
-                    DispatchQueue.main.async { [weak self] in
-                        self?.talentsBranches[index].talents = talents
+                    do {
+                        let talents = try await self.loadTalentsFromJSON(named: filename)
+                        return (index, talents)
+                    } catch {
+                        DispatchQueue.main.async {
+                            self.errorMessage = "Не удалось загрузить таланты для ветки \(talentTree.name): \(error)"
+                        }
+                        return (index, nil)
                     }
-                } catch {
-                    print("Не удалось загрузить таланты для ветки \(talentTree.name): \(error)")
                 }
+            }
+
+            for await result in group {
+                talents[result.0] = result.1
+            }
+        }
+
+        for (index, talentList) in talents.enumerated() {
+            if let talentList = talentList {
+                talentsBranches[index].talents = talentList
             }
         }
     }
 
     func isTalentActive(talent: Talent, branchIndex: Int) -> Bool {
         guard let dependencyName = talent.dependencyName else {
-            return talent.requiredPoints <= branchPoint[branchIndex]
+            return talent.requiredPoints <= branchPoint[branchIndex] && pointsLeft > 0
         }
-        guard let requiredTalent = talentsBranches[branchIndex].talents?.first(where: { $0.name == dependencyName }) else { return false }
+        guard let requiredTalent = talentsBranches[branchIndex].talents?.first(where: { $0.name == dependencyName }) else {
+            return false
+        }
 
-        return requiredTalent.currentPoints == requiredTalent.maxPoints && talent.requiredPoints <= branchPoint[branchIndex]
+        let isRequiredTalentMaxed = requiredTalent.currentPoints == requiredTalent.maxPoints
+        let hasSufficientBranchPoints = talent.requiredPoints <= branchPoint[branchIndex]
+        let hasAvailableTotalPoints = pointsLeft > 0
+
+        return isRequiredTalentMaxed && hasSufficientBranchPoints && hasAvailableTotalPoints
     }
 
     private func loadTalentsFromJSON(named fileName: String) async throws -> [Talent] {
@@ -54,11 +84,14 @@ class GridViewModel: ObservableObject {
     }
 
     func incrementCount(for elementID: UUID, inBranch branchIndex: Int) {
-        if let index = talentsBranches[branchIndex].talents!.firstIndex(where: { $0.id == elementID }) {
-            if talentsBranches[branchIndex].talents![index].currentPoints < talentsBranches[branchIndex].talents![index].maxPoints {
-                talentsBranches[branchIndex].talents![index].currentPoints += 1
+        if let talentIndex = talentsBranches[branchIndex].talents!.firstIndex(where: { $0.id == elementID }) {
+            var talent = talentsBranches[branchIndex].talents![talentIndex]
+
+            if talent.currentPoints < talent.maxPoints {
+                talent.currentPoints += 1
                 branchPoint[branchIndex] += 1
-                totalPoints += 1
+                pointsLeft -= 1
+                talentsBranches[branchIndex].talents![talentIndex] = talent
                 objectWillChange.send()
             }
         }

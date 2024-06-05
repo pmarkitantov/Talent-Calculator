@@ -57,7 +57,7 @@ struct TalentGridView: View {
                         }
                         .frame(height: 75)
                         .allowsHitTesting(isUnlocked)
-                        .grayscale(isUnlocked ? 0 : 1)
+                        .grayscale(isUnlocked || talent.currentPoints != 0 ? 0 : 1)
                     } else {
                         Color.clear
                     }
@@ -69,5 +69,5 @@ struct TalentGridView: View {
 }
 
 #Preview {
-    TalentGridView(viewModel: GridViewModel(chatacterClass: CharacterData.characterClasses[0]), selectedBranchIndex: 1)
+    TalentGridView(viewModel: GridViewModel(characterClass: CharacterData.characterClasses[0]), selectedBranchIndex: 1)
 }

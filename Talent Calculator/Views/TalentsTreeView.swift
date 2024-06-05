@@ -15,7 +15,7 @@ struct TalentsTreeView: View {
     init(characterClass: CharacterClass) {
         self.characterClass = characterClass
 
-        self._viewModel = ObservedObject(initialValue: GridViewModel(chatacterClass: characterClass))
+        self._viewModel = ObservedObject(initialValue: GridViewModel(characterClass: characterClass))
     }
 
     var body: some View {
@@ -26,6 +26,9 @@ struct TalentsTreeView: View {
                     .ignoresSafeArea()
 
                 VStack(spacing: 0) {
+                    header
+                        .padding(.horizontal)
+
                     TalentGridView(viewModel: viewModel, selectedBranchIndex: selectedTab)
                         .padding(.horizontal)
 
@@ -41,6 +44,29 @@ struct TalentsTreeView: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+extension TalentsTreeView {
+    var header: some View {
+        HStack {
+            Text(characterClass.name)
+                .foregroundStyle(Color(characterClass.nameColor))
+            Text("(\(viewModel.branchPointAsString()))")
+
+            Spacer()
+            Text("Points left: \(viewModel.pointsLeft)")
+        }
+        .font(.headline)
+        .fontWeight(.bold)
+        .foregroundStyle(.accent)
+        .padding()
+        .background(.ultraThinMaterial)
+        .cornerRadius(10)
+        .overlay {
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(.accent, lineWidth: 2)
+        }
     }
 }
 

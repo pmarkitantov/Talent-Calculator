@@ -19,7 +19,6 @@
 		AC1598FB2BB5B89400D605F9 /* druidBalance.json in Resources */ = {isa = PBXBuildFile; fileRef = AC1598FA2BB5B89400D605F9 /* druidBalance.json */; };
 		AC69D01F2BF25D38006F68C2 /* paladinRetribution.json in Resources */ = {isa = PBXBuildFile; fileRef = AC69D01E2BF25D38006F68C2 /* paladinRetribution.json */; };
 		AC7BAF9D2BB620FE007883B1 /* TabbarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7BAF9C2BB620FE007883B1 /* TabbarButtonView.swift */; };
-		AC7BAF9F2BB63EDC007883B1 /* TalentTreeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7BAF9E2BB63EDC007883B1 /* TalentTreeHeader.swift */; };
 		AC7BAFA12BB64392007883B1 /* CharacterClassesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7BAFA02BB64392007883B1 /* CharacterClassesModel.swift */; };
 		AC8D2B2B2BC6B5E300E4A245 /* TalentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8D2B2A2BC6B5E300E4A245 /* TalentCell.swift */; };
 		AC8D2B2D2BC6C4B500E4A245 /* druidFeral.json in Resources */ = {isa = PBXBuildFile; fileRef = AC8D2B2C2BC6C4B500E4A245 /* druidFeral.json */; };
@@ -57,7 +56,6 @@
 		AC1598FA2BB5B89400D605F9 /* druidBalance.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = druidBalance.json; sourceTree = "<group>"; };
 		AC69D01E2BF25D38006F68C2 /* paladinRetribution.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = paladinRetribution.json; sourceTree = "<group>"; };
 		AC7BAF9C2BB620FE007883B1 /* TabbarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarButtonView.swift; sourceTree = "<group>"; };
-		AC7BAF9E2BB63EDC007883B1 /* TalentTreeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentTreeHeader.swift; sourceTree = "<group>"; };
 		AC7BAFA02BB64392007883B1 /* CharacterClassesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClassesModel.swift; sourceTree = "<group>"; };
 		AC8D2B2A2BC6B5E300E4A245 /* TalentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentCell.swift; sourceTree = "<group>"; };
 		AC8D2B2C2BC6C4B500E4A245 /* druidFeral.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = druidFeral.json; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				AC7BAF9C2BB620FE007883B1 /* TabbarButtonView.swift */,
-				AC7BAF9E2BB63EDC007883B1 /* TalentTreeHeader.swift */,
 				AC8D2B2A2BC6B5E300E4A245 /* TalentCell.swift */,
 			);
 			path = Components;
@@ -378,7 +375,6 @@
 			files = (
 				AC1598E92BB49BF300D605F9 /* TalentsTreeView.swift in Sources */,
 				AC1598EB2BB49C8A00D605F9 /* TalentGridView.swift in Sources */,
-				AC7BAF9F2BB63EDC007883B1 /* TalentTreeHeader.swift in Sources */,
 				AC7BAFA12BB64392007883B1 /* CharacterClassesModel.swift in Sources */,
 				AC7BAF9D2BB620FE007883B1 /* TabbarButtonView.swift in Sources */,
 				AC1598F12BB4A62200D605F9 /* GridViewModel.swift in Sources */,
@@ -528,7 +524,8 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -536,9 +533,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "hidaha.com.Talent-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -558,7 +559,8 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -566,9 +568,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "hidaha.com.Talent-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
