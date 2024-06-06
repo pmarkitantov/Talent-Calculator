@@ -7,8 +7,7 @@
         "maxPoints": 3,
         "requiredPoints": 0,
         "row": 1,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Improved Sinister Strike",
@@ -18,8 +17,7 @@
         "maxPoints": 2,
         "requiredPoints": 0,
         "row": 1,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Lightning Reflexes",
@@ -29,8 +27,7 @@
         "maxPoints": 5,
         "requiredPoints": 0,
         "row": 1,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Improved Backstab",
@@ -40,8 +37,7 @@
         "maxPoints": 3,
         "requiredPoints": 5,
         "row": 2,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Deflection",
@@ -51,8 +47,7 @@
         "maxPoints": 5,
         "requiredPoints": 5,
         "row": 2,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Precision",
@@ -62,8 +57,7 @@
         "maxPoints": 5,
         "requiredPoints": 5,
         "row": 2,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Endurance",
@@ -73,15 +67,14 @@
         "maxPoints": 2,
         "requiredPoints": 10,
         "row": 3,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Riposte",
         "icon": "ability_warrior_challange",
         "baseDescription": "A strike that becomes active after parrying an opponent's attack.  This attack deals 150% weapon damage and disarms the target for 6 sec.",
         "currentPoints": 0,
-        "maxPoints":1,
+        "maxPoints": 1,
         "requiredPoints": 10,
         "row": 3,
         "column": 2,
@@ -89,7 +82,7 @@
             "image": "ArrowShort",
             "side": "top",
             "size": "short"
-          },
+        },
         "dependencyName": "Deflection"
     },
     {
@@ -100,8 +93,7 @@
         "maxPoints": 2,
         "requiredPoints": 10,
         "row": 3,
-        "column": 4,
-        "arrow": null
+        "column": 4
     },
     {
         "name": "Improved Kick",
@@ -111,8 +103,7 @@
         "maxPoints": 2,
         "requiredPoints": 15,
         "row": 4,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Dagger Specialization",
@@ -122,8 +113,7 @@
         "maxPoints": 5,
         "requiredPoints": 15,
         "row": 4,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Dual Wield Specialization",
@@ -138,7 +128,7 @@
             "image": "ArrowMedium",
             "side": "top",
             "size": "medium"
-          },
+        },
         "dependencyName": "Precision"
     },
     {
@@ -149,8 +139,7 @@
         "maxPoints": 5,
         "requiredPoints": 20,
         "row": 5,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Blade Flurry",
@@ -160,8 +149,7 @@
         "maxPoints": 1,
         "requiredPoints": 20,
         "row": 5,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Sword Specialization",
@@ -171,8 +159,7 @@
         "maxPoints": 5,
         "requiredPoints": 20,
         "row": 5,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Fist Weapon Specialization",
@@ -182,15 +169,14 @@
         "maxPoints": 5,
         "requiredPoints": 20,
         "row": 5,
-        "column": 4,
-        "arrow": null
+        "column": 4
     },
     {
         "name": "Weapon Expertise",
         "icon": "spell_holy_blessingofstrength",
         "baseDescription": "Increases your skill with Sword, Fist and Dagger weapons by 3.",
         "currentPoints": 0,
-        "maxPoints":2,
+        "maxPoints": 2,
         "requiredPoints": 10,
         "row": 6,
         "column": 2,
@@ -198,7 +184,7 @@
             "image": "ArrowShort",
             "side": "top",
             "size": "short"
-          },
+        },
         "dependencyName": "Blade Flurry"
     },
     {
@@ -209,8 +195,7 @@
         "maxPoints": 3,
         "requiredPoints": 25,
         "row": 6,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Adrenaline Rush",
@@ -220,10 +205,6 @@
         "maxPoints": 1,
         "requiredPoints": 30,
         "row": 7,
-        "column": 2,
-        "arrow": null
+        "column": 2
     }
-    
 ]
-
-

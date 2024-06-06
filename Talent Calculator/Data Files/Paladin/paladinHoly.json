@@ -7,8 +7,7 @@
         "maxPoints": 5,
         "requiredPoints": 0,
         "row": 1,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Divine Intellect",
@@ -18,8 +17,7 @@
         "maxPoints": 5,
         "requiredPoints": 0,
         "row": 1,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Spiritual Focus",
@@ -29,8 +27,7 @@
         "maxPoints": 5,
         "requiredPoints": 5,
         "row": 2,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Improved Seal of Righteousness",
@@ -40,8 +37,7 @@
         "maxPoints": 5,
         "requiredPoints": 5,
         "row": 2,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Healing Light",
@@ -51,8 +47,7 @@
         "maxPoints": 3,
         "requiredPoints": 10,
         "row": 3,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Consecration",
@@ -62,8 +57,7 @@
         "maxPoints": 1,
         "requiredPoints": 10,
         "row": 3,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Improved Lay on Hands",
@@ -73,8 +67,7 @@
         "maxPoints": 2,
         "requiredPoints": 10,
         "row": 3,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Unyielding Faith",
@@ -84,8 +77,7 @@
         "maxPoints":2,
         "requiredPoints": 10,
         "row": 3,
-        "column": 4,
-        "arrow": null
+        "column": 4
     },
     {
         "name": "Illumination",
@@ -95,8 +87,7 @@
         "maxPoints": 5,
         "requiredPoints": 15,
         "row": 4,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Improved Blessing of Wisdom",
@@ -106,8 +97,7 @@
         "maxPoints": 2,
         "requiredPoints": 15,
         "row": 4,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Divine Favor",
@@ -133,8 +123,7 @@
         "maxPoints": 3,
         "requiredPoints": 20,
         "row": 5,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Holy Power",
@@ -144,8 +133,7 @@
         "maxPoints": 5,
         "requiredPoints": 25,
         "row": 6,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Holy Shock",

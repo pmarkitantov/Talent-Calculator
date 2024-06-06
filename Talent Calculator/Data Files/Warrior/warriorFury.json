@@ -7,8 +7,7 @@
         "maxPoints": 5,
         "requiredPoints": 0,
         "row": 1,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Cruelty",
@@ -18,8 +17,7 @@
         "maxPoints": 5,
         "requiredPoints": 0,
         "row": 1,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Improved Demoralizing Shout",
@@ -29,8 +27,7 @@
         "maxPoints": 5,
         "requiredPoints": 5,
         "row": 2,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Unbridled Wrath",
@@ -40,8 +37,7 @@
         "maxPoints": 5,
         "requiredPoints": 5,
         "row": 2,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Improved Cleave",
@@ -51,8 +47,7 @@
         "maxPoints": 3,
         "requiredPoints": 10,
         "row": 3,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Piercing Howl",
@@ -62,8 +57,7 @@
         "maxPoints": 1,
         "requiredPoints": 10,
         "row": 3,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Blood Craze",
@@ -73,8 +67,7 @@
         "maxPoints": 3,
         "requiredPoints": 10,
         "row": 3,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Improved Battle Shout",
@@ -84,8 +77,7 @@
         "maxPoints": 5,
         "requiredPoints": 10,
         "row": 3,
-        "column": 4,
-        "arrow": null
+        "column": 4
     },
     {
         "name": "Dual Wield Specialization",
@@ -95,8 +87,7 @@
         "maxPoints": 3,
         "requiredPoints": 15,
         "row": 4,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Improved Execute",
@@ -106,8 +97,7 @@
         "maxPoints": 2,
         "requiredPoints": 15,
         "row": 4,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Enrage",
@@ -117,8 +107,7 @@
         "maxPoints": 5,
         "requiredPoints": 15,
         "row": 4,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Improved Slam",
@@ -128,8 +117,7 @@
         "maxPoints": 5,
         "requiredPoints": 20,
         "row": 5,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Death Wish",
@@ -139,8 +127,7 @@
         "maxPoints": 1,
         "requiredPoints": 20,
         "row": 5,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Improved Intercept",
@@ -150,8 +137,7 @@
         "maxPoints": 2,
         "requiredPoints": 20,
         "row": 5,
-        "column": 4,
-        "arrow": null
+        "column": 4
     },
     {
         "name": "Improved Berserker Rage",
@@ -161,8 +147,7 @@
         "maxPoints": 2,
         "requiredPoints": 25,
         "row": 6,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Flurry",
@@ -177,7 +162,7 @@
             "image": "ArrowMedium",
             "side": "top",
             "size": "medium"
-          },
+        },
         "dependencyName": "Enrage"
     },
     {
@@ -193,8 +178,7 @@
             "image": "ArrowMedium",
             "side": "top",
             "size": "medium"
-      },
+        },
         "dependencyName": "Death Wish"
     }
-
 ]

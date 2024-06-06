@@ -1,0 +1,175 @@
+[
+    {
+        "name": "Ancestral Knowledge",
+        "icon": "spell_shadow_grimward",
+        "baseDescription": "Increases your maximum Mana by 1%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 2
+    },
+    {
+        "name": "Shield Specialization",
+        "icon": "inv_shield_06",
+        "baseDescription": "Increases your chance to block attacks with a shield by 1% and increases the amount blocked by 5%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 0,
+        "row": 1,
+        "column": 3
+    },
+    {
+        "name": "Guardian Totems",
+        "icon": "spell_nature_stoneskintotem",
+        "baseDescription": "Increases the amount of damage reduced by your Stoneskin Totem and Windwall Totem by 10% and reduces the cooldown of your Grounding Totem by 1 sec.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 1
+    },
+    {
+        "name": "Thundering Strikes",
+        "icon": "ability_thunderbolt",
+        "baseDescription": "Improves your chance to get a critical strike with all spells and attacks by 1%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 2
+    },
+    {
+        "name": "Improved Ghost Wolf",
+        "icon": "spell_nature_spiritwolf",
+        "baseDescription": "Reduces the cast time of your Ghost Wolf spell by 1 sec.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 3
+    },
+    {
+        "name": "Improved Lightning Shield",
+        "icon": "spell_nature_lightningshield",
+        "baseDescription": "Increases the damage done by your Lightning Shield orbs by 5%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 5,
+        "row": 2,
+        "column": 4
+    },
+    {
+        "name": "Enhancing Totems",
+        "icon": "spell_nature_earthbindtotem",
+        "baseDescription": "Increases the effect of your Strength of Earth and Grace of Air Totems by 8%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 1
+    },
+    {
+        "name": "Two-Handed Axes and Maces",
+        "icon": "inv_axe_10",
+        "baseDescription": "Allows you to wield two-handed axes and two-handed maces.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 3
+    },
+    {
+        "name": "Anticipation",
+        "icon": "spell_nature_mirrorimage",
+        "baseDescription": "Increases your chance to dodge by 1%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 10,
+        "row": 3,
+        "column": 4
+    },
+    {
+        "name": "Flurry",
+        "icon": "ability_ghoulfrenzy",
+        "baseDescription": "Increases your attack speed by 10% for your next 3 swings after dealing a critical strike.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 2,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+          },
+        "dependencyName": "Thundering Strikes"
+        
+    },
+    {
+        "name": "Toughness",
+        "icon": "spell_holy_devotion",
+        "baseDescription": "Increases your armor value from items by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 15,
+        "row": 4,
+        "column": 3
+    },
+    {
+        "name": "Improved Weapon Totems",
+        "icon": "spell_fire_enchantweapon",
+        "baseDescription": "Increases the melee attack power bonus of your Windfury Totem by 15%.",
+        "currentPoints": 0,
+        "maxPoints": 2,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 1
+    },
+    {
+        "name": "Elemental Weapons",
+        "icon": "spell_fire_flametounge",
+        "baseDescription": "Increases the melee attack power bonus of your Rockbiter Weapon and Windfury Weapon by 13% and increases the damage caused by your Flametongue Weapon and Frostbrand Weapon by 5%.",
+        "currentPoints": 0,
+        "maxPoints": 3,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 2
+    },
+    {
+        "name": "Parry",
+        "icon": "ability_parry",
+        "baseDescription": "Gives a chance to parry enemy melee attacks.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 20,
+        "row": 5,
+        "column": 3
+    },
+    {
+        "name": "Weapon Mastery",
+        "icon": "inv_axe_09",
+        "baseDescription": "Increases the damage you deal with all weapons by 2%.",
+        "currentPoints": 0,
+        "maxPoints": 5,
+        "requiredPoints": 25,
+        "row": 6,
+        "column": 3
+    },
+    {
+        "name": "Stormstrike",
+        "icon": "spell_holy_sealofmight",
+        "baseDescription": "Gives you an extra attack. In addition, the next 2 sources of Nature damage dealt to the target are increased by 20%.",
+        "currentPoints": 0,
+        "maxPoints": 1,
+        "requiredPoints": 30,
+        "row": 7,
+        "column": 2,
+        "arrow": {
+            "image": "ArrowMedium",
+            "side": "top",
+            "size": "medium"
+          },
+        "dependencyName": "Elemental Weapons"
+    }
+]

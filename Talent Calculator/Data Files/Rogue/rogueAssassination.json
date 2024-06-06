@@ -7,8 +7,7 @@
         "maxPoints": 3,
         "requiredPoints": 0,
         "row": 1,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Remorseless Attacks",
@@ -18,8 +17,7 @@
         "maxPoints": 2,
         "requiredPoints": 0,
         "row": 1,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Malice",
@@ -29,8 +27,7 @@
         "maxPoints": 3,
         "requiredPoints": 0,
         "row": 1,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Ruthlessness",
@@ -40,8 +37,7 @@
         "maxPoints": 3,
         "requiredPoints": 5,
         "row": 2,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Murder",
@@ -51,8 +47,7 @@
         "maxPoints": 2,
         "requiredPoints": 5,
         "row": 2,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Improved Slice and Dice",
@@ -62,8 +57,7 @@
         "maxPoints": 3,
         "requiredPoints": 5,
         "row": 2,
-        "column": 4,
-        "arrow": null
+        "column": 4
     },
     {
         "name": "Relentless Strikes",
@@ -73,19 +67,17 @@
         "maxPoints": 1,
         "requiredPoints": 10,
         "row": 3,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Improved Expose Armor",
         "icon": "ability_warrior_riposte",
         "baseDescription": "Increases the armor reduced by your Expose Armor ability by 25%.",
         "currentPoints": 0,
-        "maxPoints":2,
+        "maxPoints": 2,
         "requiredPoints": 10,
         "row": 3,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Lethality",
@@ -100,7 +92,7 @@
             "image": "ArrowMedium",
             "side": "top",
             "size": "medium"
-          },
+        },
         "dependencyName": "Malice"
     },
     {
@@ -111,8 +103,7 @@
         "maxPoints": 5,
         "requiredPoints": 15,
         "row": 4,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Improved Poisons",
@@ -122,8 +113,7 @@
         "maxPoints": 2,
         "requiredPoints": 15,
         "row": 4,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Cold Blood",
@@ -133,8 +123,7 @@
         "maxPoints": 1,
         "requiredPoints": 20,
         "row": 5,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Improved Kidney Shot",
@@ -144,8 +133,7 @@
         "maxPoints": 3,
         "requiredPoints": 20,
         "row": 5,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Seal Fate",
@@ -160,7 +148,7 @@
             "image": "ArrowShort",
             "side": "top",
             "size": "short"
-          },
+        },
         "dependencyName": "Cold Blood"
     },
     {
@@ -171,9 +159,6 @@
         "maxPoints": 1,
         "requiredPoints": 30,
         "row": 7,
-        "column": 2,
-        "arrow": null
+        "column": 2
     }
-    
 ]
-

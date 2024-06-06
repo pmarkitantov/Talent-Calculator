@@ -7,8 +7,7 @@
         "maxPoints": 2,
         "requiredPoints": 0,
         "row": 1,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Arcane Focus",
@@ -18,8 +17,7 @@
         "maxPoints": 5,
         "requiredPoints": 0,
         "row": 1,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Improved Arcane Missiles",
@@ -29,8 +27,7 @@
         "maxPoints": 5,
         "requiredPoints": 0,
         "row": 1,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Wand Specialization",
@@ -40,8 +37,7 @@
         "maxPoints": 2,
         "requiredPoints": 5,
         "row": 2,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Magic Absorption",
@@ -51,8 +47,7 @@
         "maxPoints": 5,
         "requiredPoints": 5,
         "row": 2,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Arcane Concentration",
@@ -62,8 +57,7 @@
         "maxPoints": 5,
         "requiredPoints": 5,
         "row": 2,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Magic Attunement",
@@ -73,19 +67,17 @@
         "maxPoints": 2,
         "requiredPoints": 10,
         "row": 3,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Improved Arcane Explosion",
         "icon": "spell_nature_wispsplode",
         "baseDescription": "Increases the critical strike chance of your Arcane Explosion spell by an additional 4%.",
         "currentPoints": 0,
-        "maxPoints":3,
+        "maxPoints": 3,
         "requiredPoints": 10,
         "row": 3,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Arcane Resilience",
@@ -95,8 +87,7 @@
         "maxPoints": 1,
         "requiredPoints": 10,
         "row": 3,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Improved Mana Shield",
@@ -106,8 +97,7 @@
         "maxPoints": 2,
         "requiredPoints": 15,
         "row": 4,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Improved Counterspell",
@@ -117,8 +107,7 @@
         "maxPoints": 2,
         "requiredPoints": 15,
         "row": 4,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Arcane Meditation",
@@ -128,8 +117,7 @@
         "maxPoints": 3,
         "requiredPoints": 15,
         "row": 4,
-        "column": 4,
-        "arrow": null
+        "column": 4
     },
     {
         "name": "Presence of Mind",
@@ -139,8 +127,7 @@
         "maxPoints": 1,
         "requiredPoints": 20,
         "row": 5,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Arcane Mind",
@@ -155,7 +142,7 @@
             "image": "ArrowMedium",
             "side": "top",
             "size": "medium"
-          },
+        },
         "dependencyName": "Arcane Resilience"
     },
     {
@@ -171,7 +158,7 @@
             "image": "ArrowShort",
             "side": "top",
             "size": "short"
-          },
+        },
         "dependencyName": "Presence of Mind"
     },
     {
@@ -187,9 +174,7 @@
             "image": "ArrowShort",
             "side": "top",
             "size": "short"
-          },
+        },
         "dependencyName": "Arcane Instability"
     }
-    
 ]
-

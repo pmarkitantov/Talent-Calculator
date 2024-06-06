@@ -1,4 +1,3 @@
-
 [
     {
         "name": "Shield Specialization",
@@ -8,8 +7,7 @@
         "maxPoints": 5,
         "requiredPoints": 0,
         "row": 1,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Anticipation",
@@ -19,8 +17,7 @@
         "maxPoints": 5,
         "requiredPoints": 0,
         "row": 1,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Improved Bloodrage",
@@ -30,8 +27,7 @@
         "maxPoints": 2,
         "requiredPoints": 0,
         "row": 2,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Toughness",
@@ -41,8 +37,7 @@
         "maxPoints": 5,
         "requiredPoints": 5,
         "row": 2,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Iron Will",
@@ -52,8 +47,7 @@
         "maxPoints": 5,
         "requiredPoints": 5,
         "row": 2,
-        "column": 4,
-        "arrow": null
+        "column": 4
     },
     {
         "name": "Improved Thunder Clap",
@@ -63,8 +57,7 @@
         "maxPoints": 3,
         "requiredPoints": 5,
         "row": 2,
-        "column": 4,
-        "arrow": null
+        "column": 4
     },
     {
         "name": "Last Stand",
@@ -79,7 +72,7 @@
             "image": "ArrowShort",
             "side": "top",
             "size": "short"
-          },
+        },
         "dependencyName": "Improved Bloodrage"
     },
     {
@@ -95,7 +88,7 @@
             "image": "ArrowMedium",
             "side": "top",
             "size": "medium"
-          },
+        },
         "dependencyName": "Tactical Mastery"
     },
     {
@@ -106,8 +99,7 @@
         "maxPoints": 3,
         "requiredPoints": 10,
         "row": 3,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Defiance",
@@ -117,8 +109,7 @@
         "maxPoints": 5,
         "requiredPoints": 10,
         "row": 3,
-        "column": 4,
-        "arrow": null
+        "column": 4
     },
     {
         "name": "Improved Sunder Armor",
@@ -128,8 +119,7 @@
         "maxPoints": 3,
         "requiredPoints": 15,
         "row": 4,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Improved Disarm",
@@ -139,8 +129,7 @@
         "maxPoints": 3,
         "requiredPoints": 20,
         "row": 4,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Improved Taunt",
@@ -150,8 +139,7 @@
         "maxPoints": 2,
         "requiredPoints": 15,
         "row": 4,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Improved Shield Wall",
@@ -161,8 +149,7 @@
         "maxPoints": 2,
         "requiredPoints": 20,
         "row": 5,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Concussion Blow",
@@ -172,8 +159,7 @@
         "maxPoints": 1,
         "requiredPoints": 20,
         "row": 5,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Improved Shield Bash",
@@ -183,8 +169,7 @@
         "maxPoints": 2,
         "requiredPoints": 20,
         "row": 5,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "One-Handed Weapon Specialization",
@@ -194,8 +179,7 @@
         "maxPoints": 5,
         "requiredPoints": 25,
         "row": 6,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Shield Slam",
@@ -210,10 +194,7 @@
             "image": "ArrowMedium",
             "side": "top",
             "size": "medium"
-      },
+        },
         "dependencyName": "Concussion Blow"
-}
-
-    
+    }
 ]
-

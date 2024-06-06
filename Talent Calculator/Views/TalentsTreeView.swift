@@ -13,7 +13,7 @@ struct TalentsTreeView: View {
     @State private var selectedTab: Int = 0
     @State var selectedTalentId = UUID()
     @State var showDescription: Bool = false
-    @State private var showSaveSheet: Bool = false
+    @State private var showSaveAlert: Bool = false
     @State var textfieldInput = ""
     @State var filename = ""
     @State private var showErrorAlert = false
@@ -60,13 +60,11 @@ struct TalentsTreeView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-//                        if viewModel.pointsLeft == 51 {
-//                            showErrorAlert.toggle()
-//                        } else {
-//                            showSaveSheet.toggle()
-//                        }
-//                        viewModel.saveDataToFile(data: viewModel.talentsBranches, filename: filename)
-//                        print(filename)
+                        if viewModel.pointsLeft == 51 {
+                            showErrorAlert.toggle()
+                        } else {
+                            showSaveAlert.toggle()
+                        }
                     } label: {
                         HStack {
                             Text("Save build")
@@ -90,7 +88,7 @@ struct TalentsTreeView: View {
             }
             .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
-            .alert("Save Build", isPresented: $showSaveSheet) {
+            .alert("Save Build", isPresented: $showSaveAlert) {
                 TextField("Enter name", text: $textfieldInput)
                 Button("Cancel", role: .cancel) {}
                 Button("Save Build", action: {
@@ -98,7 +96,6 @@ struct TalentsTreeView: View {
                         showErrorAlert = true
                     } else {
                         filename = textfieldInput
-//                        viewModel.saveDataToFile(data: viewModel.talentsBranches, filename: filename)
                         print(filename)
                         filename = ""
                     }
@@ -193,5 +190,5 @@ extension TalentsTreeView {
 }
 
 #Preview {
-    TalentsTreeView(characterClass: CharacterData.characterClasses[2])
+    TalentsTreeView(characterClass: CharacterData.characterClasses[6])
 }

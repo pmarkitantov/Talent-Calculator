@@ -7,8 +7,7 @@
         "maxPoints": 3,
         "requiredPoints": 0,
         "row": 1,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Deflection",
@@ -18,8 +17,7 @@
         "maxPoints": 5,
         "requiredPoints": 0,
         "row": 1,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Improved Rend",
@@ -29,8 +27,7 @@
         "maxPoints": 3,
         "requiredPoints": 0,
         "row": 1,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Improved Charge",
@@ -40,8 +37,7 @@
         "maxPoints": 2,
         "requiredPoints": 5,
         "row": 2,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Tactical Mastery",
@@ -51,8 +47,7 @@
         "maxPoints": 5,
         "requiredPoints": 5,
         "row": 2,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Improved Thunder Clap",
@@ -62,8 +57,7 @@
         "maxPoints": 3,
         "requiredPoints": 5,
         "row": 2,
-        "column": 4,
-        "arrow": null
+        "column": 4
     },
     {
         "name": "Improved Overpower",
@@ -73,15 +67,14 @@
         "maxPoints": 2,
         "requiredPoints": 10,
         "row": 3,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Anger Management",
         "icon": "spell_holy_blessingofstamina",
         "baseDescription": "Hurls an immense fiery boulder that causes 148 to 195 Fire damage and an additional 56 Fire damage over 12 sec.",
         "currentPoints": 0,
-        "maxPoints":1,
+        "maxPoints": 1,
         "requiredPoints": 10,
         "row": 3,
         "column": 2,
@@ -89,7 +82,7 @@
             "image": "ArrowShort",
             "side": "top",
             "size": "short"
-          },
+        },
         "dependencyName": "Tactical Mastery"
     },
     {
@@ -105,7 +98,7 @@
             "image": "ArrowMedium",
             "side": "top",
             "size": "medium"
-          },
+        },
         "dependencyName": "Improved Rend"
     },
     {
@@ -116,8 +109,7 @@
         "maxPoints": 5,
         "requiredPoints": 15,
         "row": 4,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Impale",
@@ -132,7 +124,7 @@
             "image": "ArrowShort",
             "side": "top",
             "size": "short"
-          },
+        },
         "dependencyName": "Deep Wounds"
     },
     {
@@ -143,8 +135,7 @@
         "maxPoints": 5,
         "requiredPoints": 20,
         "row": 5,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Sweeping Strikes",
@@ -154,8 +145,7 @@
         "maxPoints": 1,
         "requiredPoints": 20,
         "row": 5,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Mace Specialization",
@@ -165,8 +155,7 @@
         "maxPoints": 5,
         "requiredPoints": 20,
         "row": 5,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Sword Specialization",
@@ -211,10 +200,7 @@
             "image": "ArrowMedium",
             "side": "top",
             "size": "medium"
-      },
+        },
         "dependencyName": "Sweeping Strikes"
-}
-
-    
+    }
 ]
-

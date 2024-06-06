@@ -7,8 +7,7 @@
         "maxPoints": 2,
         "requiredPoints": 0,
         "row": 1,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Improved Frostbolt",
@@ -18,8 +17,7 @@
         "maxPoints": 5,
         "requiredPoints": 0,
         "row": 1,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Elemental Precision",
@@ -29,8 +27,7 @@
         "maxPoints": 3,
         "requiredPoints": 0,
         "row": 1,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Ice Shards",
@@ -40,8 +37,7 @@
         "maxPoints": 5,
         "requiredPoints": 5,
         "row": 2,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Frostbite",
@@ -51,8 +47,7 @@
         "maxPoints": 3,
         "requiredPoints": 5,
         "row": 2,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Improved Frost Nova",
@@ -62,8 +57,7 @@
         "maxPoints": 2,
         "requiredPoints": 5,
         "row": 2,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Permafrost",
@@ -73,19 +67,17 @@
         "maxPoints": 3,
         "requiredPoints": 5,
         "row": 2,
-        "column": 4,
-        "arrow": null
+        "column": 4
     },
     {
         "name": "Piercing Ice",
         "icon": "spell_frost_frostbolt",
         "baseDescription": "Hurls an immense fiery boulder that causes 148 to 195 Fire damage and an additional 56 Fire damage over 12 sec.",
         "currentPoints": 0,
-        "maxPoints":3,
+        "maxPoints": 3,
         "requiredPoints": 10,
         "row": 3,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Cold Snap",
@@ -95,8 +87,7 @@
         "maxPoints": 1,
         "requiredPoints": 10,
         "row": 3,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Improved Blizzard",
@@ -106,8 +97,7 @@
         "maxPoints": 3,
         "requiredPoints": 10,
         "row": 3,
-        "column": 4,
-        "arrow": null
+        "column": 4
     },
     {
         "name": "Arctic Reach",
@@ -117,8 +107,7 @@
         "maxPoints": 2,
         "requiredPoints": 15,
         "row": 4,
-        "column": 1,
-        "arrow": null
+        "column": 1
     },
     {
         "name": "Frost Channeling",
@@ -128,8 +117,7 @@
         "maxPoints": 3,
         "requiredPoints": 15,
         "row": 4,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Shatter",
@@ -144,7 +132,7 @@
             "image": "ArrowMedium",
             "side": "top",
             "size": "medium"
-          },
+        },
         "dependencyName": "Improved Frost Nova"
     },
     {
@@ -155,8 +143,7 @@
         "maxPoints": 1,
         "requiredPoints": 20,
         "row": 5,
-        "column": 2,
-        "arrow": null
+        "column": 2
     },
     {
         "name": "Improved Cone of Cold",
@@ -166,8 +153,7 @@
         "maxPoints": 3,
         "requiredPoints": 20,
         "row": 5,
-        "column": 3,
-        "arrow": null
+        "column": 3
     },
     {
         "name": "Winter's Chill",
@@ -176,9 +162,8 @@
         "currentPoints": 0,
         "maxPoints": 5,
         "requiredPoints": 25,
-        "row":6,
-        "column": 3,
-        "arrow": null
+        "row": 6,
+        "column": 3
     },
     {
         "name": "Ice Barrier",
@@ -193,8 +178,7 @@
             "image": "ArrowMedium",
             "side": "top",
             "size": "medium"
-          },
+        },
         "dependencyName": "Ice Block"
     }
-    
 ]

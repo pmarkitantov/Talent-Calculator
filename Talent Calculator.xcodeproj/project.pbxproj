@@ -37,6 +37,9 @@
 		ACE1B5952C11145500ADFD2C /* LoadingTalentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE1B5942C11145500ADFD2C /* LoadingTalentView.swift */; };
 		ACE1B5972C11147100ADFD2C /* LoadingCommunityBuilds.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE1B5962C11147100ADFD2C /* LoadingCommunityBuilds.swift */; };
 		ACE1B59B2C11D62B00ADFD2C /* BuildLoadingServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE1B59A2C11D62B00ADFD2C /* BuildLoadingServices.swift */; };
+		ACE1B59D2C11E73200ADFD2C /* shamanElemental.json in Resources */ = {isa = PBXBuildFile; fileRef = ACE1B59C2C11E73200ADFD2C /* shamanElemental.json */; };
+		ACE1B59F2C11E9C700ADFD2C /* shamanEnhancement.json in Resources */ = {isa = PBXBuildFile; fileRef = ACE1B59E2C11E9C700ADFD2C /* shamanEnhancement.json */; };
+		ACE1B5A12C11F18400ADFD2C /* shamanRestoration.json in Resources */ = {isa = PBXBuildFile; fileRef = ACE1B5A02C11F18400ADFD2C /* shamanRestoration.json */; };
 		ACE97D492BF4A90000A66BE5 /* warriorArms.json in Resources */ = {isa = PBXBuildFile; fileRef = ACE97D482BF4A90000A66BE5 /* warriorArms.json */; };
 		ACE97D4B2BF4B34700A66BE5 /* warriorFury.json in Resources */ = {isa = PBXBuildFile; fileRef = ACE97D4A2BF4B34700A66BE5 /* warriorFury.json */; };
 		ACE97D4D2BF4B8A400A66BE5 /* warriorProtection.json in Resources */ = {isa = PBXBuildFile; fileRef = ACE97D4C2BF4B8A300A66BE5 /* warriorProtection.json */; };
@@ -82,6 +85,9 @@
 		ACE1B5942C11145500ADFD2C /* LoadingTalentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTalentView.swift; sourceTree = "<group>"; };
 		ACE1B5962C11147100ADFD2C /* LoadingCommunityBuilds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCommunityBuilds.swift; sourceTree = "<group>"; };
 		ACE1B59A2C11D62B00ADFD2C /* BuildLoadingServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildLoadingServices.swift; sourceTree = "<group>"; };
+		ACE1B59C2C11E73200ADFD2C /* shamanElemental.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = shamanElemental.json; sourceTree = "<group>"; };
+		ACE1B59E2C11E9C700ADFD2C /* shamanEnhancement.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = shamanEnhancement.json; sourceTree = "<group>"; };
+		ACE1B5A02C11F18400ADFD2C /* shamanRestoration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = shamanRestoration.json; sourceTree = "<group>"; };
 		ACE97D482BF4A90000A66BE5 /* warriorArms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = warriorArms.json; sourceTree = "<group>"; };
 		ACE97D4A2BF4B34700A66BE5 /* warriorFury.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = warriorFury.json; sourceTree = "<group>"; };
 		ACE97D4C2BF4B8A300A66BE5 /* warriorProtection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = warriorProtection.json; sourceTree = "<group>"; };
@@ -262,6 +268,9 @@
 		ACE97D582BF6065700A66BE5 /* Shaman */ = {
 			isa = PBXGroup;
 			children = (
+				ACE1B59C2C11E73200ADFD2C /* shamanElemental.json */,
+				ACE1B59E2C11E9C700ADFD2C /* shamanEnhancement.json */,
+				ACE1B5A02C11F18400ADFD2C /* shamanRestoration.json */,
 			);
 			path = Shaman;
 			sourceTree = "<group>";
@@ -371,10 +380,12 @@
 				ACE97D4F2BF6049800A66BE5 /* rogueAssassination.json in Resources */,
 				ACE97D5E2C04883B00A66BE5 /* priestDiscipline.json in Resources */,
 				ACD358AC2BF2098D00AA2BB0 /* mageFire.json in Resources */,
+				ACE1B59D2C11E73200ADFD2C /* shamanElemental.json in Resources */,
 				ACE97D662C04897D00A66BE5 /* hunterMarksmanship.json in Resources */,
 				ACD358B02BF3BB9E00AA2BB0 /* hunterBeastMastery.json in Resources */,
 				ACE97D682C04898D00A66BE5 /* hunterSurvival.json in Resources */,
 				ACE97D532BF604CC00A66BE5 /* rogueSubtlety.json in Resources */,
+				ACE1B59F2C11E9C700ADFD2C /* shamanEnhancement.json in Resources */,
 				ACA5BE9B2BE274DE00E9AA8A /* paladinHoly.json in Resources */,
 				ACE97D602C04884E00A66BE5 /* priestHoly.json in Resources */,
 				AC1598B82BB478C400D605F9 /* Preview Assets.xcassets in Resources */,
@@ -384,6 +395,7 @@
 				ACD2B7D32C10A9F90045ED72 /* warlockAffliction.json in Resources */,
 				AC8D2B2F2BC6C4CA00E4A245 /* druidRestoration.json in Resources */,
 				ACE97D4D2BF4B8A400A66BE5 /* warriorProtection.json in Resources */,
+				ACE1B5A12C11F18400ADFD2C /* shamanRestoration.json in Resources */,
 				ACE97D492BF4A90000A66BE5 /* warriorArms.json in Resources */,
 				ACD2B7D72C10C3840045ED72 /* warlockDestruction.json in Resources */,
 				ACE97D4B2BF4B34700A66BE5 /* warriorFury.json in Resources */,

@@ -1,8 +1,8 @@
 [
     {
-        "name": "Improved wrath",
+        "name": "Improved Wrath",
         "icon": "spell_nature_abolishmagic",
-        "baseDescription": "Description of Talent 1.",
+        "baseDescription": "Reduces the cast time of your Wrath spell by 0.1 sec.",
         "currentPoints": 0,
         "maxPoints": 5,
         "requiredPoints": 0,
@@ -10,20 +10,19 @@
         "column": 1
     },
     {
-        "name": "Nature's grasp",
+        "name": "Nature's Grasp",
         "icon": "spell_nature_natureswrath",
-        "baseDescription": "Description of Talent 2.",
+        "baseDescription": "While active, any time an enemy strikes the caster they have a 35% chance to become afflicted by Entangling Roots.",
         "currentPoints": 0,
         "maxPoints": 1,
         "requiredPoints": 0,
         "row": 1,
         "column": 2
-       
     },
     {
-        "name": "Improved Nature's grasp",
+        "name": "Improved Nature's Grasp",
         "icon": "spell_nature_natureswrath",
-        "baseDescription": "Description of Talent 3.",
+        "baseDescription": "Increases the chance for your Nature's Grasp to entangle an enemy by 15%.",
         "currentPoints": 0,
         "maxPoints": 4,
         "requiredPoints": 0,
@@ -33,13 +32,13 @@
             "image": "ArrowRightShort",
             "side": "left",
             "size": "short"
-          },
-        "dependencyName": "Nature's grasp"
+        },
+        "dependencyName": "Nature's Grasp"
     },
     {
-        "name": "Improved Entangling roots",
+        "name": "Improved Entangling Roots",
         "icon": "spell_nature_stranglevines",
-        "baseDescription": "Description of Talent 4.",
+        "baseDescription": "Increases the damage done by your Entangling Roots spell by 10%.",
         "currentPoints": 0,
         "maxPoints": 3,
         "requiredPoints": 5,
@@ -49,40 +48,37 @@
     {
         "name": "Improved Moonfire",
         "icon": "spell_nature_starfall",
-        "baseDescription": "Description of Talent 5.",
+        "baseDescription": "Increases the damage and critical strike chance of your Moonfire spell by 5%.",
         "currentPoints": 0,
         "maxPoints": 5,
         "requiredPoints": 5,
         "row": 2,
         "column": 2
-        
     },
     {
         "name": "Natural Weapons",
         "icon": "inv_staff_01",
-        "baseDescription": "Description of Talent 5.",
+        "baseDescription": "Increases the damage you deal with physical attacks by 10%.",
         "currentPoints": 0,
         "maxPoints": 5,
         "requiredPoints": 5,
         "row": 2,
         "column": 3
-        
     },
     {
         "name": "Natural Shapeshifter",
         "icon": "spell_nature_wispsplode",
-        "baseDescription": "Description of Talent 5.",
+        "baseDescription": "Reduces the mana cost of all shapeshifting by 10%.",
         "currentPoints": 0,
         "maxPoints": 3,
         "requiredPoints": 5,
         "row": 2,
         "column": 4
-        
     },
     {
-        "name": "Improved Throrns",
+        "name": "Improved Thorns",
         "icon": "spell_nature_thorns",
-        "baseDescription": "Description of Talent 5.",
+        "baseDescription": "Increases the damage caused by your Thorns spell by 25%.",
         "currentPoints": 0,
         "maxPoints": 3,
         "requiredPoints": 10,
@@ -92,7 +88,7 @@
     {
         "name": "Omen of Clarity",
         "icon": "spell_nature_crystalball",
-        "baseDescription": "Description of Talent 5.",
+        "baseDescription": "Imbues the druid with natural energy. Each of the druid's melee attacks has a chance of causing the caster to enter a Clearcasting state.",
         "currentPoints": 0,
         "maxPoints": 1,
         "requiredPoints": 10,
@@ -102,13 +98,13 @@
             "image": "ArrowShort",
             "side": "top",
             "size": "short"
-          },
+        },
         "dependencyName": "Natural Weapons"
     },
     {
         "name": "Nature's Reach",
         "icon": "spell_nature_naturetouchgrow",
-        "baseDescription": "Description of Talent 5.",
+        "baseDescription": "Increases the range of your Balance spells and Faerie Fire by 10%.",
         "currentPoints": 0,
         "maxPoints": 2,
         "requiredPoints": 10,
@@ -118,7 +114,7 @@
     {
         "name": "Vengeance",
         "icon": "spell_nature_purge",
-        "baseDescription": "Description of Talent 5.",
+        "baseDescription": "Increases the critical strike damage bonus of your Starfire, Moonfire, and Wrath spells by 20%.",
         "currentPoints": 0,
         "maxPoints": 5,
         "requiredPoints": 15,
@@ -128,14 +124,13 @@
             "image": "ArrowMedium",
             "side": "top",
             "size": "medium"
-          },
+        },
         "dependencyName":"Improved Moonfire"
-        
     },
     {
         "name": "Improved Starfire",
         "icon": "spell_arcane_starfire",
-        "baseDescription": "Description of Talent 5.",
+        "baseDescription": "Reduces the cast time of your Starfire spell by 0.5 sec and has a 5% chance to stun the target for 3 sec.",
         "currentPoints": 0,
         "maxPoints": 5,
         "requiredPoints": 15,
@@ -143,9 +138,9 @@
         "column": 3
     },
     {
-        "name": "Nature's Grase",
+        "name": "Nature's Grace",
         "icon": "spell_nature_naturesblessing",
-        "baseDescription": "Description of Talent 5.",
+        "baseDescription": "All spell criticals grace you with a blessing of nature, reducing the casting time of your next spell by 0.5 sec.",
         "currentPoints": 0,
         "maxPoints": 1,
         "requiredPoints": 20,
@@ -155,7 +150,7 @@
     {
         "name": "Moonglow",
         "icon": "spell_nature_sentinal",
-        "baseDescription": "Description of Talent 5.",
+        "baseDescription": "Reduces the Mana cost of your Moonfire, Starfire, Wrath, Healing Touch, and Rejuvenation spells by 3%.",
         "currentPoints": 0,
         "maxPoints": 3,
         "requiredPoints": 20,
@@ -165,7 +160,7 @@
     {
         "name": "Moonfury",
         "icon": "spell_nature_moonglow",
-        "baseDescription": "Description of Talent 5.",
+        "baseDescription": "Increases the damage done by your Starfire, Moonfire and Wrath spells by 10%.",
         "currentPoints": 0,
         "maxPoints": 5,
         "requiredPoints": 25,
@@ -175,18 +170,17 @@
             "image": "ArrowShort",
             "side": "top",
             "size": "short"
-          },
-        "dependencyName": "Nature's Grase"
+        },
+        "dependencyName": "Nature's Grace"
     },
     {
         "name": "Moonkin Form",
         "icon": "spell_nature_forceofnature",
-        "baseDescription": "Description of Talent 5.",
+        "baseDescription": "Transforms the Druid into Moonkin Form. While in this form the armor contribution from items is increased by 360%, all party members within 30 yards have their spell critical chance increased by 3%, and the druid gains 150% increased attack power.",
         "currentPoints": 0,
         "maxPoints": 1,
         "requiredPoints": 30,
         "row": 7,
         "column": 2
     }
-    
 ]
