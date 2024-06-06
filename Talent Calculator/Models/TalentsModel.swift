@@ -8,13 +8,18 @@
 import Foundation
 import SwiftUI
 
-struct Arrow: Decodable {
+enum LoadType {
+    case fromSaves
+    case fromDefault
+}
+
+struct Arrow: Codable {
     let image: String
     let side: String
     let size: String
 }
 
-struct TalentBranch {
+struct TalentBranch: Codable {
     let name: String
     let background: String
     let icon: String
@@ -22,7 +27,7 @@ struct TalentBranch {
     var spentPointsInBranch: Int = 0
 }
 
-struct Talent: Identifiable, Decodable {
+struct Talent: Identifiable, Codable {
     var id: UUID = .init()
     let name: String
     let icon: String
@@ -54,8 +59,23 @@ struct Talent: Identifiable, Decodable {
         arrow = try container.decodeIfPresent(Arrow.self, forKey: .arrow)
         dependencyName = try container.decodeIfPresent(String.self, forKey: .dependencyName)
     }
-    
-    //Кастомый инициализатор для превьюшек
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+
+        try container.encode(name, forKey: .name)
+        try container.encode(icon, forKey: .icon)
+        try container.encode(baseDescription, forKey: .baseDescription)
+        try container.encode(currentPoints, forKey: .currentPoints)
+        try container.encode(maxPoints, forKey: .maxPoints)
+        try container.encode(requiredPoints, forKey: .requiredPoints)
+        try container.encode(row, forKey: .row)
+        try container.encode(column, forKey: .column)
+        try container.encodeIfPresent(arrow, forKey: .arrow)
+        try container.encodeIfPresent(dependencyName, forKey: .dependencyName)
+    }
+
+    // Кастомый инициализатор для превьюшек
 
     init(name: String, icon: String, baseDescription: String, currentPoints: Int = 0, maxPoints: Int, requiredPoints: Int, row: Int, column: Int, arrow: Arrow? = nil, dependencyName: String? = nil) {
         self.name = name

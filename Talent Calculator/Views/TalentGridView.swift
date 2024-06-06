@@ -78,5 +78,5 @@ struct TalentGridView: View {
 }
 
 #Preview {
-    TalentGridView(viewModel: GridViewModel(characterClass: CharacterData.characterClasses[0]), selectedTalentId: .constant(UUID(uuidString: "550e8400-e29b-41d4-a716-446655440000")!), selectedBranchIndex: 1)
+    TalentGridView(viewModel: GridViewModel(characterClass: CharacterData.characterClasses[0], loadType: .fromDefault), selectedTalentId: .constant(UUID(uuidString: "550e8400-e29b-41d4-a716-446655440000")!), selectedBranchIndex: 1)
 }

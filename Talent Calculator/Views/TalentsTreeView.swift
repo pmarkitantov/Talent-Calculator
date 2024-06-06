@@ -13,11 +13,15 @@ struct TalentsTreeView: View {
     @State private var selectedTab: Int = 0
     @State var selectedTalentId = UUID()
     @State var showDescription: Bool = false
+    @State private var showSaveSheet: Bool = false
+    @State var textfieldInput = ""
+    @State var filename = ""
+    @State private var showErrorAlert = false
 
     init(characterClass: CharacterClass) {
         self.characterClass = characterClass
 
-        self._viewModel = ObservedObject(initialValue: GridViewModel(characterClass: characterClass))
+        self._viewModel = ObservedObject(initialValue: GridViewModel(characterClass: characterClass, loadType: .fromDefault))
     }
 
     var body: some View {
@@ -35,8 +39,6 @@ struct TalentsTreeView: View {
                         TalentGridView(viewModel: viewModel, selectedTalentId: $selectedTalentId, selectedBranchIndex: selectedTab)
                             .padding(.horizontal)
 
-                        Spacer()
-
                         if showDescription {
                             descriptionView
                                 .padding([.bottom, .horizontal])
@@ -47,6 +49,7 @@ struct TalentsTreeView: View {
                             .frame(height: 60)
                             .padding()
                     }
+
                     .onChange(of: selectedTalentId) {
                         showDescription = true
                     }
@@ -57,7 +60,15 @@ struct TalentsTreeView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button {} label: {
+                    Button {
+                        if viewModel.pointsLeft == 51 {
+                            showErrorAlert.toggle()
+                        } else {
+                            showSaveSheet.toggle()
+                        }
+                        viewModel.saveDataToFile(data: viewModel.talentsBranches, filename: filename)
+                        print(filename)
+                    } label: {
                         HStack {
                             Text("Save build")
                             Image(systemName: "square.and.arrow.down")
@@ -76,6 +87,32 @@ struct TalentsTreeView: View {
                         .fontWeight(.semibold)
                         .foregroundStyle(.red)
                     }
+                }
+            }
+            .alert("Save Build", isPresented: $showSaveSheet) {
+                TextField("Enter name", text: $textfieldInput)
+                Button("Cancel", role: .cancel) {}
+                Button("Save Build", action: {
+                    if textfieldInput.isEmpty {
+                        showErrorAlert = true
+                    } else {
+                        filename = textfieldInput
+                        viewModel.saveDataToFile(data: viewModel.talentsBranches, filename: filename)
+                        print(filename)
+                        filename = ""
+                    }
+                })
+                .foregroundStyle(.green)
+            } message: {
+                Text("Please enter the name for your build")
+            }
+            .alert("Error", isPresented: $showErrorAlert) {
+                Button("OK", role: .cancel) {}
+            } message: {
+                if viewModel.pointsLeft == 51 {
+                    Text("The build cannot be empty.")
+                } else {
+                    Text("The name field cannot be empty.")
                 }
             }
         }

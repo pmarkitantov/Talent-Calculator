@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LoadingTalentView: View {
+    @State private var listOfBuilds: [String] = []
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -21,13 +23,38 @@ struct LoadingTalentView: View {
                         Text("Saved Builds")
                             .font(.largeTitle)
                             .fontWeight(.semibold)
+                                    
                         Spacer()
                     }
                     .padding()
+                    List(listOfBuilds, id: \.self) { file in
+                        Text(file)
+                    }
 
                     Spacer()
                 }
             }
+            .onAppear(perform: loadListOfBuilds)
+        }
+    }
+
+    func loadListOfBuilds() {
+        listOfBuilds = getListOfSavedFiles()
+    }
+
+    func getDocumentsDirectory() -> URL {
+        FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    }
+
+    func getListOfSavedFiles() -> [String] {
+        do {
+            let documentsURL = getDocumentsDirectory()
+            let fileURLs = try FileManager.default.contentsOfDirectory(at: documentsURL, includingPropertiesForKeys: nil)
+            
+            return fileURLs.filter { $0.pathExtension == "json" }.map { $0.lastPathComponent }
+        } catch {
+            print("Error while enumerating files \(getDocumentsDirectory().path): \(error.localizedDescription)")
+            return []
         }
     }
 }
