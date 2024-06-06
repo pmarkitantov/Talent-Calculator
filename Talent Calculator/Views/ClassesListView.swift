@@ -41,7 +41,7 @@ struct ClassesListView: View {
                                     .frame(maxWidth: .infinity)
                                     .background(.thinMaterial)
                                     .clipShape(RoundedRectangle(cornerRadius: 15))
-                                    .shadow(color: Color(characterClass.nameColor).opacity(1), radius: 5, x: 0, y: -1)
+                                    .shadow(color: Color(characterClass.nameColor).opacity(1), radius: 1, x: -1, y: -1)
                                 }
                             }
                         }

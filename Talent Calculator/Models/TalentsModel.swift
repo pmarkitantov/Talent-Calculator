@@ -24,7 +24,6 @@ struct TalentBranch: Codable {
     let background: String
     let icon: String
     var talents: [Talent]?
-    var spentPointsInBranch: Int = 0
 }
 
 struct Talent: Identifiable, Codable {

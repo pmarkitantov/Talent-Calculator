@@ -10,8 +10,7 @@ import Foundation
 import SwiftUI
 
 class GridViewModel: ObservableObject {
-    private var className: String
-    @Published var talentsBranches: [TalentBranch]
+    @Published var characterClass: CharacterClass
     @Published var errorMessage: String?
     var tapCount = 0
     private var lastSelectedTalentId: UUID?
@@ -26,93 +25,21 @@ class GridViewModel: ObservableObject {
     init(characterClass: CharacterClass, loadType: LoadType) {
         switch loadType {
         case .fromDefault:
-            self.talentsBranches = characterClass.talentTrees
-            className = characterClass.name
+            self.characterClass = characterClass
             Task { await loadTalents(characterClass: characterClass) }
+
         case .fromSaves:
-            self.talentsBranches = characterClass.talentTrees
-            className = characterClass.name
+            self.characterClass = characterClass
             Task { await loadTalents(characterClass: characterClass) }
         }
-    }
-    
-    func loadDataFromFile<T: Decodable>(filename: String, type: T.Type) -> T? {
-        let url = getDocumentsDirectory().appendingPathComponent(filename)
-        do {
-            let data = try Data(contentsOf: url)
-            let decoder = JSONDecoder()
-            let loadedData = try decoder.decode(type, from: data)
-            return loadedData
-        } catch {
-            print("Failed to load data: \(error)")
-            return nil
-        }
-    }
-
-    func saveDataToFile(data: Codable, filename: String) {
-        do {
-            let url = getDocumentsDirectory().appendingPathComponent("\(filename).json")
-            let encoder = JSONEncoder()
-            let data = try encoder.encode(data)
-            try data.write(to: url, options: [.atomicWrite, .completeFileProtection])
-            print("Data saved to \(url)")
-        } catch {
-            print("Failed to save data: \(error)")
-        }
-    }
-
-    func getDocumentsDirectory() -> URL {
-        FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-    }
-    
-    func fileExists(filename: String) -> Bool {
-        let url = getDocumentsDirectory().appendingPathComponent(filename)
-        return FileManager.default.fileExists(atPath: url.path)
-    }
-    
-    func generateUniqueFilename(base: String) -> String {
-        let uuid = UUID().uuidString
-        return "\(base)--\(uuid).json"
-    }
-
-    func saveDataConditionally(data: Codable, filename: String) {
-        let fullPath = generateUniqueFilename(base: filename) // Используйте уникальный ID
-        if fileExists(filename: fullPath) {
-            // Обработка случая, когда файл уже существует
-            print("File already exists. Consider renaming or overwriting.")
-        } else {
-            saveDataToFile(data: data, filename: fullPath)
-        }
-    }
-    
-    func getListOfSavedFiles() -> [String] {
-        do {
-            let documentsURL = getDocumentsDirectory()
-            let fileURLs = try FileManager.default.contentsOfDirectory(at: documentsURL, includingPropertiesForKeys: nil)
-            
-            return fileURLs.filter { $0.pathExtension == "json" }.map { $0.lastPathComponent }
-        } catch {
-            print("Error while enumerating files \(getDocumentsDirectory().path): \(error.localizedDescription)")
-            return []
-        }
-    }
-    
-    func suggestNewFilename(originalFilename: String) -> String {
-        var newFilename = originalFilename
-        var count = 1
-        while fileExists(filename: newFilename) {
-            newFilename = "\(originalFilename)_\(count)"
-            count += 1
-        }
-        return newFilename
     }
 
     @MainActor
     func loadTalents(characterClass: CharacterClass) async {
-        var talents = [[Talent]?](repeating: nil, count: talentsBranches.count)
+        var talents = [[Talent]?](repeating: nil, count: self.characterClass.talentsBranches.count)
 
         await withTaskGroup(of: (Int, [Talent]?).self) { group in
-            for (index, talentTree) in characterClass.talentTrees.enumerated() where index < talentsBranches.count {
+            for (index, talentTree) in characterClass.talentsBranches.enumerated() where index < self.characterClass.talentsBranches.count {
                 group.addTask {
                     let filename = characterClass.name.lowercased() + talentTree.name.replacingOccurrences(of: " ", with: "")
                     do {
@@ -134,7 +61,7 @@ class GridViewModel: ObservableObject {
 
         for (index, talentList) in talents.enumerated() {
             if let talentList = talentList {
-                talentsBranches[index].talents = talentList
+                self.characterClass.talentsBranches[index].talents = talentList
             }
         }
     }
@@ -143,7 +70,7 @@ class GridViewModel: ObservableObject {
         guard let dependencyName = talent.dependencyName else {
             return talent.requiredPoints <= branchPoint[branchIndex] && pointsLeft > 0
         }
-        guard let requiredTalent = talentsBranches[branchIndex].talents?.first(where: { $0.name == dependencyName }) else {
+        guard let requiredTalent = characterClass.talentsBranches[branchIndex].talents?.first(where: { $0.name == dependencyName }) else {
             return false
         }
 
@@ -165,7 +92,7 @@ class GridViewModel: ObservableObject {
     }
 
     func showDescription(for talentId: UUID) -> String {
-        for talentBrach in talentsBranches {
+        for talentBrach in characterClass.talentsBranches {
             if let talent = talentBrach.talents!.first(where: { $0.id == talentId }) {
                 return talent.baseDescription
             }
@@ -174,7 +101,7 @@ class GridViewModel: ObservableObject {
     }
 
     func showTalentName(for taletId: UUID) -> String {
-        for talentsBranch in talentsBranches {
+        for talentsBranch in characterClass.talentsBranches {
             if let talent = talentsBranch.talents!.first(where: { $0.id == taletId }) {
                 return talent.name
             }
@@ -183,7 +110,7 @@ class GridViewModel: ObservableObject {
     }
 
     func showTalentRank(for taletId: UUID) -> String {
-        for talentsBranch in talentsBranches {
+        for talentsBranch in characterClass.talentsBranches {
             if let talent = talentsBranch.talents!.first(where: { $0.id == taletId }) {
                 return "\(talent.currentPoints)/\(talent.maxPoints)"
             }
@@ -192,14 +119,14 @@ class GridViewModel: ObservableObject {
     }
 
     func incrementCount(for elementID: UUID, inBranch branchIndex: Int) {
-        if let talentIndex = talentsBranches[branchIndex].talents!.firstIndex(where: { $0.id == elementID }) {
-            var talent = talentsBranches[branchIndex].talents![talentIndex]
+        if let talentIndex = characterClass.talentsBranches[branchIndex].talents!.firstIndex(where: { $0.id == elementID }) {
+            var talent = characterClass.talentsBranches[branchIndex].talents![talentIndex]
 
             if talent.currentPoints < talent.maxPoints {
                 talent.currentPoints += 1
                 branchPoint[branchIndex] += 1
                 pointsLeft -= 1
-                talentsBranches[branchIndex].talents![talentIndex] = talent
+                characterClass.talentsBranches[branchIndex].talents![talentIndex] = talent
                 objectWillChange.send()
             }
         }
@@ -218,21 +145,13 @@ class GridViewModel: ObservableObject {
         tapCount += 1
     }
 
-    func resetTalent() {
-        DispatchQueue.global(qos: .userInitiated).async {
-            for index in 0..<self.talentsBranches.count {
-                if let talents = self.talentsBranches[index].talents {
-                    for i in 0..<talents.count {
-                        self.talentsBranches[index].talents![i].currentPoints = 0
-                    }
-                }
-            }
+    func resetTalents() {
+        branchPoint = [0, 0, 0]
+        pointsLeft = 51
 
-            self.pointsLeft = 51
-            self.branchPoint = [0, 0, 0]
-
-            DispatchQueue.main.async {
-                self.objectWillChange.send()
+        for (index, talentsBranch) in characterClass.talentsBranches.enumerated() {
+            for talentIndex in talentsBranch.talents!.indices {
+                characterClass.talentsBranches[index].talents![talentIndex].currentPoints = 0
             }
         }
     }

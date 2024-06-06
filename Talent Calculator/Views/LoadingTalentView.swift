@@ -23,23 +23,30 @@ struct LoadingTalentView: View {
                         Text("Saved Builds")
                             .font(.largeTitle)
                             .fontWeight(.semibold)
-                                    
+
                         Spacer()
                     }
                     .padding()
                     List(listOfBuilds, id: \.self) { file in
                         Text(file)
+                            .font(.title2)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(.ultraThickMaterial)
+                            .clipShape(RoundedRectangle(cornerRadius: 15))
+                            .padding(.horizontal)
                     }
+                    .scrollContentBackground(.hidden)
 
                     Spacer()
                 }
             }
-            .onAppear(perform: loadListOfBuilds)
+//            .onAppear(perform: loadListOfBuilds)
         }
     }
 
     func loadListOfBuilds() {
-        listOfBuilds = getListOfSavedFiles()
+//        listOfBuilds = getListOfSavedFiles()
     }
 
     func getDocumentsDirectory() -> URL {
@@ -50,7 +57,7 @@ struct LoadingTalentView: View {
         do {
             let documentsURL = getDocumentsDirectory()
             let fileURLs = try FileManager.default.contentsOfDirectory(at: documentsURL, includingPropertiesForKeys: nil)
-            
+
             return fileURLs.filter { $0.pathExtension == "json" }.map { $0.lastPathComponent }
         } catch {
             print("Error while enumerating files \(getDocumentsDirectory().path): \(error.localizedDescription)")

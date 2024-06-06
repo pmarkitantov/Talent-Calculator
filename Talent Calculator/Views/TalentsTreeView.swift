@@ -27,7 +27,7 @@ struct TalentsTreeView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                if let tree = characterClass.talentTrees.indices.contains(selectedTab) ? characterClass.talentTrees[selectedTab] : nil {
+                if let tree = characterClass.talentsBranches.indices.contains(selectedTab) ? characterClass.talentsBranches[selectedTab] : nil {
                     Image(tree.background)
                         .resizable()
                         .ignoresSafeArea()
@@ -44,10 +44,9 @@ struct TalentsTreeView: View {
                                 .padding([.bottom, .horizontal])
                         }
 
-                        TabbarButtonView(talentTrees: characterClass.talentTrees, selectedTab: $selectedTab)
+                        TabbarButtonView(talentTrees: characterClass.talentsBranches, selectedTab: $selectedTab)
                             .shadow(color: Color(characterClass.nameColor).opacity(10), radius: 5, x: 0, y: 0)
-                            .frame(height: 60)
-                            .padding()
+                            .padding(.horizontal)
                     }
 
                     .onChange(of: selectedTalentId) {
@@ -61,13 +60,13 @@ struct TalentsTreeView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        if viewModel.pointsLeft == 51 {
-                            showErrorAlert.toggle()
-                        } else {
-                            showSaveSheet.toggle()
-                        }
-                        viewModel.saveDataToFile(data: viewModel.talentsBranches, filename: filename)
-                        print(filename)
+//                        if viewModel.pointsLeft == 51 {
+//                            showErrorAlert.toggle()
+//                        } else {
+//                            showSaveSheet.toggle()
+//                        }
+//                        viewModel.saveDataToFile(data: viewModel.talentsBranches, filename: filename)
+//                        print(filename)
                     } label: {
                         HStack {
                             Text("Save build")
@@ -78,7 +77,7 @@ struct TalentsTreeView: View {
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        viewModel.resetTalent()
+                        viewModel.resetTalents()
                     } label: {
                         HStack {
                             Text("Reset")
@@ -89,6 +88,8 @@ struct TalentsTreeView: View {
                     }
                 }
             }
+            .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
             .alert("Save Build", isPresented: $showSaveSheet) {
                 TextField("Enter name", text: $textfieldInput)
                 Button("Cancel", role: .cancel) {}
@@ -97,7 +98,7 @@ struct TalentsTreeView: View {
                         showErrorAlert = true
                     } else {
                         filename = textfieldInput
-                        viewModel.saveDataToFile(data: viewModel.talentsBranches, filename: filename)
+//                        viewModel.saveDataToFile(data: viewModel.talentsBranches, filename: filename)
                         print(filename)
                         filename = ""
                     }

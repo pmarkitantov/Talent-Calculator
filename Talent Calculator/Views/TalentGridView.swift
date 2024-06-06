@@ -16,7 +16,7 @@ struct TalentGridView: View {
     private let columns = 4
     var selectedBranchIndex: Int = 0
     var selectedBranch: TalentBranch {
-        return viewModel.talentsBranches[selectedBranchIndex]
+        return viewModel.characterClass.talentsBranches[selectedBranchIndex]
     }
 
     @State private var lastSelectedTalentId: UUID?

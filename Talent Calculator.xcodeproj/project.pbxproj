@@ -36,6 +36,7 @@
 		ACE1B5932C11142600ADFD2C /* CustomNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE1B5922C11142600ADFD2C /* CustomNavigationLink.swift */; };
 		ACE1B5952C11145500ADFD2C /* LoadingTalentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE1B5942C11145500ADFD2C /* LoadingTalentView.swift */; };
 		ACE1B5972C11147100ADFD2C /* LoadingCommunityBuilds.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE1B5962C11147100ADFD2C /* LoadingCommunityBuilds.swift */; };
+		ACE1B59B2C11D62B00ADFD2C /* BuildLoadingServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE1B59A2C11D62B00ADFD2C /* BuildLoadingServices.swift */; };
 		ACE97D492BF4A90000A66BE5 /* warriorArms.json in Resources */ = {isa = PBXBuildFile; fileRef = ACE97D482BF4A90000A66BE5 /* warriorArms.json */; };
 		ACE97D4B2BF4B34700A66BE5 /* warriorFury.json in Resources */ = {isa = PBXBuildFile; fileRef = ACE97D4A2BF4B34700A66BE5 /* warriorFury.json */; };
 		ACE97D4D2BF4B8A400A66BE5 /* warriorProtection.json in Resources */ = {isa = PBXBuildFile; fileRef = ACE97D4C2BF4B8A300A66BE5 /* warriorProtection.json */; };
@@ -80,6 +81,7 @@
 		ACE1B5922C11142600ADFD2C /* CustomNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationLink.swift; sourceTree = "<group>"; };
 		ACE1B5942C11145500ADFD2C /* LoadingTalentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTalentView.swift; sourceTree = "<group>"; };
 		ACE1B5962C11147100ADFD2C /* LoadingCommunityBuilds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCommunityBuilds.swift; sourceTree = "<group>"; };
+		ACE1B59A2C11D62B00ADFD2C /* BuildLoadingServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildLoadingServices.swift; sourceTree = "<group>"; };
 		ACE97D482BF4A90000A66BE5 /* warriorArms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = warriorArms.json; sourceTree = "<group>"; };
 		ACE97D4A2BF4B34700A66BE5 /* warriorFury.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = warriorFury.json; sourceTree = "<group>"; };
 		ACE97D4C2BF4B8A300A66BE5 /* warriorProtection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = warriorProtection.json; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				8CC576402C0E7D8F00A58EBD /* ArrowCalculations.swift */,
+				ACE1B59A2C11D62B00ADFD2C /* BuildLoadingServices.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				AC1598EB2BB49C8A00D605F9 /* TalentGridView.swift in Sources */,
 				ACE1B5932C11142600ADFD2C /* CustomNavigationLink.swift in Sources */,
 				AC7BAFA12BB64392007883B1 /* CharacterClassesModel.swift in Sources */,
+				ACE1B59B2C11D62B00ADFD2C /* BuildLoadingServices.swift in Sources */,
 				AC7BAF9D2BB620FE007883B1 /* TabbarButtonView.swift in Sources */,
 				AC1598F12BB4A62200D605F9 /* GridViewModel.swift in Sources */,
 				ACE1B5912C110EDC00ADFD2C /* HomeView.swift in Sources */,
