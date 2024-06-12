@@ -15,11 +15,38 @@ class GridViewModel: ObservableObject {
     var tapCount = 0
     private var lastSelectedTalentId: UUID?
 
-    var branchPoint = [0, 0, 0]
-    var pointsLeft = 51
+    var branchPoints: [Int] {
+        var branchPointsCount = [0, 0, 0]
+        for index in characterClass.talentsBranches.indices {
+            if let talents = characterClass.talentsBranches[index].talents {
+                for talent in talents {
+                    if talent.currentPoints > 0 {
+                        branchPointsCount[index] += Int(talent.currentPoints)
+                    }
+                }
+            }
+        }
+        return branchPointsCount
+    }
+
+    var pointsLeft: Int {
+        var countPoints = 0
+        for branch in characterClass.talentsBranches {
+            if let talents = branch.talents {
+                for talent in talents {
+                    if talent.currentPoints > 0 {
+                        countPoints += Int(talent.currentPoints)
+                    }
+                }
+            } else {
+                print("Talents are nil for branch \(branch.name)")
+            }
+        }
+        return 51 - countPoints
+    }
 
     func branchPointAsString() -> String {
-        return branchPoint.map { String($0) }.joined(separator: "/")
+        return branchPoints.map { String($0) }.joined(separator: "/")
     }
 
     init(characterClass: CharacterClass, loadType: LoadType) {
@@ -68,14 +95,14 @@ class GridViewModel: ObservableObject {
 
     func isTalentActive(talent: Talent, branchIndex: Int) -> Bool {
         guard let dependencyName = talent.dependencyName else {
-            return talent.requiredPoints <= branchPoint[branchIndex] && pointsLeft > 0
+            return talent.requiredPoints <= branchPoints[branchIndex] && pointsLeft > 0
         }
         guard let requiredTalent = characterClass.talentsBranches[branchIndex].talents?.first(where: { $0.name == dependencyName }) else {
             return false
         }
 
         let isRequiredTalentMaxed = requiredTalent.currentPoints == requiredTalent.maxPoints
-        let hasSufficientBranchPoints = talent.requiredPoints <= branchPoint[branchIndex]
+        let hasSufficientBranchPoints = talent.requiredPoints <= branchPoints[branchIndex]
         let hasAvailableTotalPoints = pointsLeft > 0
 
         return isRequiredTalentMaxed && hasSufficientBranchPoints && hasAvailableTotalPoints
@@ -124,8 +151,6 @@ class GridViewModel: ObservableObject {
 
             if talent.currentPoints < talent.maxPoints {
                 talent.currentPoints += 1
-                branchPoint[branchIndex] += 1
-                pointsLeft -= 1
                 characterClass.talentsBranches[branchIndex].talents![talentIndex] = talent
                 objectWillChange.send()
             }
@@ -146,9 +171,6 @@ class GridViewModel: ObservableObject {
     }
 
     func resetTalents() {
-        branchPoint = [0, 0, 0]
-        pointsLeft = 51
-
         for (index, talentsBranch) in characterClass.talentsBranches.enumerated() {
             for talentIndex in talentsBranch.talents!.indices {
                 characterClass.talentsBranches[index].talents![talentIndex].currentPoints = 0

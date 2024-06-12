@@ -13,6 +13,14 @@ enum LoadType {
     case fromDefault
 }
 
+struct SavedBuild: Codable, Identifiable {
+    var id = UUID()
+    let name: String
+    let className: String
+    let imageName: String
+    let talentPointsString: String
+}
+
 struct Arrow: Codable {
     let image: String
     let side: String
