@@ -5,23 +5,27 @@
 //  Created by Pavel Markitantov on 27/03/2024.
 //
 
+import Foundation
 import SwiftUI
 
 struct TalentsTreeView: View {
     let characterClass: CharacterClass
+    let loadType: LoadType
+    @State var loadingString: String?
     @ObservedObject var viewModel: GridViewModel
     @State private var selectedTab: Int = 0
     @State var selectedTalentId = UUID()
     @State var showDescription: Bool = false
     @State private var showSaveAlert: Bool = false
     @State var textfieldInput = ""
-    @State var filename = ""
     @State private var showErrorAlert = false
 
-    init(characterClass: CharacterClass) {
+    init(characterClass: CharacterClass, loadType: LoadType, loadingString: String? = nil) {
         self.characterClass = characterClass
+        self.loadType = loadType
+        self.loadingString = loadingString
 
-        self._viewModel = ObservedObject(initialValue: GridViewModel(characterClass: characterClass, loadType: .fromDefault))
+        self.viewModel = GridViewModel(characterClass: characterClass, loadType: loadType, loadingString: loadingString)
     }
 
     var body: some View {
@@ -36,21 +40,21 @@ struct TalentsTreeView: View {
                         header
                             .padding([.horizontal, .top])
 
-                        TalentGridView(viewModel: viewModel, selectedTalentId: $selectedTalentId, selectedBranchIndex: selectedTab)
+                        TalentGridView(viewModel: self.viewModel, selectedTalentId: self.$selectedTalentId, selectedBranchIndex: self.selectedTab)
                             .padding(.horizontal)
 
-                        if showDescription {
+                        if self.showDescription {
                             descriptionView
                                 .padding([.bottom, .horizontal])
                         }
 
-                        TabbarButtonView(talentTrees: characterClass.talentsBranches, selectedTab: $selectedTab)
-                            .shadow(color: Color(characterClass.nameColor).opacity(10), radius: 5, x: 0, y: 0)
+                        TabbarButtonView(talentTrees: self.characterClass.talentsBranches, selectedTab: self.$selectedTab)
+                            .shadow(color: Color(self.characterClass.nameColor).opacity(10), radius: 5, x: 0, y: 0)
                             .padding(.horizontal)
                     }
 
-                    .onChange(of: selectedTalentId) {
-                        showDescription = true
+                    .onChange(of: self.selectedTalentId) {
+                        self.showDescription = true
                     }
                 } else {
                     Text("Выбранная вкладка недоступна")
@@ -60,10 +64,10 @@ struct TalentsTreeView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        if viewModel.pointsLeft == 51 {
-                            showErrorAlert.toggle()
+                        if self.viewModel.pointsLeft == 51 {
+                            self.showErrorAlert.toggle()
                         } else {
-                            showSaveAlert.toggle()
+                            self.showSaveAlert.toggle()
                         }
                     } label: {
                         HStack {
@@ -75,7 +79,7 @@ struct TalentsTreeView: View {
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        viewModel.resetTalents()
+                        self.viewModel.resetTalents()
                     } label: {
                         HStack {
                             Text("Reset")
@@ -88,26 +92,27 @@ struct TalentsTreeView: View {
             }
             .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
-            .alert("Save Build", isPresented: $showSaveAlert) {
-                TextField("Enter name", text: $textfieldInput)
+            .alert("Save Build", isPresented: self.$showSaveAlert) {
+                TextField("Enter name", text: self.$textfieldInput)
                 Button("Cancel", role: .cancel) {}
                 Button("Save Build", action: {
-                    if textfieldInput.isEmpty {
-                        showErrorAlert = true
+                    if self.textfieldInput.isEmpty {
+                        self.showErrorAlert = true
                     } else {
-                        filename = textfieldInput
-                        print(filename)
-                        filename = ""
+                        let newBuild = TalentBuild(name: textfieldInput, className: characterClass.name, imageName: self.characterClass.iconName, talentPointsString: self.viewModel.createTalentString(for: self.viewModel.characterClass))
+                        print(newBuild.talentPointsString)
+                        let saveSuccessful = self.viewModel.saveBuild(talentBuild: newBuild)
+                        print("Save successful: \(saveSuccessful)")
                     }
                 })
                 .foregroundStyle(.green)
             } message: {
                 Text("Please enter the name for your build")
             }
-            .alert("Error", isPresented: $showErrorAlert) {
+            .alert("Error", isPresented: self.$showErrorAlert) {
                 Button("OK", role: .cancel) {}
             } message: {
-                if viewModel.pointsLeft == 51 {
+                if self.viewModel.pointsLeft == 51 {
                     Text("The build cannot be empty.")
                 } else {
                     Text("The name field cannot be empty.")
@@ -120,21 +125,21 @@ struct TalentsTreeView: View {
 extension TalentsTreeView {
     var header: some View {
         HStack {
-            Image(characterClass.iconName)
+            Image(self.characterClass.iconName)
                 .resizable()
                 .frame(width: 30, height: 30)
                 .clipShape(Circle())
                 .overlay {
                     Circle()
-                        .stroke(Color(characterClass.nameColor), lineWidth: 2)
+                        .stroke(Color(self.characterClass.nameColor), lineWidth: 2)
                 }
 
-            Text(characterClass.name)
-                .foregroundStyle(Color(characterClass.nameColor))
-            Text("(\(viewModel.branchPointAsString()))")
+            Text(self.characterClass.name)
+                .foregroundStyle(Color(self.characterClass.nameColor))
+            Text("(\(self.viewModel.branchPointAsString()))")
 
             Spacer()
-            Text("Points left: \(viewModel.pointsLeft)")
+            Text("Points left: \(self.viewModel.pointsLeft)")
         }
         .font(.headline)
         .fontWeight(.bold)
@@ -144,7 +149,7 @@ extension TalentsTreeView {
         .cornerRadius(10)
         .overlay {
             RoundedRectangle(cornerRadius: 10)
-                .stroke(characterClass.nameColor, lineWidth: 2)
+                .stroke(self.characterClass.nameColor, lineWidth: 2)
         }
         .shadow(color: Color(characterClass.nameColor).opacity(0.5), radius: 5, x: 0, y: 0)
     }
@@ -153,16 +158,16 @@ extension TalentsTreeView {
         VStack(alignment: .leading) {
             HStack {
                 VStack(alignment: .leading) {
-                    Text(viewModel.showTalentName(for: selectedTalentId))
+                    Text(self.viewModel.showTalentName(for: self.selectedTalentId))
                         .font(.headline)
                         .fontWeight(.bold)
-                    Text("Rank: \(viewModel.showTalentRank(for: selectedTalentId))")
+                    Text("Rank: \(self.viewModel.showTalentRank(for: self.selectedTalentId))")
                         .foregroundStyle(.secondary)
                 }
                 .padding(.leading)
                 Spacer()
             }
-            Text(viewModel.showDescription(for: selectedTalentId))
+            Text(self.viewModel.showDescription(for: self.selectedTalentId))
                 .padding(.horizontal)
                 .font(.subheadline)
         }
@@ -171,10 +176,10 @@ extension TalentsTreeView {
         .clipShape(RoundedRectangle(cornerRadius: 15))
         .overlay(alignment: .topTrailing) {
             Button {
-                if viewModel.tapCount > 1 {
-                    viewModel.tapCount = 0
+                if self.viewModel.tapCount > 1 {
+                    self.viewModel.tapCount = 0
                 }
-                showDescription = false
+                self.showDescription = false
             }
             label: {
                 Image(systemName: "xmark")
@@ -190,5 +195,5 @@ extension TalentsTreeView {
 }
 
 #Preview {
-    TalentsTreeView(characterClass: CharacterData.characterClasses[6])
+    TalentsTreeView(characterClass: CharacterData.characterClasses[6], loadType: .fromDefault)
 }

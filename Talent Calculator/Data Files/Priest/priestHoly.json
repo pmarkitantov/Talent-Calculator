@@ -14,7 +14,7 @@
         "icon": "spell_holy_renew",
         "baseDescription": "Increases the amount healed by your Renew spell by 10%.",
         "currentPoints": 0,
-        "maxPoints": 5,
+        "maxPoints": 3,
         "requiredPoints": 0,
         "row": 1,
         "column": 2

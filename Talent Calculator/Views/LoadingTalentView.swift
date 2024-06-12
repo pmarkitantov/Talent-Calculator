@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoadingTalentView: View {
-    @State private var listOfBuilds: [String] = []
+    @State private var listOfBuilds: [TalentBuild] = loadSavedBuilds() ?? []
 
     var body: some View {
         NavigationStack {
@@ -27,43 +27,59 @@ struct LoadingTalentView: View {
                         Spacer()
                     }
                     .padding()
-                    List(listOfBuilds, id: \.self) { file in
-                        Text(file)
-                            .font(.title2)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(.ultraThickMaterial)
-                            .clipShape(RoundedRectangle(cornerRadius: 15))
-                            .padding(.horizontal)
+
+                    ScrollView {
+                        VStack(alignment: .leading) {
+                            ForEach(listOfBuilds, id: \.name) { build in
+                                let classIndex = indexOfCharacterClass(withName: build.className.capitalizingFirstLetter())!
+                                NavigationLink(destination: TalentsTreeView(characterClass: CharacterData.characterClasses[classIndex], loadType: .fromSaves, loadingString: build.talentPointsString)) {
+                                    HStack {
+                                        Image(build.imageName)
+
+                                        Text(build.name)
+                                            .font(.headline)
+                                            .fontWeight(.semibold)
+                                            .multilineTextAlignment(.leading)
+                                            .padding()
+
+                                        Spacer()
+                                    }
+                                    .padding()
+                                    .frame(maxWidth: .infinity)
+                                    .background(.thinMaterial)
+                                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                                }
+                            }
+                        }
+                        .padding(.horizontal)
+                        .padding(.top)
                     }
-                    .scrollContentBackground(.hidden)
-
-                    Spacer()
                 }
+                .scrollContentBackground(.hidden)
+
+                Spacer()
             }
-//            .onAppear(perform: loadListOfBuilds)
         }
     }
+}
 
-    func loadListOfBuilds() {
-//        listOfBuilds = getListOfSavedFiles()
+func loadSavedBuilds() -> [TalentBuild]? {
+    let defaults = UserDefaults.standard
+    guard let savedData = defaults.data(forKey: "builds") else {
+        print("No saved data found for key 'builds'")
+        return nil
     }
-
-    func getDocumentsDirectory() -> URL {
-        FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    do {
+        let decoded = try JSONDecoder().decode([TalentBuild].self, from: savedData)
+        return decoded
+    } catch {
+        print("Failed to decode TalentBuild: \(error)")
+        return nil
     }
+}
 
-    func getListOfSavedFiles() -> [String] {
-        do {
-            let documentsURL = getDocumentsDirectory()
-            let fileURLs = try FileManager.default.contentsOfDirectory(at: documentsURL, includingPropertiesForKeys: nil)
-
-            return fileURLs.filter { $0.pathExtension == "json" }.map { $0.lastPathComponent }
-        } catch {
-            print("Error while enumerating files \(getDocumentsDirectory().path): \(error.localizedDescription)")
-            return []
-        }
-    }
+func indexOfCharacterClass(withName name: String) -> Int? {
+    return CharacterData.characterClasses.firstIndex(where: { $0.name == name })
 }
 
 #Preview {

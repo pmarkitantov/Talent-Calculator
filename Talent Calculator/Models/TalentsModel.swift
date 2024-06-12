@@ -13,7 +13,7 @@ enum LoadType {
     case fromDefault
 }
 
-struct SavedBuild: Codable, Identifiable {
+struct TalentBuild: Codable, Identifiable {
     var id = UUID()
     let name: String
     let className: String

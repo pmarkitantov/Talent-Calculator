@@ -28,7 +28,7 @@ struct ClassesListView: View {
                     ScrollView {
                         VStack(alignment: .leading) {
                             ForEach(CharacterData.characterClasses, id: \.name) { characterClass in
-                                NavigationLink(destination: TalentsTreeView(characterClass: characterClass)) {
+                                NavigationLink(destination: TalentsTreeView(characterClass: characterClass, loadType: .fromDefault)) {
                                     HStack {
                                         Image(characterClass.iconName)
                                         Text(characterClass.name)

@@ -14,6 +14,26 @@ class GridViewModel: ObservableObject {
     @Published var errorMessage: String?
     var tapCount = 0
     private var lastSelectedTalentId: UUID?
+    @Published var loadingString: String?
+
+    init(characterClass: CharacterClass, loadType: LoadType, loadingString: String?) {
+        switch loadType {
+        case .fromDefault:
+            self.characterClass = characterClass
+            loadTalents(characterClass: characterClass)
+
+        case .fromSaves:
+            self.characterClass = characterClass
+            loadTalents(characterClass: characterClass)
+            self.loadingString = loadingString
+            if let talentString = loadingString {
+                self.loadingString = talentString
+                loadTalentsFromString(talentString: talentString)
+            } else {
+                print("No talent string provided")
+            }
+        }
+    }
 
     var branchPoints: [Int] {
         var branchPointsCount = [0, 0, 0]
@@ -26,6 +46,7 @@ class GridViewModel: ObservableObject {
                 }
             }
         }
+
         return branchPointsCount
     }
 
@@ -38,8 +59,6 @@ class GridViewModel: ObservableObject {
                         countPoints += Int(talent.currentPoints)
                     }
                 }
-            } else {
-                print("Talents are nil for branch \(branch.name)")
             }
         }
         return 51 - countPoints
@@ -49,40 +68,16 @@ class GridViewModel: ObservableObject {
         return branchPoints.map { String($0) }.joined(separator: "/")
     }
 
-    init(characterClass: CharacterClass, loadType: LoadType) {
-        switch loadType {
-        case .fromDefault:
-            self.characterClass = characterClass
-            Task { await loadTalents(characterClass: characterClass) }
+    func loadTalents(characterClass: CharacterClass) {
+        var talents = [[Talent]?](repeating: nil, count: characterClass.talentsBranches.count)
 
-        case .fromSaves:
-            self.characterClass = characterClass
-            Task { await loadTalents(characterClass: characterClass) }
-        }
-    }
-
-    @MainActor
-    func loadTalents(characterClass: CharacterClass) async {
-        var talents = [[Talent]?](repeating: nil, count: self.characterClass.talentsBranches.count)
-
-        await withTaskGroup(of: (Int, [Talent]?).self) { group in
-            for (index, talentTree) in characterClass.talentsBranches.enumerated() where index < self.characterClass.talentsBranches.count {
-                group.addTask {
-                    let filename = characterClass.name.lowercased() + talentTree.name.replacingOccurrences(of: " ", with: "")
-                    do {
-                        let talents = try await self.loadTalentsFromJSON(named: filename)
-                        return (index, talents)
-                    } catch {
-                        DispatchQueue.main.async {
-                            self.errorMessage = "Не удалось загрузить таланты для ветки \(talentTree.name): \(error)"
-                        }
-                        return (index, nil)
-                    }
-                }
-            }
-
-            for await result in group {
-                talents[result.0] = result.1
+        for (index, talentTree) in characterClass.talentsBranches.enumerated() {
+            let filename = "\(characterClass.name.lowercased())\(talentTree.name.replacingOccurrences(of: " ", with: ""))"
+            do {
+                let loadedTalents = try loadTalentsFromJSON(named: filename)
+                talents[index] = loadedTalents
+            } catch {
+                errorMessage = "Не удалось загрузить таланты для ветки \(talentTree.name): \(error)"
             }
         }
 
@@ -91,6 +86,16 @@ class GridViewModel: ObservableObject {
                 self.characterClass.talentsBranches[index].talents = talentList
             }
         }
+    }
+
+    func loadTalentsFromJSON(named fileName: String) throws -> [Talent] {
+        guard let fileURL = Bundle.main.url(forResource: fileName, withExtension: "json") else {
+            throw NSError(domain: "TalentLoaderError", code: 404, userInfo: [NSLocalizedDescriptionKey: "Файл \(fileName).json не найден"])
+        }
+
+        let data = try Data(contentsOf: fileURL)
+        let decoder = JSONDecoder()
+        return try decoder.decode([Talent].self, from: data)
     }
 
     func isTalentActive(talent: Talent, branchIndex: Int) -> Bool {
@@ -106,16 +111,6 @@ class GridViewModel: ObservableObject {
         let hasAvailableTotalPoints = pointsLeft > 0
 
         return isRequiredTalentMaxed && hasSufficientBranchPoints && hasAvailableTotalPoints
-    }
-
-    private func loadTalentsFromJSON(named fileName: String) async throws -> [Talent] {
-        guard let fileURL = Bundle.main.url(forResource: fileName, withExtension: "json") else {
-            throw NSError(domain: "TalentLoaderError", code: 404, userInfo: [NSLocalizedDescriptionKey: "Файл \(fileName).json не найден"])
-        }
-
-        let data = try Data(contentsOf: fileURL)
-        let decoder = JSONDecoder()
-        return try decoder.decode([Talent].self, from: data)
     }
 
     func showDescription(for talentId: UUID) -> String {
@@ -175,6 +170,71 @@ class GridViewModel: ObservableObject {
             for talentIndex in talentsBranch.talents!.indices {
                 characterClass.talentsBranches[index].talents![talentIndex].currentPoints = 0
             }
+        }
+    }
+
+    func createTalentString(for charClass: CharacterClass) -> String {
+        var talentString = ""
+
+        for branch in charClass.talentsBranches {
+            guard let talents = branch.talents else {
+                continue
+            }
+
+            for talent in talents {
+                talentString += "\(talent.currentPoints)"
+            }
+        }
+        print(talentString)
+        return talentString
+    }
+
+    func loadTalentsFromString(talentString: String) {
+        let talentStringChars = Array(talentString)
+        var stringIndex = 0
+
+        for branchIndex in characterClass.talentsBranches.indices {
+            guard let talents = characterClass.talentsBranches[branchIndex].talents else {
+                continue
+            }
+
+            for talentIndex in talents.indices {
+                if stringIndex < talentStringChars.count,
+                   let value = Int(String(talentStringChars[stringIndex]))
+                {
+                    characterClass.talentsBranches[branchIndex].talents?[talentIndex].currentPoints = value
+                    stringIndex += 1
+                }
+            }
+        }
+    }
+
+    func saveBuild(talentBuild: TalentBuild) -> Bool {
+        let defaults = UserDefaults.standard
+        var savedBuilds: [TalentBuild] = loadSavedBuilds() ?? []
+        savedBuilds.append(talentBuild)
+        do {
+            let encoded = try JSONEncoder().encode(savedBuilds)
+            defaults.set(encoded, forKey: "builds")
+            return true
+        } catch {
+            print("Failed to encode TalentBuilds: \(error)")
+            return false
+        }
+    }
+
+    func loadSavedBuilds() -> [TalentBuild]? {
+        let defaults = UserDefaults.standard
+        guard let savedData = defaults.data(forKey: "builds") else {
+            print("No saved data found for key 'builds'")
+            return nil
+        }
+        do {
+            let decoded = try JSONDecoder().decode([TalentBuild].self, from: savedData)
+            return decoded
+        } catch {
+            print("Failed to decode TalentBuild: \(error)")
+            return nil
         }
     }
 }

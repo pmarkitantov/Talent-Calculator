@@ -32,6 +32,7 @@
 		ACD358AC2BF2098D00AA2BB0 /* mageFire.json in Resources */ = {isa = PBXBuildFile; fileRef = ACD358AB2BF2098D00AA2BB0 /* mageFire.json */; };
 		ACD358AE2BF2099D00AA2BB0 /* mageFrost.json in Resources */ = {isa = PBXBuildFile; fileRef = ACD358AD2BF2099D00AA2BB0 /* mageFrost.json */; };
 		ACD358B02BF3BB9E00AA2BB0 /* hunterBeastMastery.json in Resources */ = {isa = PBXBuildFile; fileRef = ACD358AF2BF3BB9E00AA2BB0 /* hunterBeastMastery.json */; };
+		ACD7E1252C19EEAE00FF5D23 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD7E1242C19EEAE00FF5D23 /* Extensions.swift */; };
 		ACE1B5912C110EDC00ADFD2C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE1B5902C110EDC00ADFD2C /* HomeView.swift */; };
 		ACE1B5932C11142600ADFD2C /* CustomNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE1B5922C11142600ADFD2C /* CustomNavigationLink.swift */; };
 		ACE1B5952C11145500ADFD2C /* LoadingTalentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE1B5942C11145500ADFD2C /* LoadingTalentView.swift */; };
@@ -79,6 +80,7 @@
 		ACD358AB2BF2098D00AA2BB0 /* mageFire.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mageFire.json; sourceTree = "<group>"; };
 		ACD358AD2BF2099D00AA2BB0 /* mageFrost.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mageFrost.json; sourceTree = "<group>"; };
 		ACD358AF2BF3BB9E00AA2BB0 /* hunterBeastMastery.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = hunterBeastMastery.json; sourceTree = "<group>"; };
+		ACD7E1242C19EEAE00FF5D23 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		ACE1B5902C110EDC00ADFD2C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		ACE1B5922C11142600ADFD2C /* CustomNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationLink.swift; sourceTree = "<group>"; };
 		ACE1B5942C11145500ADFD2C /* LoadingTalentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTalentView.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				8CC576402C0E7D8F00A58EBD /* ArrowCalculations.swift */,
+				ACD7E1242C19EEAE00FF5D23 /* Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				ACE1B5912C110EDC00ADFD2C /* HomeView.swift in Sources */,
 				8CC576412C0E7D8F00A58EBD /* ArrowCalculations.swift in Sources */,
 				AC1598DC2BB47D0100D605F9 /* ClassesListView.swift in Sources */,
+				ACD7E1252C19EEAE00FF5D23 /* Extensions.swift in Sources */,
 				AC8D2B2B2BC6B5E300E4A245 /* TalentCell.swift in Sources */,
 				AC1598E02BB47D5A00D605F9 /* TalentsModel.swift in Sources */,
 				AC1598B12BB478C200D605F9 /* Talent_CalculatorApp.swift in Sources */,
