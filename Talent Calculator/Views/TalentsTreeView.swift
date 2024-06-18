@@ -19,6 +19,8 @@ struct TalentsTreeView: View {
     @State private var showSaveAlert: Bool = false
     @State var textfieldInput = ""
     @State private var showErrorAlert = false
+    @State private var showNameAlert = false
+    @State var saveSuccessful: Bool = true
 
     init(characterClass: CharacterClass, loadType: LoadType, loadingString: String? = nil) {
         self.characterClass = characterClass
@@ -99,10 +101,12 @@ struct TalentsTreeView: View {
                     if self.textfieldInput.isEmpty {
                         self.showErrorAlert = true
                     } else {
-                        let newBuild = TalentBuild(name: textfieldInput, className: characterClass.name, imageName: self.characterClass.iconName, talentPointsString: self.viewModel.createTalentString(for: self.viewModel.characterClass))
+                        let newBuild = TalentBuild(name: textfieldInput, className: characterClass.name, imageName: self.characterClass.iconName, talentPointsString: self.viewModel.createTalentString(for: self.viewModel.characterClass), pointsSpend: self.viewModel.branchPointAsString())
                         print(newBuild.talentPointsString)
-                        let saveSuccessful = self.viewModel.saveBuild(talentBuild: newBuild)
-                        print("Save successful: \(saveSuccessful)")
+                        self.saveSuccessful = self.viewModel.saveBuild(talentBuild: newBuild)
+                        if self.saveSuccessful == false {
+                            self.showErrorAlert = true
+                        }
                     }
                 })
                 .foregroundStyle(.green)
@@ -110,10 +114,16 @@ struct TalentsTreeView: View {
                 Text("Please enter the name for your build")
             }
             .alert("Error", isPresented: self.$showErrorAlert) {
-                Button("OK", role: .cancel) {}
+                Button("OK", role: .cancel) {
+                    if !saveSuccessful {
+                        showSaveAlert.toggle()
+                    }
+                }
             } message: {
                 if self.viewModel.pointsLeft == 51 {
                     Text("The build cannot be empty.")
+                } else if !saveSuccessful {
+                    Text("A build with this name already exists. Please choose a different name.")
                 } else {
                     Text("The name field cannot be empty.")
                 }

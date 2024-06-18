@@ -19,6 +19,7 @@ struct TalentBuild: Codable, Identifiable {
     let className: String
     let imageName: String
     let talentPointsString: String
+    let pointsSpend: String
 }
 
 struct Arrow: Codable {

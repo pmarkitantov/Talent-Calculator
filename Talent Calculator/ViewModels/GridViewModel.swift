@@ -141,16 +141,16 @@ class GridViewModel: ObservableObject {
     }
 
     func incrementCount(for elementID: UUID, inBranch branchIndex: Int) {
-        if let talentIndex = characterClass.talentsBranches[branchIndex].talents!.firstIndex(where: { $0.id == elementID }) {
-            var talent = characterClass.talentsBranches[branchIndex].talents![talentIndex]
+            if let talentIndex = characterClass.talentsBranches[branchIndex].talents!.firstIndex(where: { $0.id == elementID }) {
+                var talent = characterClass.talentsBranches[branchIndex].talents![talentIndex]
 
-            if talent.currentPoints < talent.maxPoints {
-                talent.currentPoints += 1
-                characterClass.talentsBranches[branchIndex].talents![talentIndex] = talent
-                objectWillChange.send()
+                if talent.currentPoints < talent.maxPoints {
+                    talent.currentPoints += 1
+                    characterClass.talentsBranches[branchIndex].talents![talentIndex] = talent
+                    objectWillChange.send()
+                }
             }
         }
-    }
 
     func handleButtonTap(for talentId: UUID, inBranch branchIndex: Int, selectedTalentId: inout UUID) {
         if lastSelectedTalentId != talentId {
@@ -210,6 +210,11 @@ class GridViewModel: ObservableObject {
     }
 
     func saveBuild(talentBuild: TalentBuild) -> Bool {
+        guard isBuildNameUnique(talentBuild.name) else {
+            errorMessage = "Имя билда уже существует. Пожалуйста, выберите другое имя."
+            return false
+        }
+
         let defaults = UserDefaults.standard
         var savedBuilds: [TalentBuild] = loadSavedBuilds() ?? []
         savedBuilds.append(talentBuild)
@@ -237,4 +242,12 @@ class GridViewModel: ObservableObject {
             return nil
         }
     }
+
+    private func isBuildNameUnique(_ name: String) -> Bool {
+        guard let savedBuilds = loadSavedBuilds() else {
+            return true
+        }
+        return !savedBuilds.contains { $0.name == name }
+    }
 }
+

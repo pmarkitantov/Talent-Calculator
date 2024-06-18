@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct LoadingTalentView: View {
-    @State private var listOfBuilds: [TalentBuild] = loadSavedBuilds() ?? []
+    @State private var listOfBuilds: [TalentBuild] = []
+    @State private var showAlert = false
+    @State private var buildToDelete: TalentBuild?
 
     var body: some View {
         NavigationStack {
@@ -36,13 +38,27 @@ struct LoadingTalentView: View {
                                     HStack {
                                         Image(build.imageName)
 
-                                        Text(build.name)
-                                            .font(.headline)
-                                            .fontWeight(.semibold)
-                                            .multilineTextAlignment(.leading)
-                                            .padding()
+                                        VStack(alignment: .leading) {
+                                            Text(build.name)
+                                                .font(.headline)
+                                                .fontWeight(.semibold)
+                                                .multilineTextAlignment(.leading)
+                                            Text(build.pointsSpend)
+                                        }
+                                        .padding()
 
                                         Spacer()
+
+                                        Button(action: {
+                                            buildToDelete = build
+                                            showAlert = true
+                                        }) {
+                                            Image(systemName: "trash")
+                                                .foregroundColor(.red)
+                                                .font(.title2)
+                                        }
+                                        .buttonStyle(BorderlessButtonStyle())
+                                        .padding()
                                     }
                                     .padding()
                                     .frame(maxWidth: .infinity)
@@ -60,6 +76,26 @@ struct LoadingTalentView: View {
                 Spacer()
             }
         }
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text("Delete Build"),
+                message: Text("Are you sure you want to delete this build?"),
+                primaryButton: .destructive(Text("Delete")) {
+                    if let buildToDelete = buildToDelete {
+                        deleteBuild(build: buildToDelete)
+                    }
+                },
+                secondaryButton: .cancel()
+            )
+        }
+        .onAppear {
+            listOfBuilds = loadSavedBuilds() ?? []
+        }
+    }
+
+    private func deleteBuild(build: TalentBuild) {
+        listOfBuilds.removeAll { $0.name == build.name }
+        saveBuilds(builds: listOfBuilds)
     }
 }
 
@@ -78,9 +114,20 @@ func loadSavedBuilds() -> [TalentBuild]? {
     }
 }
 
+func saveBuilds(builds: [TalentBuild]) {
+    let defaults = UserDefaults.standard
+    do {
+        let encodedData = try JSONEncoder().encode(builds)
+        defaults.set(encodedData, forKey: "builds")
+    } catch {
+        print("Failed to encode TalentBuild: \(error)")
+    }
+}
+
 func indexOfCharacterClass(withName name: String) -> Int? {
     return CharacterData.characterClasses.firstIndex(where: { $0.name == name })
 }
+
 
 #Preview {
     LoadingTalentView()
